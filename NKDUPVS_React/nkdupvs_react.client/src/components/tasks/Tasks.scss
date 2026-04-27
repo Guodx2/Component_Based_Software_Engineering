@@ -1,0 +1,184 @@
+.uzduotys-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .add-task-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  }
+
+  .tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .task-card {
+    width: 300px; // fixed width for each task card
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    .task-description {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: normal;      // allow wrapping on multiple lines
+      word-break: break-word;   // break long words if needed
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    p {
+      margin: 5px 0;
+      color: #666;
+      text-align: justify;
+    }
+
+    .task-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      span {
+        font-size: 0.9em;
+        color: #999;
+      }
+    }
+
+    .edit-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .edit-button:hover {
+      background-color: #0056b3;
+    }
+
+    .delete-button {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .delete-button:hover {
+      background-color: #c82333;
+    }
+
+    a {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+}
+
+/* Modal styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.task-icon {
+  width: 60px;   
+  height: 60px;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;  // centers the header in the card
+}
+
+.task-title {
+  margin-left: 2px;  
+  font-size: 1.2em;
+  text-align: center;
+}

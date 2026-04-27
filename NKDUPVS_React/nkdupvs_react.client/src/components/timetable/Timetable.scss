@@ -1,0 +1,471 @@
+.rbc-time-header .rbc-today {
+    color: #354B57 !important;
+    font-weight: bold; /* Optional: make it stand out */
+}
+
+.suggestions .btn
+{
+    float: right;
+}
+
+.registered-modal-container {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0 auto;
+}
+
+.event-modal-container p {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.file-upload-input {
+    display: none; /* Hide the default file input */
+}
+
+/* Override the styles for the outer .modal inside the timetable container */
+.timetable-container .modal {
+    background: none;      // remove background
+    box-shadow: none;      // remove shadow
+    padding: 0;            // remove extra padding
+  }
+
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #123634; /* Change to match your theme */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.file-upload-label:hover {
+    background-color: #1a4e4b;
+}
+
+.add-event-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.rbc-toolbar button {
+    background: #354B57;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rbc-toolbar .left-btn{
+    border-radius: 5px 0 0 5px;
+}
+
+.rbc-toolbar .middle-btn{
+    border-radius: 0px;
+    margin-left: -1px;
+}
+
+.rbc-toolbar .right-btn{
+    border-radius: 0 5px 5px 0;
+    margin-left: -1px;
+}
+
+.timetable-container {
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px; // space between calendar and controls
+}
+
+.calendar-container {
+    flex: 1;
+    margin-top: -80px;
+}
+
+.controls-container {
+    margin-top: -80px;
+    width: 300px; // adjust as needed
+    display: flex;
+    flex-direction: column;
+}
+
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-upload label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.event-buttons {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.event-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* General calendar container */
+.rbc-calendar {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;  /* Modern font */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Toolbar styling */
+.rbc-toolbar {
+    background: #123634;
+    border-bottom: 2px solid #e1e4e8;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    height: 80px;
+}
+
+/* Toolbar buttons */
+.rbc-toolbar button {
+    background: #256c68;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rbc-toolbar-label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.rbc-toolbar button:hover {
+    background: #0c2524;
+    color: #fff;
+}
+
+.rbc-toolbar button.rbc-active {
+    background: #0c2524;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Calendar day cells */
+.rbc-month-view {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rbc-month-row {
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.rbc-day-bg.rbc-today,
+.rbc-today {
+    background: #194b485e !important;
+}
+
+.rbc-header {
+    background: #194b48;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 2px solid #e1e4e8;
+}
+
+/* Styling for events */
+.rbc-event {
+    border-radius: 8px;
+    //background: linear-gradient(135deg, #4c8bf5, #1e73e6);
+    color: white;
+    padding: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.rbc-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Event label (time) inside events */
+.rbc-event-label {
+    display: none;
+}
+
+/* Selected event styling */
+.rbc-selected {
+    background: linear-gradient(135deg, #71797E, #484d50) !important;
+}
+
+/* Customization for agenda view */
+.rbc-agenda-view table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.rbc-agenda-table tbody tr {
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Week & Day view time grid styling */
+.rbc-time-view {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rbc-time-header-cell {
+    background: #f0f2f5;
+    font-weight: bold;
+}
+
+/* Hourly rows */
+.rbc-time-slot {
+    border-top: 1px solid #e1e4e8;
+}
+
+/* Custom tooltip effect */
+.rbc-tooltip {
+    background: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Better transition effects */
+.rbc-row-content,
+.rbc-day-bg {
+    transition: all 0.3s ease;
+}
+
+.rbc-day-bg:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+/* Modal form styles */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; // Reduce the gap between form groups
+    padding: 5px; // Adjust padding for tighter layout
+}
+
+.modal-form .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.modal-form .form-group label {
+    flex: 0 0 120px; /* Adjust label width for a tighter form */
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+    text-align: left; 
+}
+
+.modal-form .form-group input,
+.modal-form .form-group select {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-form .form-group input[type="datetime-local"],
+.modal-form .form-group select {
+    padding: 5px 12px; // Adjust padding for a better input size
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn:hover {
+    background-color: #999;
+}
+
+/* Optional: shrink modal width */
+.timetable-container .modal {
+    width: 500px; 
+    max-width: 90%;
+    padding: 20px;
+    max-height: auto;
+}
+
+.close-add-event-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.event-modal-container {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0 auto;
+    max-height: 80vh;         // Limit height to 80% of viewport height
+    overflow-y: auto;         // Add vertical scrolling if necessary
+  }
+
+  .export-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    /* Stack the calendar and controls vertically */
+    .timetable-container {
+      flex-direction: column;
+      padding: 10px;
+      gap: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    /* Make the calendar full width */
+    .calendar-container {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    /* Adjust controls container to stack items vertically */
+    .controls-container {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .rbc-calendar{
+        margin-left: 20px;
+    }
+    /* Resize toolbar buttons and stack them */
+    .rbc-toolbar {
+      flex-direction: row !important;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: auto;  // Allow horizontal scrolling if needed
+      padding: 10px;
+      height: auto;
+    }
+  
+    .rbc-toolbar label,
+    .rbc-toolbar button {
+      font-size: 12px;
+      margin: 0 5px;
+      white-space: nowrap; // Prevent line breaks in each button
+    }
+  
+    /* Reduce padding for the calendar container */
+    .rbc-calendar {
+      padding: 5px;
+    }
+  
+    /* Ensure modal containers use full width on small screens */
+    .timetable-container .modal,
+    .event-modal-container {
+      width: 90% !important;
+      max-width: 90% !important;
+      margin: 10px auto;
+    }
+
+    .add-event-btn{
+        margin-bottom: 10px;
+    }
+
+    .export-btn{
+        margin-bottom: 10px;
+    }
+  }

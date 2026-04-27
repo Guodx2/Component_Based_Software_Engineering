@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5176",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\..\\nkdupvs_react.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

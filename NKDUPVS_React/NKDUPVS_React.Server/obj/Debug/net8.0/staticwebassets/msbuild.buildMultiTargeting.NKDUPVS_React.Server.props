@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NKDUPVS_React.Server.props" />
+</Project>

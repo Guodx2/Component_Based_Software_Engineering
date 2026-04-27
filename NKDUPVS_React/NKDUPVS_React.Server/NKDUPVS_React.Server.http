@@ -1,0 +1,6 @@
+@NKDUPVS_React.Server_HostAddress = http://localhost:5216
+
+GET {{NKDUPVS_React.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

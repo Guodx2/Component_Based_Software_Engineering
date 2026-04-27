@@ -1,0 +1,105 @@
+.mentor-suggestions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-bottom: 10px !important;
+}
+
+.tasks-section table {
+  grid-column: 1 / -1;
+}
+
+.mentor-suggestions-table th,
+.mentor-suggestions-table td {
+    font-size: 18px; 
+}
+
+.mentor-suggestions-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.mentor-suggestions-table th:hover {
+  background-color: #e6e4e4;
+  cursor: pointer;
+}
+
+.mentor-suggestions-table tr:hover {
+  background-color: #e6e4e4;
+  cursor: pointer;
+}
+
+.semesterplan {
+  padding: 20px;
+  max-width: 100%;
+  padding-bottom: 50px;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+  }
+}
+
+.mentor-suggestions-container {
+  grid-column: 1 / -1; // Make this container span all grid columns
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 20px auto;
+}
+
+.tasks-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 20px;  // Optional horizontal padding
+  h3 {
+    color: #444;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.task-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 320px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #666;
+    text-align: justify;
+  }
+}
+
+.btn-suggestion {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #218838;
+  }
+  float: right;
+}

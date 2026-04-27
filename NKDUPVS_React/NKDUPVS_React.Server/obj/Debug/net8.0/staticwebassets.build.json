@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "09J3ioYmfQwSz2GS3vtKV5R0H3gdpyaecEgiVGHNx6A=",
+  "Source": "NKDUPVS_React.Server",
+  "BasePath": "_content/NKDUPVS_React.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\nkdupvs_react.client\\nkdupvs_react.client.esproj",
+      "Version": 2,
+      "Source": "nkdupvs_react.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

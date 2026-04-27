@@ -1,0 +1,199 @@
+.personal-info-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  min-height: 100vh;
+  margin-bottom: 200px;
+}
+
+.personal-info-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.personal-info-container {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-container p {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.personal-info-container p strong {
+  width: 150px;
+  font-weight: 600;
+  color: #333;
+  /* Allow text to wrap if needed */
+  word-break: break-word;
+}
+
+.personal-info-container input {
+  flex: 1;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+.btn-edit-personal-info {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px auto 0 auto;
+  display: block;
+}
+
+.btn-edit-personal-info:hover {
+  background-color: #0056b3;
+}
+
+.btn-save-edit {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-save-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-decline-edit {
+  background: #dc3545;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  margin-left: 50%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.btn-decline-edit:hover {
+  background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .personal-info-page {
+    padding: 20px 10px;
+  }
+  
+  .personal-info-container {
+    width: 100%;
+    max-width: none;
+    padding: 20px 15px;
+  }
+  
+  .personal-info-page h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .personal-info-container p {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .personal-info-container p strong {
+    width: auto; /* Remove fixed width */
+    margin-right: 10px;
+    font-size: 0.95rem;
+    white-space: normal; /* Allow wrapping */
+  }
+  
+  .personal-info-container input {
+    width: 100%;
+  }
+  
+  /* Ensure buttons fill available width */
+  .btn-edit-personal-info,
+  .btn-save-edit,
+  .btn-decline-edit {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Example additions to PersonalInfo.scss */
+.expertise-display-container,
+.expertise-edit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.btn-edit-expertise {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit-expertise:hover {
+  background-color: #0056b3;
+}
+
+.btn-close-edit {
+  background: #dc3545;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-close-edit:hover {
+  background-color: #c82333;
+}
+
+.mentor-availability-section {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  label {
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  .btn {
+    width: auto;
+    margin-left: 40%;
+  }
+}

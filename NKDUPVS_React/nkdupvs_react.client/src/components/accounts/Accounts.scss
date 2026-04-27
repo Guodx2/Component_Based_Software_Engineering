@@ -1,0 +1,235 @@
+.accounts-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 20px 20px 20px;
+}
+
+th {
+    text-align: center !important;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.table-container {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 10px;
+    overflow-x: auto;
+    /* Set max height relative to viewport */
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+    padding-bottom: 30px;
+    /* Ensure left content is not cut off */
+    direction: ltr;
+    margin-bottom: 40px;
+}
+
+.table-container h3 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    /* Remove fixed min-width for better scaling */
+    /* min-width: 600px; */
+    margin-left: 0;  /* Force table to start at left edge */
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+.btn-outline-info {
+    color: #17a2b8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+/* Button Styles (unchanged) */
+.btn-outline-primary {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-success {
+    width: 100%;
+    margin-top: 10px;
+    border-color: #28a745;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-accept {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-accept:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #970F0F;
+}
+
+.create-account-button,
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.create-account-button:hover,
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.account-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.csv-file-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.csv-file-group label {
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+/* General Fixes */
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    display: block; /* Ensures it doesn't get cut off */
+    padding: 20px;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    min-width: max-content; /* Prevents columns from shrinking too much */
+    border-collapse: collapse;
+}
+
+/* Ensure text wraps properly */
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .accounts-page {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        padding: 10px;
+        max-height: calc(100vh - 150px);
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        margin-left: 320px;
+        width: auto;
+    }
+    
+    table {
+        min-width: 100%;
+        overflow-x: auto; /* Ensures full visibility on small screens */
+        display: block;
+    }
+    
+    table th,
+    table td {
+        font-size: 0.8rem;
+        padding: 6px;
+        white-space: normal; /* Ensures wrapping */
+    }
+}

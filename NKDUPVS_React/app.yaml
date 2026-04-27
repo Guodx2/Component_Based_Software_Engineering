@@ -1,0 +1,2 @@
+runtime: aspnetcore
+entrypoint: dotnet NKDUPVS_React.Server.dll

@@ -1,0 +1,84 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+  
+.timetable-content {
+    background: #fff;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;    // Maximum height is 90% of the viewport height
+    overflow-y: auto;    // Enable vertical scrolling if content exceeds max height
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    h3 {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+  
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+// Custom styles for agenda view buttons in react-big-calendar
+.rbc-agenda button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rbc-agenda button:hover {
+  background-color: #0056b3;
+}
+
+/* Arrange the agenda header to display the date on the left and the navigation buttons on the right */
+.rbc-agenda .rbc-agenda-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Adjust if necessary */
+}
+
+/* Ensure the button block on the right appears in a row */
+.rbc-agenda .rbc-agenda-header .rbc-agenda-btn-group {
+  display: flex;
+  gap: 0.5em;  /* Adjust spacing between buttons */
+}
+
+/* Optionally adjust the agenda title if needed */
+.rbc-agenda .rbc-agenda-header .rbc-agenda-date-cell {
+  flex: 1; 
+}
+
+.rbc-header {
+    padding: 4px 8px !important; // Reduce header padding
+    white-space: nowrap !important; // Prevent unnecessary line breaks
+    text-align: center;
+}
+.rbc-row {
+    min-height: auto !important; // Remove extra height in rows
+}

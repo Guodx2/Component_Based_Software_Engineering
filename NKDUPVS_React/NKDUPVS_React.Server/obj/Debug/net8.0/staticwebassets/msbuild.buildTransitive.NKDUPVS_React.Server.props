@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NKDUPVS_React.Server.props" />
+</Project>
