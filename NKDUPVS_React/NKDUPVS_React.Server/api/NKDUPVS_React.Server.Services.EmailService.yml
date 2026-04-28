@@ -1,0 +1,586 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Services.EmailService
+  commentId: T:NKDUPVS_React.Server.Services.EmailService
+  id: EmailService
+  parent: NKDUPVS_React.Server.Services
+  children:
+  - NKDUPVS_React.Server.Services.EmailService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  - NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: EmailService
+  nameWithType: EmailService
+  fullName: NKDUPVS_React.Server.Services.EmailService
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/EmailService.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: EmailService
+    path: Controllers/EmailService.cs
+    startLine: 26
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Services
+  summary: Implementation of the IEmailService interface using SendGrid to send emails. This class retrieves the SendGrid API key and sender information from the application configuration, and uses the SendGrid client to create and send emails based on the provided recipient, subject, and content. The SendEmailAsync method constructs the email message and sends it asynchronously, allowing for efficient email delivery without blocking the main thread of the application.
+  example: []
+  syntax:
+    content: 'public class EmailService : IEmailService'
+    content.vb: Public Class EmailService Implements IEmailService
+  inheritance:
+  - System.Object
+  implements:
+  - NKDUPVS_React.Server.Services.IEmailService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Services.EmailService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:NKDUPVS_React.Server.Services.EmailService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: NKDUPVS_React.Server.Services.EmailService
+  langs:
+  - csharp
+  - vb
+  name: EmailService(IConfiguration)
+  nameWithType: EmailService.EmailService(IConfiguration)
+  fullName: NKDUPVS_React.Server.Services.EmailService.EmailService(Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/EmailService.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: .ctor
+    path: Controllers/EmailService.cs
+    startLine: 36
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Services
+  summary: Initializes a new instance of the EmailService class with the specified configuration. The constructor retrieves the SendGrid API key, sender email, and sender name from the application configuration, which are necessary for sending emails using the SendGrid service. This setup allows for flexible configuration of email sending parameters without hardcoding sensitive information in the codebase.
+  example: []
+  syntax:
+    content: public EmailService(IConfiguration configuration)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The application configuration.
+    content.vb: Public Sub New(configuration As IConfiguration)
+  overload: NKDUPVS_React.Server.Services.EmailService.#ctor*
+  nameWithType.vb: EmailService.New(IConfiguration)
+  fullName.vb: NKDUPVS_React.Server.Services.EmailService.New(Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: New(IConfiguration)
+- uid: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  commentId: M:NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String,System.String)
+  parent: NKDUPVS_React.Server.Services.EmailService
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(string, string, string, string)
+  nameWithType: EmailService.SendEmailAsync(string, string, string, string)
+  fullName: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(string, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/EmailService.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: SendEmailAsync
+    path: Controllers/EmailService.cs
+    startLine: 51
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Services
+  summary: Sends an email asynchronously to the specified recipient with the given subject, plain text content, and HTML content using the SendGrid service. This method constructs an email message using the sender information and recipient details, and then uses the SendGrid client to send the email. The asynchronous nature of this method allows for non-blocking email sending, improving the performance and responsiveness of the application when sending emails.
+  example: []
+  syntax:
+    content: public Task SendEmailAsync(string toEmail, string subject, string plainText, string htmlContent)
+    parameters:
+    - id: toEmail
+      type: System.String
+      description: The email address of the recipient.
+    - id: subject
+      type: System.String
+      description: The subject of the email.
+    - id: plainText
+      type: System.String
+      description: The plain text content of the email.
+    - id: htmlContent
+      type: System.String
+      description: The HTML content of the email.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task representing the asynchronous operation.
+    content.vb: Public Function SendEmailAsync(toEmail As String, subject As String, plainText As String, htmlContent As String) As Task
+  overload: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync*
+  implements:
+  - NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  nameWithType.vb: EmailService.SendEmailAsync(String, String, String, String)
+  fullName.vb: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(String, String, String, String)
+  name.vb: SendEmailAsync(String, String, String, String)
+references:
+- uid: NKDUPVS_React.Server.Services
+  commentId: N:NKDUPVS_React.Server.Services
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Services
+  nameWithType: NKDUPVS_React.Server.Services
+  fullName: NKDUPVS_React.Server.Services
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: NKDUPVS_React.Server.Services.IEmailService
+  commentId: T:NKDUPVS_React.Server.Services.IEmailService
+  parent: NKDUPVS_React.Server.Services
+  href: NKDUPVS_React.Server.Services.IEmailService.html
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: NKDUPVS_React.Server.Services.IEmailService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Services.EmailService.#ctor*
+  commentId: Overload:NKDUPVS_React.Server.Services.EmailService.#ctor
+  href: NKDUPVS_React.Server.Services.EmailService.html#NKDUPVS_React_Server_Services_EmailService__ctor_Microsoft_Extensions_Configuration_IConfiguration_
+  name: EmailService
+  nameWithType: EmailService.EmailService
+  fullName: NKDUPVS_React.Server.Services.EmailService.EmailService
+  nameWithType.vb: EmailService.New
+  fullName.vb: NKDUPVS_React.Server.Services.EmailService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync*
+  commentId: Overload:NKDUPVS_React.Server.Services.EmailService.SendEmailAsync
+  href: NKDUPVS_React.Server.Services.EmailService.html#NKDUPVS_React_Server_Services_EmailService_SendEmailAsync_System_String_System_String_System_String_System_String_
+  name: SendEmailAsync
+  nameWithType: EmailService.SendEmailAsync
+  fullName: NKDUPVS_React.Server.Services.EmailService.SendEmailAsync
+- uid: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  commentId: M:NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  parent: NKDUPVS_React.Server.Services.IEmailService
+  isExternal: true
+  href: NKDUPVS_React.Server.Services.IEmailService.html#NKDUPVS_React_Server_Services_IEmailService_SendEmailAsync_System_String_System_String_System_String_System_String_
+  name: SendEmailAsync(string, string, string, string)
+  nameWithType: IEmailService.SendEmailAsync(string, string, string, string)
+  fullName: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(string, string, string, string)
+  nameWithType.vb: IEmailService.SendEmailAsync(String, String, String, String)
+  fullName.vb: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(String, String, String, String)
+  name.vb: SendEmailAsync(String, String, String, String)
+  spec.csharp:
+  - uid: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+    name: SendEmailAsync
+    href: NKDUPVS_React.Server.Services.IEmailService.html#NKDUPVS_React_Server_Services_IEmailService_SendEmailAsync_System_String_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+    name: SendEmailAsync
+    href: NKDUPVS_React.Server.Services.IEmailService.html#NKDUPVS_React_Server_Services_IEmailService_SendEmailAsync_System_String_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

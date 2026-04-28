@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TaskController | NKDUPVS Docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TaskController | NKDUPVS Docs ">
+      
+      <meta name="description" content="Controller responsible for handling API requests related to tasks. This controller provides endpoints for creating, retrieving, updating, and deleting tasks, as well as assigning tasks to mentees and marking tasks as completed. The TaskController interacts with the database through the ApplicationDbContext to perform CRUD operations on tasks and manage task assignments. It also includes functionality to retrieve task types and get assigned tasks for specific mentees, allowing for efficient task management within the application.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Guodx2/Component_Based_Software_Engineering/new/main/apiSpec/new?filename=NKDUPVS_React_Server_Controllers_TaskController.md&amp;value=---%0Auid%3A%20NKDUPVS_React.Server.Controllers.TaskController%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NKDUPVS Docs">
+            NKDUPVS Docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NKDUPVS_React.Server.Controllers.TaskController">
+
+
+
+  <h1 id="NKDUPVS_React_Server_Controllers_TaskController" data-uid="NKDUPVS_React.Server.Controllers.TaskController" class="text-break">
+Class TaskController  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NKDUPVS_React.html">NKDUPVS_React</a>.<a class="xref" href="NKDUPVS_React.Server.html">Server</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.html">Controllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NKDUPVS_React.Server.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Controller responsible for handling API requests related to tasks. This controller provides endpoints for creating, retrieving, updating, and deleting tasks, as well as assigning tasks to mentees and marking tasks as completed. The TaskController interacts with the database through the ApplicationDbContext to perform CRUD operations on tasks and manage task assignments. It also includes functionality to retrieve task types and get assigned tasks for specific mentees, allowing for efficient task management within the application.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class TaskController : ControllerBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+      <div><span class="xref">TaskController</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32)">ControllerBase.StatusCode(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32-system-object)">ControllerBase.StatusCode(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string)">ControllerBase.Content(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string)">ControllerBase.Content(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string-system-text-encoding)">ControllerBase.Content(string, string, Encoding)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-microsoft-net-http-headers-mediatypeheadervalue)">ControllerBase.Content(string, MediaTypeHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.nocontent">ControllerBase.NoContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok">ControllerBase.Ok()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok(system-object)">ControllerBase.Ok(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirect">ControllerBase.Redirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanent">ControllerBase.RedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpreservemethod">ControllerBase.RedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanentpreservemethod">ControllerBase.RedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirect">ControllerBase.LocalRedirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanent">ControllerBase.LocalRedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpreservemethod">ControllerBase.LocalRedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanentpreservemethod">ControllerBase.LocalRedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction">ControllerBase.RedirectToAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string)">ControllerBase.RedirectToAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-object)">ControllerBase.RedirectToAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string)">ControllerBase.RedirectToAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object)">ControllerBase.RedirectToAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-string)">ControllerBase.RedirectToAction(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToAction(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpreservemethod">ControllerBase.RedirectToActionPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string)">ControllerBase.RedirectToActionPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToActionPermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanentpreservemethod">ControllerBase.RedirectToActionPermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string)">ControllerBase.RedirectToRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-object)">ControllerBase.RedirectToRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object)">ControllerBase.RedirectToRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-string)">ControllerBase.RedirectToRoute(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object-system-string)">ControllerBase.RedirectToRoute(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepreservemethod">ControllerBase.RedirectToRoutePreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string)">ControllerBase.RedirectToRoutePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-object)">ControllerBase.RedirectToRoutePermanent(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object)">ControllerBase.RedirectToRoutePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-string)">ControllerBase.RedirectToRoutePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object-system-string)">ControllerBase.RedirectToRoutePermanent(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanentpreservemethod">ControllerBase.RedirectToRoutePermanentPreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string)">ControllerBase.RedirectToPage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-object)">ControllerBase.RedirectToPage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string)">ControllerBase.RedirectToPage(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object)">ControllerBase.RedirectToPage(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-string)">ControllerBase.RedirectToPage(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPage(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string)">ControllerBase.RedirectToPagePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-object)">ControllerBase.RedirectToPagePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPagePermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepreservemethod">ControllerBase.RedirectToPagePreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanentpreservemethod">ControllerBase.RedirectToPagePermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string)">ControllerBase.File(byte[], string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-boolean)">ControllerBase.File(byte[], string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string)">ControllerBase.File(byte[], string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-boolean)">ControllerBase.File(byte[], string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string)">ControllerBase.File(Stream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-boolean)">ControllerBase.File(Stream, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string)">ControllerBase.File(Stream, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-boolean)">ControllerBase.File(Stream, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string)">ControllerBase.File(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-boolean)">ControllerBase.File(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string)">ControllerBase.File(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-boolean)">ControllerBase.File(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string)">ControllerBase.PhysicalFile(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string)">ControllerBase.PhysicalFile(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized">ControllerBase.Unauthorized()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized(system-object)">ControllerBase.Unauthorized(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound">ControllerBase.NotFound()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound(system-object)">ControllerBase.NotFound(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest">ControllerBase.BadRequest()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(system-object)">ControllerBase.BadRequest(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.BadRequest(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity">ControllerBase.UnprocessableEntity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(system-object)">ControllerBase.UnprocessableEntity(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.UnprocessableEntity(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict">ControllerBase.Conflict()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(system-object)">ControllerBase.Conflict(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.Conflict(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem">ControllerBase.Problem(string, string, int?, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-validationproblemdetails)">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(string, string, int?, string, string, ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created">ControllerBase.Created()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-string-system-object)">ControllerBase.Created(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-uri-system-object)">ControllerBase.Created(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object)">ControllerBase.CreatedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object)">ControllerBase.CreatedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-object-system-object)">ControllerBase.CreatedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object-system-object)">ControllerBase.CreatedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted">ControllerBase.Accepted()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-object)">ControllerBase.Accepted(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri)">ControllerBase.Accepted(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string)">ControllerBase.Accepted(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string-system-object)">ControllerBase.Accepted(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri-system-object)">ControllerBase.Accepted(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string)">ControllerBase.AcceptedAtAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string)">ControllerBase.AcceptedAtAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object)">ControllerBase.AcceptedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object)">ControllerBase.AcceptedAtAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object)">ControllerBase.AcceptedAtRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string)">ControllerBase.AcceptedAtRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object)">ControllerBase.AcceptedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object-system-object)">ControllerBase.AcceptedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object-system-object)">ControllerBase.AcceptedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge">ControllerBase.Challenge()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(system-string())">ControllerBase.Challenge(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Challenge(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Challenge(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid">ControllerBase.Forbid()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(system-string())">ControllerBase.Forbid(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Forbid(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Forbid(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal)">ControllerBase.SignIn(ClaimsPrincipal)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-system-string)">ControllerBase.SignIn(ClaimsPrincipal, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties-system-string)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout">ControllerBase.SignOut()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignOut(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(system-string())">ControllerBase.SignOut(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.SignOut(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string)">ControllerBase.TryUpdateModelAsync(object, Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync(object, Type, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object)">ControllerBase.TryValidateModel(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object-system-string)">ControllerBase.TryValidateModel(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.httpcontext">ControllerBase.HttpContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.request">ControllerBase.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.response">ControllerBase.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.routedata">ControllerBase.RouteData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelstate">ControllerBase.ModelState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.controllercontext">ControllerBase.ControllerContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.metadataprovider">ControllerBase.MetadataProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelbinderfactory">ControllerBase.ModelBinderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.url">ControllerBase.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problemdetailsfactory">ControllerBase.ProblemDetailsFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user">ControllerBase.User</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.empty">ControllerBase.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController__ctor_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.#ctor*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController__ctor_NKDUPVS_React_Server_Data_ApplicationDbContext_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+  TaskController(ApplicationDbContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor for the TaskController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to perform CRUD operations on tasks and manage task assignments. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to access the database context for handling API requests related to tasks. This setup is essential for the functionality of the TaskController, as it relies on the database context to fetch, create, update, and delete task data, as well as manage task assignments and retrieve task types for use in the frontend application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskController(ApplicationDbContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="NKDUPVS_React.Server.Data.ApplicationDbContext.html">ApplicationDbContext</a></dt>
+    <dd><p>The application database context.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_AssignTask_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.AssignTask*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_AssignTask_NKDUPVS_React_Server_Controllers_TaskController_AssignTaskRequest_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.AssignTask(NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest)">
+  AssignTask(AssignTaskRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles POST requests to assign a task to multiple mentees. This method accepts an AssignTaskRequest object in the request body, which includes the task ID and a list of mentee codes to whom the task should be assigned. The method first filters out any null or empty mentee codes from the provided list. If there are no valid mentee codes, it removes all existing assignments for the task and marks the task as unassigned. If there are valid mentee codes, it retrieves the current assignments for the task and compares them with the new list of mentee codes. It removes any assignments that are no longer valid and adds new assignments for any new mentee codes. Finally, it marks the task as assigned and saves the changes to the database before returning a success response. This endpoint allows for efficient management of task assignments to mentees within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;assign&quot;)]
+public Task&lt;IActionResult&gt; AssignTask(TaskController.AssignTaskRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.html">TaskController</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html">AssignTaskRequest</a></dt>
+    <dd><p>The request object containing the task ID and list of mentee codes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The result of the assignment operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_CreateTask_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.CreateTask*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_CreateTask_NKDUPVS_React_Server_Models_Task_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.CreateTask(NKDUPVS_React.Server.Models.Task)">
+  CreateTask(Task)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles POST requests to create a new task. This method accepts a Task object in the request body, adds it to the Tasks table in the database, and saves the changes. Upon successful creation, the newly created task is returned in the response. This endpoint allows users to create new tasks within the application, providing them with the ability to manage their tasks effectively. The Task object should include necessary properties such as Name, Description, MaterialLink, Deadline, CreatedBy, IsAssigned, and TaskTypeId for proper task creation and management.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;create&quot;)]
+public Task&lt;IActionResult&gt; CreateTask(Task task)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>task</code> <a class="xref" href="NKDUPVS_React.Server.Models.Task.html">Task</a></dt>
+    <dd><p>The task to create.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The created task.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_CreateTaskForMentees_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.CreateTaskForMentees*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_CreateTaskForMentees_NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.CreateTaskForMentees(NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest)">
+  CreateTaskForMentees(TaskCreationRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles POST requests to create a new task and assign it to multiple mentees. This method accepts a TaskCreationRequest object in the request body, which includes task details and a list of mentee codes to whom the task should be assigned. The method creates a new task based on the provided details, saves it to the database, and then iterates through the list of mentee codes to create corresponding SemesterPlanTask entries for each mentee. If any mentee code does not have an associated semester plan, it will be skipped. Finally, the created task is returned in the response. This endpoint allows users to efficiently create tasks and assign them to multiple mentees in one operation, streamlining task management within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;createForMentees&quot;)]
+public Task&lt;IActionResult&gt; CreateTaskForMentees(TaskController.TaskCreationRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.html">TaskController</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html">TaskCreationRequest</a></dt>
+    <dd><p>The request containing task details and mentee codes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The created task.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_DeleteTask_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.DeleteTask*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_DeleteTask_System_Int32_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.DeleteTask(System.Int32)">
+  DeleteTask(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles DELETE requests to remove a task by its ID. This method first retrieves the task from the database using the provided ID. If the task is found, it checks for any related assignments in the SemesterPlanTasks table. If there are related assignments, it further checks if any of those assignments have associated feedback in the Feedback table. If feedback exists for any of the assignments, the method returns a BadRequest response indicating that the task cannot be deleted because it has been completed by at least one mentee. If there are no feedback entries, it proceeds to remove all related assignments and then deletes the task itself from the database. Finally, it saves the changes and returns an Ok response indicating successful deletion. This endpoint ensures that tasks with completed assignments cannot be deleted, preserving important data integrity within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete(&quot;delete/{id}&quot;)]
+public Task&lt;IActionResult&gt; DeleteTask(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The ID of the task to delete.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The result of the delete operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_GetAssignedTasks_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetAssignedTasks*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_GetAssignedTasks_System_String_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetAssignedTasks(System.String)">
+  GetAssignedTasks(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles GET requests to retrieve a list of tasks assigned to a specific mentee. This method queries the SemesterPlanTasks table joined with the SemesterPlans and Tasks tables to find all tasks assigned to the mentee identified by the provided mentee code. It also performs a left join with the Feedback table to include any feedback associated with each task assignment. The resulting list includes task details, assignment information, and feedback (if available) for each task assigned to the mentee. This endpoint allows mentees to view their assigned tasks along with any feedback they may have received, enabling them to manage their tasks effectively within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;assignedTasks/{menteeCode}&quot;)]
+public Task&lt;IActionResult&gt; GetAssignedTasks(string menteeCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>menteeCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The code of the mentee for whom to retrieve assigned tasks.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>A list of tasks assigned to the specified mentee.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_GetTaskAssignments_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTaskAssignments*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_GetTaskAssignments_System_Int32_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTaskAssignments(System.Int32)">
+  GetTaskAssignments(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles GET requests to retrieve a list of mentee codes that are assigned to a specific task. This method queries the SemesterPlanTasks table joined with the SemesterPlans table to find all assignments for the given task ID and returns a list of mentee codes associated with those assignments. This endpoint allows users to see which mentees are currently assigned to a particular task, providing insight into task distribution and enabling better management of task assignments within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;assignments/{taskId}&quot;)]
+public Task&lt;IActionResult&gt; GetTaskAssignments(int taskId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>taskId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The ID of the task for which to retrieve assignments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>A list of mentee codes assigned to the specified task.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_GetTaskTypes_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTaskTypes*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_GetTaskTypes" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTaskTypes">
+  GetTaskTypes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles GET requests to retrieve a list of all available task types. This method queries the TaskTypes table in the database and returns the list of task types in the response. This endpoint allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;taskTypes&quot;)]
+public Task&lt;IActionResult&gt; GetTaskTypes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>A list of task types.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_GetTasksByUser_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTasksByUser*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_GetTasksByUser_System_String_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.GetTasksByUser(System.String)">
+  GetTasksByUser(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles GET requests to retrieve a list of tasks created by a specific user. This method queries the Tasks table in the database, filtering tasks based on the CreatedBy property that matches the provided user code. The resulting list of tasks is returned in the response, allowing users to view and manage their created tasks within the application. This endpoint is essential for providing users with access to their task data and enabling them to perform actions such as updating or deleting their tasks as needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;user/{userCode}&quot;)]
+public Task&lt;IActionResult&gt; GetTasksByUser(string userCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The code of the user for whom to retrieve tasks.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>A list of tasks created by the specified user.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_MarkTaskCompleted_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.MarkTaskCompleted*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_MarkTaskCompleted_NKDUPVS_React_Server_Controllers_TaskController_CompleteTaskRequest_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.MarkTaskCompleted(NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest)">
+  MarkTaskCompleted(CompleteTaskRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles POST requests to mark a task as completed for a specific mentee. This method accepts a CompleteTaskRequest object in the request body, which includes the task ID, mentee code, and an optional completion file link. The method first retrieves the semester plan associated with the provided mentee code, then finds the corresponding task assignment for that semester plan and task ID. If a completion file link is provided, it updates the CompletionFile property of the assignment with that link; otherwise, it sets it to a default value indicating completion. Finally, it saves the changes to the database and returns the updated assignment information in the response. This endpoint allows mentees to mark their tasks as completed and optionally provide evidence of completion through a file link, facilitating better tracking of task progress within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;complete&quot;)]
+public Task&lt;IActionResult&gt; MarkTaskCompleted(TaskController.CompleteTaskRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.html">TaskController</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html">CompleteTaskRequest</a></dt>
+    <dd><p>The request object containing the task ID, mentee code, and completion file link.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The updated assignment information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_UpdateTask_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.UpdateTask*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_UpdateTask_System_Int32_NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.UpdateTask(System.Int32,NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest)">
+  UpdateTask(int, TaskCreationRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles PUT requests to update an existing task. This method accepts the task ID as a route parameter and a TaskCreationRequest object in the request body containing the updated task details and a list of mentee codes for assignment. The method first retrieves the existing task from the database using the provided ID. If the task is found, it updates the task's properties with the new values from the request. It then manages task assignments by comparing the new list of mentee codes with the current assignments in the database, removing any assignments that are no longer valid and adding new assignments for any new mentee codes. Finally, it saves the changes to the database and returns the updated task in the response. This endpoint allows users to efficiently update tasks and manage their assignments to mentees within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut(&quot;update/{id}&quot;)]
+public Task&lt;IActionResult&gt; UpdateTask(int id, TaskController.TaskCreationRequest updatedRequest)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The ID of the task to update.</p>
+</dd>
+    <dt><code>updatedRequest</code> <a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.html">TaskController</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html">TaskCreationRequest</a></dt>
+    <dd><p>The request containing updated task details and mentee codes.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a>&gt;</dt>
+    <dd><p>The updated task.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

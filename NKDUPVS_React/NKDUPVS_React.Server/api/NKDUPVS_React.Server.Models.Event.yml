@@ -1,0 +1,607 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Models.Event
+  commentId: T:NKDUPVS_React.Server.Models.Event
+  id: Event
+  parent: NKDUPVS_React.Server.Models
+  children:
+  - NKDUPVS_React.Server.Models.Event.address
+  - NKDUPVS_React.Server.Models.Event.comment
+  - NKDUPVS_React.Server.Models.Event.endTime
+  - NKDUPVS_React.Server.Models.Event.id_Event
+  - NKDUPVS_React.Server.Models.Event.name
+  - NKDUPVS_React.Server.Models.Event.startTime
+  langs:
+  - csharp
+  - vb
+  name: Event
+  nameWithType: Event
+  fullName: NKDUPVS_React.Server.Models.Event
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Event
+    path: data/Models/Event.cs
+    startLine: 4
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public class Event
+    content.vb: Public Class [Event]
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Models.Event.id_Event
+  commentId: P:NKDUPVS_React.Server.Models.Event.id_Event
+  id: id_Event
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: id_Event
+  nameWithType: Event.id_Event
+  fullName: NKDUPVS_React.Server.Models.Event.id_Event
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: id_Event
+    path: data/Models/Event.cs
+    startLine: 6
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public int? id_Event { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property id_Event As Integer?
+  overload: NKDUPVS_React.Server.Models.Event.id_Event*
+- uid: NKDUPVS_React.Server.Models.Event.name
+  commentId: P:NKDUPVS_React.Server.Models.Event.name
+  id: name
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Event.name
+  fullName: NKDUPVS_React.Server.Models.Event.name
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: name
+    path: data/Models/Event.cs
+    startLine: 7
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property name As String
+  overload: NKDUPVS_React.Server.Models.Event.name*
+- uid: NKDUPVS_React.Server.Models.Event.startTime
+  commentId: P:NKDUPVS_React.Server.Models.Event.startTime
+  id: startTime
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: startTime
+  nameWithType: Event.startTime
+  fullName: NKDUPVS_React.Server.Models.Event.startTime
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: startTime
+    path: data/Models/Event.cs
+    startLine: 8
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public DateTime? startTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property startTime As Date?
+  overload: NKDUPVS_React.Server.Models.Event.startTime*
+- uid: NKDUPVS_React.Server.Models.Event.endTime
+  commentId: P:NKDUPVS_React.Server.Models.Event.endTime
+  id: endTime
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: endTime
+  nameWithType: Event.endTime
+  fullName: NKDUPVS_React.Server.Models.Event.endTime
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: endTime
+    path: data/Models/Event.cs
+    startLine: 9
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public DateTime? endTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property endTime As Date?
+  overload: NKDUPVS_React.Server.Models.Event.endTime*
+- uid: NKDUPVS_React.Server.Models.Event.address
+  commentId: P:NKDUPVS_React.Server.Models.Event.address
+  id: address
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: address
+  nameWithType: Event.address
+  fullName: NKDUPVS_React.Server.Models.Event.address
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: address
+    path: data/Models/Event.cs
+    startLine: 10
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property address As String
+  overload: NKDUPVS_React.Server.Models.Event.address*
+- uid: NKDUPVS_React.Server.Models.Event.comment
+  commentId: P:NKDUPVS_React.Server.Models.Event.comment
+  id: comment
+  parent: NKDUPVS_React.Server.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: comment
+  nameWithType: Event.comment
+  fullName: NKDUPVS_React.Server.Models.Event.comment
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/Event.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: comment
+    path: data/Models/Event.cs
+    startLine: 11
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property comment As String
+  overload: NKDUPVS_React.Server.Models.Event.comment*
+references:
+- uid: NKDUPVS_React.Server.Models
+  commentId: N:NKDUPVS_React.Server.Models
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Models
+  nameWithType: NKDUPVS_React.Server.Models
+  fullName: NKDUPVS_React.Server.Models
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Models
+    name: Models
+    href: NKDUPVS_React.Server.Models.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Models
+    name: Models
+    href: NKDUPVS_React.Server.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Models.Event.id_Event*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.id_Event
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_id_Event
+  name: id_Event
+  nameWithType: Event.id_Event
+  fullName: NKDUPVS_React.Server.Models.Event.id_Event
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Models.Event.name*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.name
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_name
+  name: name
+  nameWithType: Event.name
+  fullName: NKDUPVS_React.Server.Models.Event.name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Models.Event.startTime*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.startTime
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_startTime
+  name: startTime
+  nameWithType: Event.startTime
+  fullName: NKDUPVS_React.Server.Models.Event.startTime
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: NKDUPVS_React.Server.Models.Event.endTime*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.endTime
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_endTime
+  name: endTime
+  nameWithType: Event.endTime
+  fullName: NKDUPVS_React.Server.Models.Event.endTime
+- uid: NKDUPVS_React.Server.Models.Event.address*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.address
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_address
+  name: address
+  nameWithType: Event.address
+  fullName: NKDUPVS_React.Server.Models.Event.address
+- uid: NKDUPVS_React.Server.Models.Event.comment*
+  commentId: Overload:NKDUPVS_React.Server.Models.Event.comment
+  href: NKDUPVS_React.Server.Models.Event.html#NKDUPVS_React_Server_Models_Event_comment
+  name: comment
+  nameWithType: Event.comment
+  fullName: NKDUPVS_React.Server.Models.Event.comment

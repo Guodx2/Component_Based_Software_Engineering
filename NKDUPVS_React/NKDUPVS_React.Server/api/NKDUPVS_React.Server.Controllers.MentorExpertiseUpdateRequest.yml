@@ -1,0 +1,493 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  id: MentorExpertiseUpdateRequest
+  parent: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+  - NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+  langs:
+  - csharp
+  - vb
+  name: MentorExpertiseUpdateRequest
+  nameWithType: MentorExpertiseUpdateRequest
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/MentorController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MentorExpertiseUpdateRequest
+    path: Controllers/MentorController.cs
+    startLine: 379
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Request model for updating a mentor's expertise areas. This model contains the mentor's unique code and a list of expertise items, where each item includes information about the study program, specialization, and priority. The MentorExpertiseUpdateRequest is used in the UpdateExpertise endpoint of the MentorController to allow mentors to update their areas of expertise in the application. Each expertise item represents a specific area of knowledge or skill that the mentor can offer to mentees, and the priority field can be used to indicate the importance or relevance of each expertise area for matching mentors with mentees based on their academic interests.
+  example: []
+  syntax:
+    content: public class MentorExpertiseUpdateRequest
+    content.vb: Public Class MentorExpertiseUpdateRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+  commentId: P:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+  id: MentorCode
+  parent: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  langs:
+  - csharp
+  - vb
+  name: MentorCode
+  nameWithType: MentorExpertiseUpdateRequest.MentorCode
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/MentorController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MentorCode
+    path: Controllers/MentorController.cs
+    startLine: 384
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The unique code of the mentor for whom to update expertise areas. This code is used to identify the mentor in the database and associate the provided expertise items with the correct mentor record. The MentorCode is a crucial part of the request model as it ensures that the expertise updates are applied to the intended mentor in the application.
+  example: []
+  syntax:
+    content: public string? MentorCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MentorCode As String
+  overload: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode*
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+  commentId: P:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+  id: ExpertiseList
+  parent: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  langs:
+  - csharp
+  - vb
+  name: ExpertiseList
+  nameWithType: MentorExpertiseUpdateRequest.ExpertiseList
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/MentorController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: ExpertiseList
+    path: Controllers/MentorController.cs
+    startLine: 389
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: A list of expertise items representing the areas of expertise for the mentor. Each item in the list contains information about a specific study program, specialization, and priority level. The ExpertiseList is used to update the mentor's expertise areas in the database, allowing mentees to find mentors with relevant academic interests when searching for mentorship opportunities in the application.
+  example: []
+  syntax:
+    content: public List<ExpertiseItem>? ExpertiseList { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{NKDUPVS_React.Server.Controllers.ExpertiseItem}
+    content.vb: Public Property ExpertiseList As List(Of ExpertiseItem)
+  overload: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList*
+references:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+  href: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.html#NKDUPVS_React_Server_Controllers_MentorExpertiseUpdateRequest_MentorCode
+  name: MentorCode
+  nameWithType: MentorExpertiseUpdateRequest.MentorCode
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+  href: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.html#NKDUPVS_React_Server_Controllers_MentorExpertiseUpdateRequest_ExpertiseList
+  name: ExpertiseList
+  nameWithType: MentorExpertiseUpdateRequest.ExpertiseList
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList
+- uid: System.Collections.Generic.List{NKDUPVS_React.Server.Controllers.ExpertiseItem}
+  commentId: T:System.Collections.Generic.List{NKDUPVS_React.Server.Controllers.ExpertiseItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ExpertiseItem>
+  nameWithType: List<ExpertiseItem>
+  fullName: System.Collections.Generic.List<NKDUPVS_React.Server.Controllers.ExpertiseItem>
+  nameWithType.vb: List(Of ExpertiseItem)
+  fullName.vb: System.Collections.Generic.List(Of NKDUPVS_React.Server.Controllers.ExpertiseItem)
+  name.vb: List(Of ExpertiseItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Controllers.ExpertiseItem
+    name: ExpertiseItem
+    href: NKDUPVS_React.Server.Controllers.ExpertiseItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Controllers.ExpertiseItem
+    name: ExpertiseItem
+    href: NKDUPVS_React.Server.Controllers.ExpertiseItem.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

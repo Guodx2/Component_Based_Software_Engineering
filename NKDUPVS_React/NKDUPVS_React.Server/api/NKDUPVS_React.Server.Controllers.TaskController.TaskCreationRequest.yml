@@ -1,0 +1,820 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  id: TaskController.TaskCreationRequest
+  parent: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+  langs:
+  - csharp
+  - vb
+  name: TaskController.TaskCreationRequest
+  nameWithType: TaskController.TaskCreationRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: TaskCreationRequest
+    path: Controllers/TaskController.cs
+    startLine: 496
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator's code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.
+  example: []
+  syntax:
+    content: public class TaskController.TaskCreationRequest
+    content.vb: Public Class TaskController.TaskCreationRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+  id: Name
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TaskController.TaskCreationRequest.Name
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Name
+    path: Controllers/TaskController.cs
+    startLine: 501
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The name of the task being created. This property is used to specify the title or name of the task that is being created. It is a nullable string, allowing for the possibility that the task name may not be provided in the request. However, in typical usage, this property should contain a valid task name to ensure that the task is properly identified and displayed within the application.
+  example: []
+  syntax:
+    content: public string? Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+  id: Description
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TaskController.TaskCreationRequest.Description
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Description
+    path: Controllers/TaskController.cs
+    startLine: 506
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: A description of the task being created. This property provides additional details or information about the task, allowing users to understand the requirements or objectives of the task. It is a nullable string, meaning that it can be left empty if no description is provided. However, in typical usage, this property should contain relevant information to help users understand the context and expectations for the task within the application.
+  example: []
+  syntax:
+    content: public string? Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+  id: MaterialLink
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: MaterialLink
+  nameWithType: TaskController.TaskCreationRequest.MaterialLink
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MaterialLink
+    path: Controllers/TaskController.cs
+    startLine: 511
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: A URL link to relevant materials for the task being created. This property allows users to provide a link to resources, documents, or other materials that are associated with the task. It is a nullable string, meaning that it can be left empty if no material link is provided. However, in typical usage, this property should contain a valid URL to ensure that users can access the necessary materials related to the task within the application.
+  example: []
+  syntax:
+    content: public string? MaterialLink { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MaterialLink As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+  id: Deadline
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: TaskController.TaskCreationRequest.Deadline
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Deadline
+    path: Controllers/TaskController.cs
+    startLine: 516
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The deadline for the task being created. This property indicates when the task is due and helps users manage their time effectively. It is a nullable DateTime, allowing for the possibility that a deadline may not be provided in the request. However, in typical usage, this property should contain a valid date and time to ensure that users are aware of the task's due date and can plan accordingly within the application.
+  example: []
+  syntax:
+    content: public DateTime? Deadline { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Deadline As Date?
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+  id: CreatedBy
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: CreatedBy
+  nameWithType: TaskController.TaskCreationRequest.CreatedBy
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: CreatedBy
+    path: Controllers/TaskController.cs
+    startLine: 521
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The code of the user who created the task. This property is used to identify the creator of the task, allowing for proper attribution and tracking within the application. It is a nullable string, meaning that it can be left empty if the creator's code is not provided in the request. However, in typical usage, this property should contain a valid user code to ensure that the task is properly associated with its creator within the application.
+  example: []
+  syntax:
+    content: public string? CreatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedBy As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+  id: IsAssigned
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: IsAssigned
+  nameWithType: TaskController.TaskCreationRequest.IsAssigned
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IsAssigned
+    path: Controllers/TaskController.cs
+    startLine: 526
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Indicates whether the task is currently assigned to any mentees. This property is used to track the assignment status of the task, allowing users to quickly see if a task has been assigned or not. It is a nullable boolean, meaning that it can be left empty if the assignment status is not provided in the request. However, in typical usage, this property should contain a value (true or false) to ensure that the task's assignment status is accurately reflected within the application.
+  example: []
+  syntax:
+    content: public bool? IsAssigned { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsAssigned As Boolean?
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+  id: TaskTypeId
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: TaskTypeId
+  nameWithType: TaskController.TaskCreationRequest.TaskTypeId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: TaskTypeId
+    path: Controllers/TaskController.cs
+    startLine: 531
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The ID of the task type, categorizing the task based on predefined types. This property allows users to classify tasks according to their nature or purpose, making it easier to organize and filter tasks within the application. It is a nullable integer, allowing for the possibility that a task type may not be provided in the request. However, in typical usage, this property should contain a valid task type ID to ensure that the task is properly categorized and can be easily identified based on its type within the application.
+  example: []
+  syntax:
+    content: public int? TaskTypeId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TaskTypeId As Integer?
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+  id: MenteeCodes
+  parent: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  langs:
+  - csharp
+  - vb
+  name: MenteeCodes
+  nameWithType: TaskController.TaskCreationRequest.MenteeCodes
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MenteeCodes
+    path: Controllers/TaskController.cs
+    startLine: 536
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: A list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This property allows for multiple mentee codes to be included in the task creation request, enabling the assignment of a single task to multiple mentees in one operation. It is a nullable list, meaning that it can be left empty if no mentee codes are provided. However, in typical usage, this property should contain at least one valid mentee code to ensure that the task is assigned to the intended recipients within the application upon creation.
+  example: []
+  syntax:
+    content: public List<string>? MenteeCodes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property MenteeCodes As List(Of String)
+  overload: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes*
+references:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Name
+  name: Name
+  nameWithType: TaskController.TaskCreationRequest.Name
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Description
+  name: Description
+  nameWithType: TaskController.TaskCreationRequest.Description
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MaterialLink
+  name: MaterialLink
+  nameWithType: TaskController.TaskCreationRequest.MaterialLink
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Deadline
+  name: Deadline
+  nameWithType: TaskController.TaskCreationRequest.Deadline
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_CreatedBy
+  name: CreatedBy
+  nameWithType: TaskController.TaskCreationRequest.CreatedBy
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_IsAssigned
+  name: IsAssigned
+  nameWithType: TaskController.TaskCreationRequest.IsAssigned
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_TaskTypeId
+  name: TaskTypeId
+  nameWithType: TaskController.TaskCreationRequest.TaskTypeId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+  href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html#NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MenteeCodes
+  name: MenteeCodes
+  nameWithType: TaskController.TaskCreationRequest.MenteeCodes
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

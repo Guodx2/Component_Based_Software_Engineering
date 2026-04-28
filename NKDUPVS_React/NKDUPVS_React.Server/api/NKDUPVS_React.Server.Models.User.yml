@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Models.User
+  commentId: T:NKDUPVS_React.Server.Models.User
+  id: User
+  parent: NKDUPVS_React.Server.Models
+  children:
+  - NKDUPVS_React.Server.Models.User.Code
+  - NKDUPVS_React.Server.Models.User.Email
+  - NKDUPVS_React.Server.Models.User.IsAdmin
+  - NKDUPVS_React.Server.Models.User.IsMentor
+  - NKDUPVS_React.Server.Models.User.IsSubmitted
+  - NKDUPVS_React.Server.Models.User.IsVerified
+  - NKDUPVS_React.Server.Models.User.LastName
+  - NKDUPVS_React.Server.Models.User.Name
+  - NKDUPVS_React.Server.Models.User.Password
+  - NKDUPVS_React.Server.Models.User.PhoneNumber
+  - NKDUPVS_React.Server.Models.User.Username
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: User
+  fullName: NKDUPVS_React.Server.Models.User
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: User
+    path: data/Models/User.cs
+    startLine: 2
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public class User
+    content.vb: Public Class User
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Models.User.Code
+  commentId: P:NKDUPVS_React.Server.Models.User.Code
+  id: Code
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: User.Code
+  fullName: NKDUPVS_React.Server.Models.User.Code
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Code
+    path: data/Models/User.cs
+    startLine: 4
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: NKDUPVS_React.Server.Models.User.Code*
+- uid: NKDUPVS_React.Server.Models.User.Username
+  commentId: P:NKDUPVS_React.Server.Models.User.Username
+  id: Username
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: User.Username
+  fullName: NKDUPVS_React.Server.Models.User.Username
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Username
+    path: data/Models/User.cs
+    startLine: 5
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? Username { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: NKDUPVS_React.Server.Models.User.Username*
+- uid: NKDUPVS_React.Server.Models.User.Password
+  commentId: P:NKDUPVS_React.Server.Models.User.Password
+  id: Password
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: User.Password
+  fullName: NKDUPVS_React.Server.Models.User.Password
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Password
+    path: data/Models/User.cs
+    startLine: 6
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: NKDUPVS_React.Server.Models.User.Password*
+- uid: NKDUPVS_React.Server.Models.User.Email
+  commentId: P:NKDUPVS_React.Server.Models.User.Email
+  id: Email
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: User.Email
+  fullName: NKDUPVS_React.Server.Models.User.Email
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Email
+    path: data/Models/User.cs
+    startLine: 7
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: NKDUPVS_React.Server.Models.User.Email*
+- uid: NKDUPVS_React.Server.Models.User.Name
+  commentId: P:NKDUPVS_React.Server.Models.User.Name
+  id: Name
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: User.Name
+  fullName: NKDUPVS_React.Server.Models.User.Name
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Name
+    path: data/Models/User.cs
+    startLine: 8
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: NKDUPVS_React.Server.Models.User.Name*
+- uid: NKDUPVS_React.Server.Models.User.LastName
+  commentId: P:NKDUPVS_React.Server.Models.User.LastName
+  id: LastName
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: User.LastName
+  fullName: NKDUPVS_React.Server.Models.User.LastName
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: LastName
+    path: data/Models/User.cs
+    startLine: 9
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: NKDUPVS_React.Server.Models.User.LastName*
+- uid: NKDUPVS_React.Server.Models.User.PhoneNumber
+  commentId: P:NKDUPVS_React.Server.Models.User.PhoneNumber
+  id: PhoneNumber
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: PhoneNumber
+  nameWithType: User.PhoneNumber
+  fullName: NKDUPVS_React.Server.Models.User.PhoneNumber
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: PhoneNumber
+    path: data/Models/User.cs
+    startLine: 10
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public string? PhoneNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PhoneNumber As String
+  overload: NKDUPVS_React.Server.Models.User.PhoneNumber*
+- uid: NKDUPVS_React.Server.Models.User.IsAdmin
+  commentId: P:NKDUPVS_React.Server.Models.User.IsAdmin
+  id: IsAdmin
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: IsAdmin
+  nameWithType: User.IsAdmin
+  fullName: NKDUPVS_React.Server.Models.User.IsAdmin
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IsAdmin
+    path: data/Models/User.cs
+    startLine: 11
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public bool? IsAdmin { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsAdmin As Boolean?
+  overload: NKDUPVS_React.Server.Models.User.IsAdmin*
+- uid: NKDUPVS_React.Server.Models.User.IsVerified
+  commentId: P:NKDUPVS_React.Server.Models.User.IsVerified
+  id: IsVerified
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: IsVerified
+  nameWithType: User.IsVerified
+  fullName: NKDUPVS_React.Server.Models.User.IsVerified
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IsVerified
+    path: data/Models/User.cs
+    startLine: 12
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public bool? IsVerified { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsVerified As Boolean?
+  overload: NKDUPVS_React.Server.Models.User.IsVerified*
+- uid: NKDUPVS_React.Server.Models.User.IsSubmitted
+  commentId: P:NKDUPVS_React.Server.Models.User.IsSubmitted
+  id: IsSubmitted
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: IsSubmitted
+  nameWithType: User.IsSubmitted
+  fullName: NKDUPVS_React.Server.Models.User.IsSubmitted
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IsSubmitted
+    path: data/Models/User.cs
+    startLine: 13
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public bool? IsSubmitted { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsSubmitted As Boolean?
+  overload: NKDUPVS_React.Server.Models.User.IsSubmitted*
+- uid: NKDUPVS_React.Server.Models.User.IsMentor
+  commentId: P:NKDUPVS_React.Server.Models.User.IsMentor
+  id: IsMentor
+  parent: NKDUPVS_React.Server.Models.User
+  langs:
+  - csharp
+  - vb
+  name: IsMentor
+  nameWithType: User.IsMentor
+  fullName: NKDUPVS_React.Server.Models.User.IsMentor
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/Models/User.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IsMentor
+    path: data/Models/User.cs
+    startLine: 14
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Models
+  syntax:
+    content: public bool? IsMentor { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsMentor As Boolean?
+  overload: NKDUPVS_React.Server.Models.User.IsMentor*
+references:
+- uid: NKDUPVS_React.Server.Models
+  commentId: N:NKDUPVS_React.Server.Models
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Models
+  nameWithType: NKDUPVS_React.Server.Models
+  fullName: NKDUPVS_React.Server.Models
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Models
+    name: Models
+    href: NKDUPVS_React.Server.Models.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Models
+    name: Models
+    href: NKDUPVS_React.Server.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Models.User.Code*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.Code
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_Code
+  name: Code
+  nameWithType: User.Code
+  fullName: NKDUPVS_React.Server.Models.User.Code
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Models.User.Username*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.Username
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_Username
+  name: Username
+  nameWithType: User.Username
+  fullName: NKDUPVS_React.Server.Models.User.Username
+- uid: NKDUPVS_React.Server.Models.User.Password*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.Password
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_Password
+  name: Password
+  nameWithType: User.Password
+  fullName: NKDUPVS_React.Server.Models.User.Password
+- uid: NKDUPVS_React.Server.Models.User.Email*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.Email
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_Email
+  name: Email
+  nameWithType: User.Email
+  fullName: NKDUPVS_React.Server.Models.User.Email
+- uid: NKDUPVS_React.Server.Models.User.Name*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.Name
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_Name
+  name: Name
+  nameWithType: User.Name
+  fullName: NKDUPVS_React.Server.Models.User.Name
+- uid: NKDUPVS_React.Server.Models.User.LastName*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.LastName
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_LastName
+  name: LastName
+  nameWithType: User.LastName
+  fullName: NKDUPVS_React.Server.Models.User.LastName
+- uid: NKDUPVS_React.Server.Models.User.PhoneNumber*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.PhoneNumber
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_PhoneNumber
+  name: PhoneNumber
+  nameWithType: User.PhoneNumber
+  fullName: NKDUPVS_React.Server.Models.User.PhoneNumber
+- uid: NKDUPVS_React.Server.Models.User.IsAdmin*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.IsAdmin
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_IsAdmin
+  name: IsAdmin
+  nameWithType: User.IsAdmin
+  fullName: NKDUPVS_React.Server.Models.User.IsAdmin
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Models.User.IsVerified*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.IsVerified
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_IsVerified
+  name: IsVerified
+  nameWithType: User.IsVerified
+  fullName: NKDUPVS_React.Server.Models.User.IsVerified
+- uid: NKDUPVS_React.Server.Models.User.IsSubmitted*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.IsSubmitted
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_IsSubmitted
+  name: IsSubmitted
+  nameWithType: User.IsSubmitted
+  fullName: NKDUPVS_React.Server.Models.User.IsSubmitted
+- uid: NKDUPVS_React.Server.Models.User.IsMentor*
+  commentId: Overload:NKDUPVS_React.Server.Models.User.IsMentor
+  href: NKDUPVS_React.Server.Models.User.html#NKDUPVS_React_Server_Models_User_IsMentor
+  name: IsMentor
+  nameWithType: User.IsMentor
+  fullName: NKDUPVS_React.Server.Models.User.IsMentor

@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Data
+  commentId: N:NKDUPVS_React.Server.Data
+  id: NKDUPVS_React.Server.Data
+  children:
+  - NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: NKDUPVS_React.Server.Data
+  nameWithType: NKDUPVS_React.Server.Data
+  fullName: NKDUPVS_React.Server.Data
+  type: Namespace
+  assemblies:
+  - NKDUPVS_React.Server
+references:
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext
+  commentId: T:NKDUPVS_React.Server.Data.ApplicationDbContext
+  parent: NKDUPVS_React.Server.Data
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext
+- uid: NKDUPVS_React.Server.Data
+  commentId: N:NKDUPVS_React.Server.Data
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Data
+  nameWithType: NKDUPVS_React.Server.Data
+  fullName: NKDUPVS_React.Server.Data
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Data
+    name: Data
+    href: NKDUPVS_React.Server.Data.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Data
+    name: Data
+    href: NKDUPVS_React.Server.Data.html

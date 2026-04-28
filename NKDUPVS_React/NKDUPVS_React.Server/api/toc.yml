@@ -1,0 +1,188 @@
+### YamlMime:TableOfContent
+items:
+- uid: NKDUPVS_React.Server.Controllers
+  name: NKDUPVS_React.Server.Controllers
+  type: Namespace
+  items:
+  - uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+    name: AffairFeedbackRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.ClassController
+    name: ClassController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.CreateAffairDto
+    name: CreateAffairDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.CreateTrainingDto
+    name: CreateTrainingDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.DepartmentController
+    name: DepartmentController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.EventsController
+    name: EventsController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.ExpertiseItem
+    name: ExpertiseItem
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.FeedbackController
+    name: FeedbackController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.FeedbackRequest
+    name: FeedbackRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest
+    name: FeedbackUpdateRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.HomeController
+    name: HomeController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.MenteeController
+    name: MenteeController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest
+    name: MentorAvailabilityUpdateRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.MentorController
+    name: MentorController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+    name: MentorExpertiseUpdateRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.RegisterAffairDto
+    name: RegisterAffairDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.RegisterTrainingDto
+    name: RegisterTrainingDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.RejectRequestModel
+    name: RejectRequestModel
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.SpecializationController
+    name: SpecializationController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.StudyProgramController
+    name: StudyProgramController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+    name: TaskController.AssignTaskRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+    name: TaskController.CompleteTaskRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+    name: TaskController.TaskCreationRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TaskTypesController
+    name: TaskTypesController
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest
+    name: TrainingFeedbackRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.UpdateAffairDto
+    name: UpdateAffairDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.UpdateTrainingDto
+    name: UpdateTrainingDto
+    type: Class
+  - uid: NKDUPVS_React.Server.Controllers.UserClassController
+    name: UserClassController
+    type: Class
+- uid: NKDUPVS_React.Server.Data
+  name: NKDUPVS_React.Server.Data
+  type: Namespace
+  items:
+  - uid: NKDUPVS_React.Server.Data.ApplicationDbContext
+    name: ApplicationDbContext
+    type: Class
+- uid: NKDUPVS_React.Server.Migrations
+  name: NKDUPVS_React.Server.Migrations
+  type: Namespace
+  items:
+  - uid: NKDUPVS_React.Server.Migrations.SeedAdminUser
+    name: SeedAdminUser
+    type: Class
+- uid: NKDUPVS_React.Server.Models
+  name: NKDUPVS_React.Server.Models
+  type: Namespace
+  items:
+  - uid: NKDUPVS_React.Server.Models.Affair
+    name: Affair
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Class
+    name: Class
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Department
+    name: Department
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Event
+    name: Event
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Feedback
+    name: Feedback
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Mentee
+    name: Mentee
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Mentor
+    name: Mentor
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.MentorExpertise
+    name: MentorExpertise
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.MentorRequest
+    name: MentorRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.RejectUserRequest
+    name: RejectUserRequest
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.RejectionHistory
+    name: RejectionHistory
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.RequestStatus
+    name: RequestStatus
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.SemesterPlan
+    name: SemesterPlan
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanEvent
+    name: SemesterPlanEvent
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanTask
+    name: SemesterPlanTask
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Specialization
+    name: Specialization
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.StudyProgram
+    name: StudyProgram
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Task
+    name: Task
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.TaskType
+    name: TaskType
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.Training
+    name: Training
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.User
+    name: User
+    type: Class
+  - uid: NKDUPVS_React.Server.Models.UserClass
+    name: UserClass
+    type: Class
+- uid: NKDUPVS_React.Server.Services
+  name: NKDUPVS_React.Server.Services
+  type: Namespace
+  items:
+  - uid: NKDUPVS_React.Server.Services.EmailService
+    name: EmailService
+    type: Class
+  - uid: NKDUPVS_React.Server.Services.IEmailService
+    name: IEmailService
+    type: Interface
+memberLayout: SamePage

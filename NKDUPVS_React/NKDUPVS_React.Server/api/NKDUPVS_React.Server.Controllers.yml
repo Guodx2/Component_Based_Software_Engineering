@@ -1,0 +1,313 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  id: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  - NKDUPVS_React.Server.Controllers.ClassController
+  - NKDUPVS_React.Server.Controllers.CreateAffairDto
+  - NKDUPVS_React.Server.Controllers.CreateTrainingDto
+  - NKDUPVS_React.Server.Controllers.DepartmentController
+  - NKDUPVS_React.Server.Controllers.EventsController
+  - NKDUPVS_React.Server.Controllers.ExpertiseItem
+  - NKDUPVS_React.Server.Controllers.FeedbackController
+  - NKDUPVS_React.Server.Controllers.FeedbackRequest
+  - NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest
+  - NKDUPVS_React.Server.Controllers.HomeController
+  - NKDUPVS_React.Server.Controllers.MenteeController
+  - NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest
+  - NKDUPVS_React.Server.Controllers.MentorController
+  - NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  - NKDUPVS_React.Server.Controllers.RegisterAffairDto
+  - NKDUPVS_React.Server.Controllers.RegisterTrainingDto
+  - NKDUPVS_React.Server.Controllers.RejectRequestModel
+  - NKDUPVS_React.Server.Controllers.SpecializationController
+  - NKDUPVS_React.Server.Controllers.StudyProgramController
+  - NKDUPVS_React.Server.Controllers.TaskController
+  - NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  - NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  - NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  - NKDUPVS_React.Server.Controllers.TaskTypesController
+  - NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest
+  - NKDUPVS_React.Server.Controllers.UpdateAffairDto
+  - NKDUPVS_React.Server.Controllers.UpdateTrainingDto
+  - NKDUPVS_React.Server.Controllers.UserClassController
+  langs:
+  - csharp
+  - vb
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  type: Namespace
+  assemblies:
+  - NKDUPVS_React.Server
+references:
+- uid: NKDUPVS_React.Server.Controllers.ClassController
+  commentId: T:NKDUPVS_React.Server.Controllers.ClassController
+  href: NKDUPVS_React.Server.Controllers.ClassController.html
+  name: ClassController
+  nameWithType: ClassController
+  fullName: NKDUPVS_React.Server.Controllers.ClassController
+- uid: NKDUPVS_React.Server.Controllers.DepartmentController
+  commentId: T:NKDUPVS_React.Server.Controllers.DepartmentController
+  href: NKDUPVS_React.Server.Controllers.DepartmentController.html
+  name: DepartmentController
+  nameWithType: DepartmentController
+  fullName: NKDUPVS_React.Server.Controllers.DepartmentController
+- uid: NKDUPVS_React.Server.Controllers.EventsController
+  commentId: T:NKDUPVS_React.Server.Controllers.EventsController
+  href: NKDUPVS_React.Server.Controllers.EventsController.html
+  name: EventsController
+  nameWithType: EventsController
+  fullName: NKDUPVS_React.Server.Controllers.EventsController
+- uid: NKDUPVS_React.Server.Controllers.CreateTrainingDto
+  commentId: T:NKDUPVS_React.Server.Controllers.CreateTrainingDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.CreateTrainingDto.html
+  name: CreateTrainingDto
+  nameWithType: CreateTrainingDto
+  fullName: NKDUPVS_React.Server.Controllers.CreateTrainingDto
+- uid: NKDUPVS_React.Server.Controllers.UpdateTrainingDto
+  commentId: T:NKDUPVS_React.Server.Controllers.UpdateTrainingDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.UpdateTrainingDto.html
+  name: UpdateTrainingDto
+  nameWithType: UpdateTrainingDto
+  fullName: NKDUPVS_React.Server.Controllers.UpdateTrainingDto
+- uid: NKDUPVS_React.Server.Controllers.CreateAffairDto
+  commentId: T:NKDUPVS_React.Server.Controllers.CreateAffairDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.CreateAffairDto.html
+  name: CreateAffairDto
+  nameWithType: CreateAffairDto
+  fullName: NKDUPVS_React.Server.Controllers.CreateAffairDto
+- uid: NKDUPVS_React.Server.Controllers.UpdateAffairDto
+  commentId: T:NKDUPVS_React.Server.Controllers.UpdateAffairDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.UpdateAffairDto.html
+  name: UpdateAffairDto
+  nameWithType: UpdateAffairDto
+  fullName: NKDUPVS_React.Server.Controllers.UpdateAffairDto
+- uid: NKDUPVS_React.Server.Controllers.RegisterTrainingDto
+  commentId: T:NKDUPVS_React.Server.Controllers.RegisterTrainingDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.RegisterTrainingDto.html
+  name: RegisterTrainingDto
+  nameWithType: RegisterTrainingDto
+  fullName: NKDUPVS_React.Server.Controllers.RegisterTrainingDto
+- uid: NKDUPVS_React.Server.Controllers.RegisterAffairDto
+  commentId: T:NKDUPVS_React.Server.Controllers.RegisterAffairDto
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.RegisterAffairDto.html
+  name: RegisterAffairDto
+  nameWithType: RegisterAffairDto
+  fullName: NKDUPVS_React.Server.Controllers.RegisterAffairDto
+- uid: NKDUPVS_React.Server.Controllers.FeedbackController
+  commentId: T:NKDUPVS_React.Server.Controllers.FeedbackController
+  href: NKDUPVS_React.Server.Controllers.FeedbackController.html
+  name: FeedbackController
+  nameWithType: FeedbackController
+  fullName: NKDUPVS_React.Server.Controllers.FeedbackController
+- uid: NKDUPVS_React.Server.Controllers.FeedbackRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.FeedbackRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.FeedbackRequest.html
+  name: FeedbackRequest
+  nameWithType: FeedbackRequest
+  fullName: NKDUPVS_React.Server.Controllers.FeedbackRequest
+- uid: NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.html
+  name: FeedbackUpdateRequest
+  nameWithType: FeedbackUpdateRequest
+  fullName: NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest
+- uid: NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.html
+  name: TrainingFeedbackRequest
+  nameWithType: TrainingFeedbackRequest
+  fullName: NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html
+  name: AffairFeedbackRequest
+  nameWithType: AffairFeedbackRequest
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+- uid: NKDUPVS_React.Server.Controllers.HomeController
+  commentId: T:NKDUPVS_React.Server.Controllers.HomeController
+  href: NKDUPVS_React.Server.Controllers.HomeController.html
+  name: HomeController
+  nameWithType: HomeController
+  fullName: NKDUPVS_React.Server.Controllers.HomeController
+- uid: NKDUPVS_React.Server.Controllers.MenteeController
+  commentId: T:NKDUPVS_React.Server.Controllers.MenteeController
+  href: NKDUPVS_React.Server.Controllers.MenteeController.html
+  name: MenteeController
+  nameWithType: MenteeController
+  fullName: NKDUPVS_React.Server.Controllers.MenteeController
+- uid: NKDUPVS_React.Server.Controllers.MentorController
+  commentId: T:NKDUPVS_React.Server.Controllers.MentorController
+  href: NKDUPVS_React.Server.Controllers.MentorController.html
+  name: MentorController
+  nameWithType: MentorController
+  fullName: NKDUPVS_React.Server.Controllers.MentorController
+- uid: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.html
+  name: MentorExpertiseUpdateRequest
+  nameWithType: MentorExpertiseUpdateRequest
+  fullName: NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest
+- uid: NKDUPVS_React.Server.Controllers.ExpertiseItem
+  commentId: T:NKDUPVS_React.Server.Controllers.ExpertiseItem
+  href: NKDUPVS_React.Server.Controllers.ExpertiseItem.html
+  name: ExpertiseItem
+  nameWithType: ExpertiseItem
+  fullName: NKDUPVS_React.Server.Controllers.ExpertiseItem
+- uid: NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.html
+  name: MentorAvailabilityUpdateRequest
+  nameWithType: MentorAvailabilityUpdateRequest
+  fullName: NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest
+- uid: NKDUPVS_React.Server.Controllers.RejectRequestModel
+  commentId: T:NKDUPVS_React.Server.Controllers.RejectRequestModel
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.RejectRequestModel.html
+  name: RejectRequestModel
+  nameWithType: RejectRequestModel
+  fullName: NKDUPVS_React.Server.Controllers.RejectRequestModel
+- uid: NKDUPVS_React.Server.Controllers.SpecializationController
+  commentId: T:NKDUPVS_React.Server.Controllers.SpecializationController
+  href: NKDUPVS_React.Server.Controllers.SpecializationController.html
+  name: SpecializationController
+  nameWithType: SpecializationController
+  fullName: NKDUPVS_React.Server.Controllers.SpecializationController
+- uid: NKDUPVS_React.Server.Controllers.StudyProgramController
+  commentId: T:NKDUPVS_React.Server.Controllers.StudyProgramController
+  href: NKDUPVS_React.Server.Controllers.StudyProgramController.html
+  name: StudyProgramController
+  nameWithType: StudyProgramController
+  fullName: NKDUPVS_React.Server.Controllers.StudyProgramController
+- uid: NKDUPVS_React.Server.Controllers.TaskController
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController
+  href: NKDUPVS_React.Server.Controllers.TaskController.html
+  name: TaskController
+  nameWithType: TaskController
+  fullName: NKDUPVS_React.Server.Controllers.TaskController
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.TaskController.html
+  name: TaskController.CompleteTaskRequest
+  nameWithType: TaskController.CompleteTaskRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  spec.csharp:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+    name: CompleteTaskRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html
+  spec.vb:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+    name: CompleteTaskRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.TaskController.html
+  name: TaskController.AssignTaskRequest
+  nameWithType: TaskController.AssignTaskRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  spec.csharp:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+    name: AssignTaskRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html
+  spec.vb:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+    name: AssignTaskRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html
+- uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  parent: NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.Server.Controllers.TaskController.html
+  name: TaskController.TaskCreationRequest
+  nameWithType: TaskController.TaskCreationRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+  spec.csharp:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+    name: TaskCreationRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html
+  spec.vb:
+  - uid: NKDUPVS_React.Server.Controllers.TaskController
+    name: TaskController
+    href: NKDUPVS_React.Server.Controllers.TaskController.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest
+    name: TaskCreationRequest
+    href: NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html
+- uid: NKDUPVS_React.Server.Controllers.TaskTypesController
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskTypesController
+  href: NKDUPVS_React.Server.Controllers.TaskTypesController.html
+  name: TaskTypesController
+  nameWithType: TaskTypesController
+  fullName: NKDUPVS_React.Server.Controllers.TaskTypesController
+- uid: NKDUPVS_React.Server.Controllers.UserClassController
+  commentId: T:NKDUPVS_React.Server.Controllers.UserClassController
+  href: NKDUPVS_React.Server.Controllers.UserClassController.html
+  name: UserClassController
+  nameWithType: UserClassController
+  fullName: NKDUPVS_React.Server.Controllers.UserClassController
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html

@@ -8,17 +8,29 @@ using System.Linq;
 using System.Threading.Tasks;
 using BCrypt.Net;
 
+/// <summary>
+/// Handles authentication-related operations such as Google login and traditional username/password login.
+/// </summary>
 [ApiController]
 [Route("api/auth")]
 public class AuthController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
 
+    /// <summary>
+    /// Initializes a new instance of the AuthController class with the specified database context.
+    /// </summary>
+    /// <param name="context">The database context.</param>
     public AuthController(ApplicationDbContext context)
     {
         _context = context;
     }
 
+    /// <summary>
+    /// Handles Google login by validating the provided token, creating a new user if necessary, and returning user details.
+    /// </summary>
+    /// <param name="request">The Google authentication request.</param>
+    /// <returns>The authentication result.</returns>
     [HttpPost("google")]
     public async Task<IActionResult> GoogleLogin([FromBody] GoogleAuthRequest request)
     {
@@ -85,6 +97,11 @@ public class AuthController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Handles traditional username/password login by validating the credentials and returning user details if successful.
+    /// </summary>
+    /// <param name="request">The login request.</param>
+    /// <returns>The login result.</returns>
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
@@ -116,16 +133,32 @@ public class AuthController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Model for Google authentication request, containing the token received from the client after Google sign-in.
+    /// </summary>
     // Model for token request
     public class GoogleAuthRequest
     {
+        /// <summary>
+        /// The token received from the client after Google sign-in, used for validating the user's identity with Google's authentication service.
+        /// </summary>
         public string? Token { get; set; }
     }
 
+    /// <summary>
+    /// Model for login request, containing the username and password for traditional authentication.
+    /// </summary>
     // Model for login request
     public class LoginRequest
     {
+        /// <summary>
+        /// The username provided by the user for authentication, typically an email or unique identifier.
+        /// </summary>
         public string? Username { get; set; }
+
+        /// <summary>
+        /// The password provided by the user for authentication, which will be verified against the stored hashed password in the database.
+        /// </summary>
         public string? Password { get; set; }
     }
 }

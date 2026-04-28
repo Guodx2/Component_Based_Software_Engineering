@@ -1,0 +1,1269 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NKDUPVS_React.Server</name>
+    </assembly>
+    <members>
+        <member name="T:AccountController">
+            <summary>
+            Handles account-related operations such as sign-in and sign-out.
+            </summary>
+        </member>
+        <member name="M:AccountController.SignIn">
+            <summary>
+            Initiates the Google authentication process.
+            </summary>
+            <returns>Sign-in result</returns>
+        </member>
+        <member name="M:AccountController.SignOut">
+            <summary>
+            Signs the user out and redirects to the home page.
+            </summary>
+            <returns>Sign-out result</returns>
+        </member>
+        <member name="T:AuthController">
+            <summary>
+            Handles authentication-related operations such as Google login and traditional username/password login.
+            </summary>
+        </member>
+        <member name="M:AuthController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Initializes a new instance of the AuthController class with the specified database context.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:AuthController.GoogleLogin(AuthController.GoogleAuthRequest)">
+            <summary>
+            Handles Google login by validating the provided token, creating a new user if necessary, and returning user details.
+            </summary>
+            <param name="request">The Google authentication request.</param>
+            <returns>The authentication result.</returns>
+        </member>
+        <member name="M:AuthController.Login(AuthController.LoginRequest)">
+            <summary>
+            Handles traditional username/password login by validating the credentials and returning user details if successful.
+            </summary>
+            <param name="request">The login request.</param>
+            <returns>The login result.</returns>
+        </member>
+        <member name="T:AuthController.GoogleAuthRequest">
+            <summary>
+            Model for Google authentication request, containing the token received from the client after Google sign-in.
+            </summary>
+        </member>
+        <member name="P:AuthController.GoogleAuthRequest.Token">
+            <summary>
+            The token received from the client after Google sign-in, used for validating the user's identity with Google's authentication service.
+            </summary>
+        </member>
+        <member name="T:AuthController.LoginRequest">
+            <summary>
+            Model for login request, containing the username and password for traditional authentication.
+            </summary>
+        </member>
+        <member name="P:AuthController.LoginRequest.Username">
+            <summary>
+            The username provided by the user for authentication, typically an email or unique identifier.
+            </summary>
+        </member>
+        <member name="P:AuthController.LoginRequest.Password">
+            <summary>
+            The password provided by the user for authentication, which will be verified against the stored hashed password in the database.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.ClassController">
+            <summary>
+            Controller for managing class-related operations such as retrieving class information and creating new classes.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.ClassController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext,Microsoft.Extensions.Logging.ILogger{NKDUPVS_React.Server.Controllers.ClassController})">
+            <summary>
+            Initializes a new instance of the ClassController class with the specified database context and logger.
+            </summary>
+            <param name="context">The database context.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.ClassController.GetClasses">
+            <summary>
+            Retrieves a list of all classes from the database and returns them to the client. This method is typically used to display available classes to users.
+            </summary>
+            <returns>A list of all classes.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.ClassController.CreateClass(NKDUPVS_React.Server.Models.Class)">
+            <summary>
+            Creates a new class in the database based on the provided class information. If no code is provided, a unique code will be generated. If a class with the same code already exists, it will return the existing class instead of creating a new one. This method is used to allow users to create new classes for their courses or groups.
+            </summary>
+            <param name="newClass">The class to create.</param>
+            <returns>The created class.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.DepartmentController">
+            <summary>
+            Controller for managing department-related operations such as retrieving department information. This controller provides endpoints for clients to access department data stored in the database, allowing them to display department options or details as needed.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.DepartmentController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Initializes a new instance of the DepartmentController class with the specified database context. This constructor is used to inject the ApplicationDbContext, which allows the controller to interact with the database and perform operations related to departments.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.DepartmentController.GetDepartments">
+            <summary>
+            Retrieves a list of all departments from the database and returns them to the client. The departments are returned in a format suitable for populating dropdowns or selection lists, with each department represented as an object containing a value (the department ID) and a label (the department name). This method is typically used to provide users with options for selecting their department when creating or updating their profile or when filtering data by department.
+            </summary>
+            <returns>A list of all departments.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.EventsController">
+            <summary>
+            Controller for managing events such as trainings and affairs. This controller provides endpoints for retrieving upcoming and past events, creating new events, updating existing events, deleting events, and registering users for events. It interacts with the database context to perform CRUD operations on events and their related entities, allowing clients to manage and access event information effectively.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Initializes a new instance of the EventsController class with the specified database context. This constructor is used to inject the ApplicationDbContext, which allows the controller to interact with the database and perform operations related to events, such as retrieving, creating, updating, and deleting event records.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetUpcomingAffairs">
+            <summary>
+            Retrieves a list of upcoming affairs from the database, including their associated event details. The method filters affairs based on their event's start time, returning only those that are scheduled to occur in the future. The returned data includes the affair ID, event ID, event name, start time, end time, address, and any comments associated with the event. This endpoint is typically used to display upcoming affairs to users, allowing them to see what events are scheduled and plan accordingly.
+            </summary>
+            <returns>A list of upcoming affairs.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetUpcomingTrainings">
+            <summary>
+            Retrieves a list of upcoming trainings from the database, including their associated event details. The method filters trainings based on their event's start time, returning only those that are scheduled to occur in the future. The returned data includes the training ID, event ID, event name, start time, end time, address, any comments associated with the event, and the code of the vice-dean for studies responsible for the training. This endpoint is typically used to display upcoming trainings to users, allowing them to see what events are scheduled and plan accordingly.
+            </summary>
+            <returns>A list of upcoming trainings.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetPastTrainings">
+            <summary>
+            Retrieves a list of past trainings from the database, including their associated event details. The method filters trainings based on their event's end time, returning only those that have already occurred. The returned data includes the training ID, event ID, event name, start time, end time, address, any comments associated with the event, and the code of the vice-dean for studies responsible for the training. This endpoint is typically used to display past trainings to users, allowing them to review what events have already taken place.
+            </summary>
+            <returns>A list of past trainings.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetPastAffairs">
+            <summary>
+            Retrieves a list of past affairs from the database, including their associated event details. The method filters affairs based on their event's end time, returning only those that have already occurred. The returned data includes the affair ID, event ID, event name, start time, end time, address, and any comments associated with the event. This endpoint is typically used to display past affairs to users, allowing them to review what events have already taken place.
+            </summary>
+            <returns>A list of past affairs.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.CreateTraining(NKDUPVS_React.Server.Controllers.CreateTrainingDto)">
+            <summary>
+            Creates a new training in the database based on the provided training information. The method first validates the input data, ensuring that the end time is after the start time. It then creates a new event record and saves it to the database, followed by creating a new training record that references the newly created event. Finally, it returns a success message along with the IDs of the created event and training. This endpoint is used to allow users to create new training events for their courses or groups.
+            </summary>
+            <param name="dto">The data transfer object containing the training information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.UpdateTraining(System.Int32,NKDUPVS_React.Server.Controllers.UpdateTrainingDto)">
+            <summary>
+            Updates an existing training in the database based on the provided training information. The method first validates the input data, ensuring that the end time is after the start time. It then retrieves the existing training record along with its associated event from the database. If the training is found, it updates the event details with the new information provided in the request and saves the changes to the database. Finally, it returns a success message indicating that the training was updated successfully. This endpoint is used to allow users to modify existing training events as needed.
+            </summary>
+            <param name="trainingId">The ID of the training to update.</param>
+            <param name="dto">The data transfer object containing the updated training information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.DeleteTraining(System.Int32)">
+            <summary>
+            Deletes an existing training from the database based on the provided training ID. The method first retrieves the training record along with its associated event from the database. If the training is found, it also retrieves and deletes any feedback and semester plan event registrations associated with the training's event. Finally, it removes the training and its associated event from the database and saves the changes. This endpoint is used to allow users to delete training events that are no longer needed or were created in error.
+            </summary>
+            <param name="trainingId">The ID of the training to delete.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.CreateAffair(NKDUPVS_React.Server.Controllers.CreateAffairDto)">
+            <summary>
+            Creates a new affair in the database based on the provided affair information. The method first validates the input data, ensuring that the end time is after the start time. It then creates a new event record and saves it to the database, followed by creating a new affair record that references the newly created event. Finally, it returns a success message along with the IDs of the created event and affair. This endpoint is used to allow users to create new affair events for their courses or groups.
+            </summary>
+            <param name="dto">The data transfer object containing the affair information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.UpdateAffair(System.Int32,NKDUPVS_React.Server.Controllers.UpdateAffairDto)">
+            <summary>
+            Updates an existing affair in the database based on the provided affair information. The method first validates the input data, ensuring that the end time is after the start time. It then retrieves the existing affair record along with its associated event from the database. If the affair is found, it updates the event details with the new information provided in the request and saves the changes to the database. Finally, it returns a success message indicating that the affair was updated successfully. This endpoint is used to allow users to modify existing affair events as needed.
+            </summary>
+            <param name="affairId">The ID of the affair to update.</param>
+            <param name="dto">The data transfer object containing the updated affair information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.DeleteAffair(System.Int32)">
+            <summary>
+            Deletes an existing affair from the database based on the provided affair ID. The method first retrieves the affair record along with its associated event from the database. If the affair is found, it also retrieves and deletes any feedback and semester plan event registrations associated with the affair's event. Finally, it removes the affair and its associated event from the database and saves the changes. This endpoint is used to allow users to delete affair events that are no longer needed or were created in error.
+            </summary>
+            <param name="affairId">The ID of the affair to delete.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.RegisterTraining(NKDUPVS_React.Server.Controllers.RegisterTrainingDto)">
+            <summary>
+            Registers a user for a training event based on the provided registration information. The method first retrieves the active semester plan for the user, ensuring that the registration is associated with the correct semester. It then checks if the user has already registered for the specified event to prevent duplicate registrations. If the registration is valid, it creates a new SemesterPlanEvent record linking the user's semester plan to the event and saves it to the database. Finally, it returns a success message along with the details of the registration. This endpoint is used to allow users to sign up for training events that they are interested in attending.
+            </summary>
+            <param name="dto">The data transfer object containing the registration information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.RegisterAffair(NKDUPVS_React.Server.Controllers.RegisterAffairDto)">
+            <summary>
+            Registers a user for an affair event based on the provided registration information. The method retrieves the most recent semester plan for the user, ensuring that the registration is associated with the correct semester. It then checks if the user has already registered for the specified event to prevent duplicate registrations. If the registration is valid, it creates a new SemesterPlanEvent record linking the user's semester plan to the event and saves it to the database. Finally, it returns a success message along with the details of the registration. This endpoint is used to allow users to sign up for affair events that they are interested in attending.
+            </summary>
+            <param name="dto">The data transfer object containing the registration information.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetRegisteredTrainings(System.String)">
+            <summary>
+            Retrieves a list of trainings that a user has registered for based on their user code. The method first retrieves the active semester plan for the user, ensuring that the registrations are associated with the correct semester. It then queries the SemesterPlanEvents to find all events that the user has registered for, filtering specifically for training events. The returned data includes the event ID, name, start time, end time, address, and any comments associated with the event. This endpoint is used to allow users to view the training events they have signed up for in the current semester.
+            </summary>
+            <param name="userCode">The code of the user for whom to retrieve registered trainings.</param>
+            <returns>A list of registered training events.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.EventsController.GetRegisteredAffairs(System.String)">
+            <summary>
+            Retrieves a list of affairs that a user has registered for based on their user code. The method first retrieves the active semester plan for the user, ensuring that the registrations are associated with the correct semester. It then queries the SemesterPlanEvents to find all events that the user has registered for, filtering specifically for affair events. The returned data includes the event ID, name, start time, end time, address, and any comments associated with the event. This endpoint is used to allow users to view the affair events they have signed up for in the current semester.
+            </summary>
+            <param name="userCode">The code of the user for whom to retrieve registered affairs.</param>
+            <returns>A list of registered affair events.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.CreateTrainingDto">
+            <summary>
+            Data transfer object for creating a new training event. This class contains properties that represent the necessary information to create a training, including the name of the training, start and end times, address, any comments, and the code of the vice-dean for studies responsible for the training. This DTO is used to receive data from the client when a new training event is being created through the API.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.name">
+            <summary>
+            Gets or sets the name of the training event. This property represents the title or name that will be associated with the training event being created. It is used to identify and describe the training in a meaningful way for users who will be viewing or registering for the event.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.startTime">
+            <summary>
+            Gets or sets the start time of the training event. This property represents the date and time when the training is scheduled to begin. It is used to determine when the event will take place and is important for scheduling and registration purposes.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.endTime">
+            <summary>
+            Gets or sets the end time of the training event. This property represents the date and time when the training is scheduled to end. It is used to determine the duration of the event and is important for scheduling and registration purposes, ensuring that users know how long the training will last.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.address">
+            <summary>
+            Gets or sets the address of the training event. This property represents the location where the training will take place. It is used to provide users with information about where they need to go to attend the training, which can be important for planning and logistics.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.comment">
+            <summary>
+            Gets or sets any comments associated with the training event. This property can be used to provide additional information or notes about the training, such as special instructions, requirements, or other relevant details that attendees should be aware of when registering for or attending the event.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateTrainingDto.createdBy">
+            <summary>
+            Gets or sets the code of the vice-dean for studies responsible for the training event. This property represents the identifier for the vice-dean who is overseeing or responsible for the training. It is used to associate the training with a specific vice-dean, which can be important for administrative purposes and for users who may need to contact the vice-dean regarding the training.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.UpdateTrainingDto">
+            <summary>
+            Data transfer object for updating an existing training event. This class contains properties that represent the information that can be updated for a training, including the name of the training, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing training event is being updated through the API, allowing users to modify the details of a training as needed.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateTrainingDto.name">
+            <summary>
+            Gets or sets the name of the training event. This property represents the title or name that will be associated with the training event being updated. It is used to identify and describe the training
+            in a meaningful way for users who will be viewing or registering for the event. When updating a training, this property allows users to change the name of the training if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateTrainingDto.startTime">
+            <summary>
+            Gets or sets the start time of the training event. This property represents the date and time when the training is scheduled to begin. It is used to determine when the event will take place and is important for scheduling and registration purposes. When updating a training, this property allows users to change the start time of the training if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateTrainingDto.endTime">
+            <summary>
+            Gets or sets the end time of the training event. This property represents the date and time when the training is scheduled to end. It is used to determine the duration of the event and is important for scheduling and registration purposes, ensuring that users know how long the training will last. When updating a training, this property allows users to change the end time of the training if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateTrainingDto.address">
+            <summary>
+            Gets or sets the address of the training event. This property represents the location where the training will take place. It is used to provide users with information about where they need to go to attend the training, which can be important for planning and logistics. When updating a training, this property allows users to change the address of the training if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateTrainingDto.comment">
+            <summary>
+            Gets or sets any comments associated with the training event. This property can be used to provide additional information or notes about the training, such as special instructions, requirements, or other relevant details that attendees should be aware of when registering for or attending the event. When updating a training, this property allows users to change the comments associated with the training if necessary.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.CreateAffairDto">
+            <summary>
+            Data transfer object for creating a new affair event. This class contains properties that represent the necessary information to create an affair, including the name of the affair, start and end times, address, any comments, and the code of the user who created the affair. This DTO is used to receive data from the client when a new affair event is being created through the API.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.name">
+            <summary>
+            Gets or sets the name of the affair event. This property represents the title or name that will be associated with the affair event being created. It is used to identify and describe the affair in a meaningful way for users who will be viewing or registering for the event.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.startTime">
+            <summary>
+            Gets or sets the start time of the affair event. This property represents the date and time when the affair is scheduled to begin. It is used to determine when the event will take place and is important for scheduling and registration purposes.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.endTime">
+            <summary>
+            Gets or sets the end time of the affair event. This property represents the date and time when the affair is scheduled to end. It is used to determine the duration of the event and is important for scheduling and registration purposes, ensuring that users know how long the affair will last.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.address">
+            <summary>
+            Gets or sets the address of the affair event. This property represents the location where the affair will take place. It is used to provide users with information about where they need to go to attend the affair, which can be important for planning and logistics.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.comment">
+            <summary>
+            Gets or sets any comments associated with the affair event. This property can be used to provide additional information or notes about the affair, such as special instructions, requirements, or other relevant details that attendees should be aware of when registering for or attending the event.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.CreateAffairDto.createdBy">
+            <summary>
+            Gets or sets the code of the user who created the affair event. This property represents the identifier for the user who is responsible for creating the affair. It is used to associate the affair with a specific user, which can be important for administrative purposes and for users who may need to contact the creator regarding the affair.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.UpdateAffairDto">
+            <summary>
+            Data transfer object for updating an existing affair event. This class contains properties that represent the information that can be updated for an affair, including the name of the affair, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing affair event is being updated through the API, allowing users to modify the details of an affair as needed.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateAffairDto.name">
+            <summary>
+            Gets or sets the name of the affair event. This property represents the title or name that will be associated with the affair event being updated. It is used to identify and describe the affair in a meaningful way for users who will be viewing or registering for the event. When updating an affair, this property allows users to change the name of the affair if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateAffairDto.startTime">
+            <summary>
+            Gets or sets the start time of the affair event. This property represents the date and time when the affair is scheduled to begin. It is used to determine when the event will take place and is important for scheduling and registration purposes. When updating an affair, this property allows users to change the start time of the affair if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateAffairDto.endTime">
+            <summary>
+            Gets or sets the end time of the affair event. This property represents the date and time when the affair is scheduled to end. It is used to determine the duration of the event and is important for scheduling and registration purposes, ensuring that users know how long the affair will last. When updating an affair, this property allows users to change the end time of the affair if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateAffairDto.address">
+            <summary>
+            Gets or sets the address of the affair event. This property represents the location where the affair will take place. It is used to provide users with information about where they need to go to attend the affair, which can be important for planning and logistics. When updating an affair, this property allows users to change the address of the affair if necessary.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.UpdateAffairDto.comment">
+            <summary>
+            Gets or sets any comments associated with the affair event. This property can be used to provide additional information or notes about the affair, such as special instructions, requirements, or other relevant details that attendees should be aware of when registering for or attending the event. When updating an affair, this property allows users to change the comments associated with the affair if necessary.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.RegisterTrainingDto">
+            <summary>
+            Data transfer object for registering a user for a training or affair event. This class contains properties that represent the necessary information to register for an event, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for a training or affair event through the API, allowing users to sign up for events they are interested in attending.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.RegisterTrainingDto.eventId">
+            <summary>
+            Gets or sets the ID of the event for which the user is registering. This property represents the unique identifier of the training or affair event that the user wants to attend. It is used to link the registration to the specific event in the database, allowing the system to track which users are registered for which events.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.RegisterTrainingDto.userCode">
+            <summary>
+            Gets or sets the code of the user who is registering for the event. This property represents the identifier for the user who is signing up for the training or affair. It is used to associate the registration with a specific user, which can be important for administrative purposes and for users who may want to view or manage their registrations.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.RegisterAffairDto">
+            <summary>
+            Data transfer object for registering a user for an affair event. This class contains properties that represent the necessary information to register for an affair, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for an affair event through the API, allowing users to sign up for events they are interested in attending.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.RegisterAffairDto.eventId">
+            <summary>
+            Gets or sets the ID of the event for which the user is registering. This property represents the unique identifier of the affair event that the user wants to attend. It is used to link the registration to the specific event in the database, allowing the system to track which users are registered for which events.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.RegisterAffairDto.userCode">
+            <summary>
+            Gets or sets the code of the user who is registering for the affair event. This property represents the identifier for the user who is signing up for the affair. It is used to associate the registration with a specific user, which can be important for administrative purposes and for users who may want to view or manage their registrations.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.FeedbackController">
+            <summary>
+            Controller for handling feedback related operations for semester plan tasks, trainings, and affairs.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for FeedbackController, initializes the database context.
+            </summary>
+            <param name="context">The database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.CreateFeedback(NKDUPVS_React.Server.Controllers.FeedbackRequest)">
+            <summary>
+            Creates feedback for a semester plan task. Validates the rating and updates the associated semester plan task to mark it as rated.
+            </summary>
+            <param name="request">The feedback request.</param>
+            <returns>The created feedback.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.UpdateFeedback(System.Int32,NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest)">
+            <summary>
+            Updates existing feedback for a semester plan task. Validates the rating and updates the feedback entry if it exists.
+            </summary>
+            <param name="semesterPlanTaskId">The ID of the semester plan task for which to update feedback.</param>
+            <param name="request">The feedback update request.</param>
+            <returns>The updated feedback.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.GetAwaitingTrainingFeedback(System.String)">
+            <summary>
+            Retrieves a list of trainings that have ended but have not yet received feedback from the specified mentee.
+            </summary>
+            <param name="menteeCode">The code of the mentee for whom to retrieve awaiting feedback.</param>
+            <returns>A list of trainings for which feedback is awaited.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.CreateTrainingFeedback(NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest)">
+            <summary>
+            Creates feedback for a training. Validates the rating, checks that the training has ended, and saves the feedback with a reference to the training and mentee code.
+            </summary>
+            <param name="request">The feedback creation request.</param>
+            <returns>The created feedback.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.CreateAffairFeedback(NKDUPVS_React.Server.Controllers.AffairFeedbackRequest)">
+            <summary>
+            Creates feedback for an affair. Validates the rating, checks that the associated affair's event has ended, prevents duplicate feedback for the same affair and mentee, and saves the feedback with a reference to the affair's event and mentee code.
+            </summary>
+            <param name="request">The feedback creation request.</param>
+            <returns>The created feedback.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.GetAwaitingAffairFeedback(System.String)">
+            <summary>
+            Retrieves a list of affairs that have ended but have not yet received feedback from the specified mentee. This checks for affairs associated with the mentee's semester plans and filters for those whose events have ended and do not have existing feedback from the mentee.
+            </summary>
+            <param name="menteeCode">The code of the mentee for whom to retrieve awaiting feedback.</param>
+            <returns>A list of affairs for which feedback is awaiting.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.GetTrainingFeedback(System.Int32)">
+            <summary>
+            Retrieves feedback for a specific training. This looks up feedback entries associated with the given training ID and includes the mentee's name and last name by joining with the Users table based on the MenteeCode.
+            </summary>
+            <param name="trainingId">The ID of the training for which to retrieve feedback.</param>
+            <returns>A list of feedback entries for the specified training.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.FeedbackController.GetAffairFeedback(System.Int32)">
+            <summary>
+            Retrieves feedback for a specific affair. This looks up feedback entries associated with the given affair ID (which is stored as fk_Affairid_Affair in the Feedback table) and includes the mentee's name and last name by joining with the Users table based on the MenteeCode.
+            </summary>
+            <param name="affairId">The ID of the affair for which to retrieve feedback.</param>
+            <returns>A list of feedback entries for the specified affair.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.FeedbackRequest">
+            <summary>
+            Request model for creating feedback for a semester plan task. Contains the semester plan task ID, rating, and an optional comment.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.FeedbackRequest.SemesterPlanTaskId">
+            <summary>
+            The ID of the semester plan task for which to create feedback. This is a nullable integer to allow for flexibility in the feedback creation process, as feedback can also be created for trainings and affairs which do not use this field. When creating feedback for a semester plan task, this field should be provided to associate the feedback with the correct task.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.FeedbackRequest.Rating">
+            <summary>
+            The rating for the feedback, which should be an integer value between 1 and 5. This field is required for creating feedback and will be validated to ensure it falls within the acceptable range. The rating represents the mentee's evaluation of the semester plan task, training, or affair for which the feedback is being created.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.FeedbackRequest.Comment">
+            <summary>
+            An optional comment for the feedback. This field allows the mentee to provide additional context or details about their rating. While it is not required, it can be useful for providing more specific feedback on what aspects were particularly good or could be improved. The comment will be stored along with the rating and can be displayed when retrieving feedback for a semester plan task, training, or affair.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest">
+            <summary>
+            Request model for updating existing feedback for a semester plan task. Contains the new rating and an optional comment. The SemesterPlanTaskId is not included in this request model since the feedback entry to be updated is identified by the route parameter in the UpdateFeedback endpoint. This model focuses on the fields that can be updated, which are the rating and comment.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.Rating">
+            <summary>
+            The new rating for the feedback, which should be an integer value between 1 and 5. This field is required for updating feedback and will be validated to ensure it falls within the acceptable range. The rating represents the mentee's updated evaluation of the semester plan task, training, or affair for which the feedback is being updated.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.Comment">
+            <summary>
+            An optional comment for the feedback update. This field allows the mentee to provide additional context or details about their updated rating. While it is not required, it can be useful for providing more specific feedback on what aspects were particularly good or could be improved based on the mentee's updated perspective. The comment will be stored along with the updated rating and can be displayed when retrieving feedback for a semester plan task, training, or affair.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest">
+            <summary>
+            Request model for creating feedback for a training. Contains the training ID, rating, comment, and mentee code. The training ID is used to associate the feedback with the correct training, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the training.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.TrainingId">
+            <summary>
+            The ID of the training for which to create feedback. This field is required when creating feedback for a training and is used to associate the feedback entry with the correct training in the database. The training ID should correspond to an existing training that has ended, as feedback can only be created for trainings that have already taken place.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.Rating">
+            <summary>
+            The rating for the feedback, which should be an integer value between 1 and 5. This field is required for creating feedback and will be validated to ensure it falls within the acceptable range. The rating represents the mentee's evaluation of the training, with 1 being the lowest rating and 5 being the highest.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.Comment">
+            <summary>
+            An optional comment for the training feedback. This field allows the mentee to provide additional context or details about their rating of the training. While it is not required, it can be useful for providing more specific feedback on what aspects of the training were particularly good or could be improved. The comment will be stored along with the rating and can be displayed when retrieving feedback for the training.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.MenteeCode">
+            <summary>
+            The code of the mentee providing the feedback. This field is required for creating feedback for a training, as it allows for tracking which mentee provided the feedback and enables features such as preventing duplicate feedback from the same mentee for the same training. The mentee code should correspond to an existing user in the system who is associated with the training through their semester plan.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest">
+            <summary>
+            Request model for creating feedback for an affair. Contains the affair ID, rating, comment, and mentee code. The affair ID is used to associate the feedback with the correct affair's event, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the affair. This model also includes validation to prevent duplicate feedback for the same affair and mentee combination.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId">
+            <summary>
+            The ID of the affair for which to create feedback. This field is required when creating feedback for an affair and is used to look up the associated affair and its event in the database. The feedback will be linked to the affair's event ID (fk_Affairid_Affair) to maintain the relationship between the feedback and the affair. The affair ID should correspond to an existing affair that has ended, as feedback can only be created for affairs that have already taken place.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating">
+            <summary>
+            The rating for the feedback, which should be an integer value between 1 and 5. This field is required for creating feedback and will be validated to ensure it falls within the acceptable range. The rating represents the mentee's evaluation of the affair, with 1 being the lowest rating and 5 being the highest.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment">
+            <summary>
+            An optional comment for the affair feedback. This field allows the mentee to provide additional context or details about their rating of the affair. While it is not required, it can be useful for providing more specific feedback on what aspects of the affair were particularly good or could be improved. The comment will be stored along with the rating and can be displayed when retrieving feedback for the affair.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode">
+            <summary>
+            The code of the mentee providing the feedback. This field is required for creating feedback for an affair, as it allows for tracking which mentee provided the feedback and enables features such as preventing duplicate feedback from the same mentee for the same affair. The mentee code should correspond to an existing user in the system who is associated with the affair through their semester plan.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.HomeController">
+            <summary>
+            Controller responsible for serving the main HTML file of the React application. The Index action method returns the index.html file located in the wwwroot directory, which is the entry point for the React frontend. This allows the React application to be loaded and rendered in the client's browser when they access the root URL of the server. The PhysicalFile method is used to serve the static HTML file with the appropriate content type.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.HomeController.Index">
+            <summary>
+            Serves the index.html file from the wwwroot directory when the root URL is accessed. This file is the main entry point for the React application, allowing it to be loaded and rendered in the client's browser. The PhysicalFile method is used to specify the path to the index.html file and set the content type to "text/html" for proper rendering.
+            </summary>
+            <returns>The physical file result</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.MenteeController">
+            <summary>
+            Controller responsible for handling API requests related to mentees. This includes retrieving mentee information, counting accepted and rejected mentor requests, marking notifications as read, and fetching educational results and mentor information for a specific mentee. The controller interacts with the ApplicationDbContext to perform database operations and returns appropriate responses based on the requested data. Each action method is designed to handle specific endpoints related to mentee functionalities in the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the MenteeController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to perform CRUD operations related to mentees and their associated data. The context is injected through dependency injection, ensuring that the controller has access to the necessary database context for handling requests and returning appropriate responses based on the data stored in the database.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetMentee(System.String)">
+            <summary>
+            Retrieves a mentee's information based on their unique code. The method takes the mentee's code as a parameter, queries the database for a matching mentee, and returns the mentee's details if found. If no mentee is found with the provided code, it returns a 404 Not Found response with an appropriate message. This endpoint allows clients to fetch specific information about a mentee using their unique identifier.
+            </summary>
+            <param name="code">The unique code of the mentee to retrieve.</param>
+            <returns>The mentee's information if found, otherwise a 404 Not Found response.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetAcceptedRequestsCount(System.String)">
+            <summary>
+            Retrieves the count of accepted mentor requests for a specific mentee that have not been marked as read. The method takes the mentee's code as a parameter, queries the database for mentor requests associated with that mentee where the request status is "accepted" (indicated by RequestStatusId == 2) and the request has not been read (IsRead == false). It then returns the count of such requests. This endpoint allows clients to determine how many accepted mentor requests are pending for a mentee, which can be useful for displaying notifications or alerts in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve accepted requests count.</param>
+            <returns>The count of accepted mentor requests if found, otherwise a 404 Not Found response.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetAcceptedRequests(System.String)">
+            <summary>
+            Retrieves a list of accepted mentor requests for a specific mentee that have not been marked as read. The method takes the mentee's code as a parameter, performs a database query to join the MentorRequests and Users tables to fetch details about the mentor associated with each accepted request. It filters the results to include only those requests where the mentee code matches, the request status is "accepted" (RequestStatusId == 2), and the request has not been read (IsRead == false). The response includes the request ID, mentor's name and last name, and the date of the request. This endpoint allows clients to display detailed information about pending accepted mentor requests for a mentee in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve accepted requests.</param>
+            <returns>The list of accepted mentor requests if found, otherwise a 404 Not Found response.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetRejectedRequestsCount(System.String)">
+            <summary>
+            Retrieves the count of rejected mentor requests for a specific mentee that have not been marked as read. The method takes the mentee's code as a parameter, queries the database for mentor requests associated with that mentee where the request status is "rejected" (indicated by RequestStatusId == 3) and the request has not been read (IsRead == false). It then returns the count of such requests. This endpoint allows clients to determine how many rejected mentor requests are pending for a mentee, which can be useful for displaying notifications or alerts in the frontend application regarding rejected requests.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve rejected requests.</param>
+            <returns>The count of rejected mentor requests if found, otherwise a 404 Not Found response.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetRejectedRequests(System.String)">
+            <summary>
+            Retrieves a list of rejected mentor requests for a specific mentee that have not been marked as read. The method takes the mentee's code as a parameter, performs a database query to join the MentorRequests and Users tables to fetch details about the mentor associated with each rejected request. It filters the results to include only those requests where the mentee code matches, the request status is "rejected" (RequestStatusId == 3), and the request has not been read (IsRead == false). The response includes the request ID, mentor's name and last name, the date of the request, and the reason for rejection. This endpoint allows clients to display detailed information about pending rejected mentor requests for a mentee in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve rejected requests.</param>
+            <returns>The list of rejected mentor requests if found, otherwise a 404 Not Found response.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.MarkRejectedNotificationsRead(System.String)">
+            <summary>
+            Marks all rejected mentor request notifications as read for a specific mentee. The method takes the mentee's code as a parameter, queries the database for mentor requests associated with that mentee where the request status is "rejected" (RequestStatusId == 3) and the request has not been read (IsRead == false). It then iterates through the list of such requests, sets the IsRead property to true for each request, and saves the changes to the database. Finally, it returns an Ok response indicating that the operation was successful. This endpoint allows clients to mark all rejected mentor request notifications as read for a mentee, which can be useful for managing notification states in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to mark rejected notifications as read.</param>
+            <returns>An Ok response indicating the operation was successful.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.MarkNotificationsRead(System.String)">
+            <summary>
+            Marks all accepted mentor request notifications as read for a specific mentee. The method takes the mentee's code as a parameter, queries the database for mentor requests associated with that mentee where the request status is "accepted" (RequestStatusId == 2) and the request has not been read (IsRead == false). It then iterates through the list of such requests, sets the IsRead property to true for each request, and saves the changes to the database. Finally, it returns an Ok response indicating that the operation was successful. This endpoint allows clients to mark all accepted mentor request notifications as read for a mentee, which can be useful for managing notification states in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to mark accepted notifications as read.</param>
+            <returns>An Ok response indicating the operation was successful.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetEducationalResults(System.String)">
+            <summary>
+            Retrieves the educational results for a specific mentee based on their most recent semester plan. The method takes the mentee's code as a parameter, queries the database to find the most recent semester plan for that mentee, and then retrieves the associated tasks and feedback for that semester plan. The response includes details about each task, such as the task name, deadline, completion file, whether it is rated, and any feedback ratings and comments. Additionally, it calculates the average rating for the tasks that have feedback. If no semester plan is found for the mentee, it returns a 404 Not Found response with an appropriate message. This endpoint allows clients to fetch comprehensive educational results for a mentee based on their latest semester plan.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve educational results.</param>
+            <returns>A response containing the educational results for the mentee.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetMenteeMentor(System.String)">
+            <summary>
+            Retrieves the mentor information for a specific mentee. The method takes the mentee's code as a parameter, queries the database to find the mentee, and then checks if the mentee has an associated mentor code. If a mentor code exists, it retrieves the mentor's user information from the database and returns the mentor's name and last name. If no mentor is found or if the mentee does not have a mentor code, it returns null. This endpoint allows clients to fetch basic information about a mentee's mentor, which can be useful for displaying mentor details in the frontend application.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve mentor information.</param>
+            <returns>A response containing the mentor's name and last name, or null if no mentor is found.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MenteeController.GetIncompleteTasksCount(System.String)">
+            <summary>
+            Retrieves the count of incomplete tasks for a specific mentee based on their most recent semester plan. The method takes the mentee's code as a parameter, queries the database to find the most recent semester plan for that mentee, and then retrieves the associated tasks for that semester plan. It counts the number of tasks that are considered incomplete, which is determined by checking if the CompletionFile property is null or whitespace. Finally, it returns the count of incomplete tasks. If no semester plan is found for the mentee, it returns a count of 0. This endpoint allows clients to determine how many tasks are still pending for a mentee based on their latest semester plan.
+            </summary>
+            <param name="menteeCode">The unique code of the mentee for whom to retrieve incomplete task count.</param>
+            <returns>The count of incomplete tasks for the specified mentee.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.MentorController">
+            <summary>
+            Controller responsible for handling mentor-related operations in the application. This includes updating mentor availability, retrieving mentor details and expertise, managing mentor requests from mentees, and fetching information about assigned mentees. The controller interacts with the database context to perform CRUD operations on mentor data and uses an email service to send notifications when necessary. It provides various endpoints for both mentors and mentees to facilitate the mentorship process within the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext,NKDUPVS_React.Server.Services.IEmailService)">
+            <summary>
+            Constructor for the MentorController class. It initializes the controller with the necessary dependencies, including the database context for accessing mentor data and the email service for sending notifications. The constructor takes an instance of ApplicationDbContext and IEmailService as parameters and assigns them to private readonly fields for use in the controller's action methods. This setup allows the controller to perform database operations and send emails as needed throughout its various endpoints.
+            </summary>
+            <param name="context">The application database context.</param>
+            <param name="emailService">The email service for sending notifications.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.UpdateAvailability(NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest)">
+            <summary>
+            Updates the availability status of a mentor to indicate whether they are accepting mentees or not. The method takes a MentorAvailabilityUpdateRequest object as input, which contains the mentor's code and their availability status. It first retrieves the mentor record from the database using the provided mentor code. If the mentor is found, it updates the AcceptingMentees property with the new availability status and saves the changes to the database. If the mentor is not found, it returns a 404 Not Found response. Finally, if the update is successful, it returns an Ok response indicating that the operation was completed successfully. This endpoint allows mentors to easily update their availability status for mentees in the application.
+            </summary>
+            <param name="request">The request containing the mentor's code and availability status.</param>
+            <returns>A response indicating the success or failure of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetMentor(System.String)">
+            <summary>
+            Retrieves the details of a specific mentor based on their unique code. The method takes the mentor's code as a parameter, queries the database to find the corresponding mentor record, and then attempts to fetch additional user details associated with that mentor. If the mentor is found, it constructs a response object containing the mentor's code, department, and user information such as name, last name, email, and phone number. If the mentor is not found, it returns a 404 Not Found response. This endpoint allows clients to fetch comprehensive details about a mentor, which can be useful for displaying mentor profiles in the frontend application.
+            </summary>
+            <param name="code">The unique code of the mentor for whom to retrieve details.</param>
+            <returns>A response containing the mentor's details, or a 404 Not Found response if the mentor is not found.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetExpertise(System.String)">
+            <summary>
+            Retrieves the list of expertise areas for a specific mentor based on their unique code. The method takes the mentor's code as a parameter, queries the database to find all mentor expertise records associated with that mentor code, and orders them by their priority. The response includes a list of expertise items, each containing information about the study program, specialization, and priority. This endpoint allows clients to fetch detailed information about a mentor's areas of expertise, which can be useful for matching mentors with mentees based on their academic interests in the frontend application.
+            </summary>
+            <param name="mentorCode">The unique code of the mentor for whom to retrieve expertise information.</param>
+            <returns>A response containing the list of expertise areas, or a 404 Not Found response if the mentor is not found.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.UpdateExpertise(NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest)">
+            <summary>
+            Updates the expertise areas for a specific mentor based on the provided list of expertise items. The method takes a MentorExpertiseUpdateRequest object as input, which contains the mentor's code and a list of expertise items, each with information about the study program, specialization, and priority. The method first removes any existing expertise records for the specified mentor from the database, and then adds new records based on the provided list of expertise items. Finally, it saves the changes to the database and returns an Ok response indicating that the operation was successful. This endpoint allows mentors to easily update their areas of expertise in the application, ensuring that mentees can find mentors with relevant academic interests.
+            </summary>
+            <param name="request">The request object containing the mentor's code and the list of expertise items to update.</param>
+            <returns>An Ok response indicating the operation was successful.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetMentorSuggestions(System.String)">
+            <summary>
+            Retrieves a list of mentor suggestions for a specific mentee based on their study program and the mentors' availability. The method takes the mentee's code as a parameter, queries the database to find the corresponding mentee record, and checks if the mentee already has a mentor assigned. If the mentee does not have a mentor, it performs a query to find mentors who are accepting mentees and have expertise in the same study program as the mentee. The results are grouped by mentor and ordered by the minimum priority of their expertise and the number of currently assigned mentees. The response includes details about each suggested mentor, such as their code, department, name, email, phone number, minimum priority of expertise, and the count of assigned mentees. This endpoint allows clients to fetch personalized mentor suggestions for a mentee based on their academic interests and mentor availability in the frontend application.
+            </summary>
+            <param name="menteeCode">The code of the mentee for whom to retrieve suggestions.</param>
+            <returns>A list of suggested mentors based on the mentee's study program and mentor availability.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetRequests(System.String)">
+            <summary>
+            Retrieves the list of mentor requests for a specific mentor based on their unique code. The method takes the mentor's code as a parameter, queries the database to find all mentor requests associated with that mentor code, and joins related data such as request status, mentee user details, mentee study program, and specialization. The response includes details about each request, such as the request ID, mentee code, mentor code, request date, request status name, mentee's name, email, phone number, study program name, and specialization name (if available). This endpoint allows mentors to view all incoming mentorship requests along with relevant information about the requesting mentees in the frontend application.
+            </summary>
+            <param name="mentorCode">The code of the mentor for whom to retrieve requests.</param>
+            <returns>A list of mentor requests associated with the specified mentor.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.SendRequest(NKDUPVS_React.Server.Models.MentorRequest)">
+            <summary>
+            Handles the submission of a new mentor request from a mentee. The method takes a MentorRequest object as input, which contains details about the mentorship request, including the mentee's code and the mentor's code. It first checks if there are any existing pending requests for the same mentee or if the mentee already has a mentor assigned. If either condition is true, it returns a BadRequest response with an appropriate message. If there are no conflicts, it adds the new mentor request to the database and saves the changes. Finally, it returns an Ok response with the created request object. This endpoint allows mentees to submit mentorship requests while ensuring that duplicate requests or requests from mentees who already have mentors are prevented.
+            </summary>
+            <param name="request">The mentor request to submit.</param>
+            <returns>The created mentor request.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.AcceptRequest(System.Int32)">
+            <summary>
+            Handles the acceptance of a mentor request by a mentor. The method takes the request ID as a parameter, retrieves the corresponding mentor request from the database, and checks if it exists and contains a valid mentee code. If the request is found and valid, it retrieves the associated mentee record and updates it by assigning the mentor's code to the mentee and changing the request status to "Priimta" (RequestStatusId = 2). Finally, it saves the changes to the database and returns an Ok response. This endpoint allows mentors to accept mentorship requests from mentees, which results in establishing a mentorship relationship between them in the application.
+            </summary>
+            <param name="requestId">The ID of the mentor request to accept.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.RejectRequest(System.Int32,NKDUPVS_React.Server.Controllers.RejectRequestModel)">
+            <summary>
+            Handles the rejection of a mentor request by a mentor. The method takes the request ID and a RejectRequestModel containing the rejection reason as parameters. It retrieves the corresponding mentor request from the database, checks if it exists and contains a valid mentee code. If the request is found and valid, it updates the request status to "Atmesta" (RequestStatusId = 3) and stores the provided rejection reason. After saving the changes to the database, it retrieves the mentee's user information and sends an email notification to inform them about the rejection of their mentorship request, including the reason for rejection. Finally, it returns an Ok response indicating that the request was rejected and the notification was sent. This endpoint allows mentors to reject mentorship requests while providing feedback to mentees through email notifications.
+            </summary>
+            <param name="requestId">The ID of the mentor request to reject.</param>
+            <param name="model">The model containing the rejection reason.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetMentees(System.String)">
+            <summary>
+            Retrieves the list of mentees assigned to a specific mentor based on the mentor's unique code. The method takes the mentor's code as a parameter, queries the database to find all mentee records associated with that mentor code, and joins related user details, study program, and specialization information. The response includes details about each mentee, such as their code, name, last name, study program name, and specialization name (if available). This endpoint allows mentors to view all their assigned mentees along with relevant information in the frontend application.
+            </summary>
+            <param name="mentorCode">The unique code of the mentor.</param>
+            <returns>The list of mentees assigned to the mentor.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetMentees">
+            <summary>
+            Retrieves the list of all mentees in the system. This method does not filter by mentor code and returns basic information about each mentee, such as their code, name, and last name. This endpoint can be used for administrative purposes or to display a list of all mentees in the application, regardless of their assigned mentors.
+            </summary>
+            <returns>The list of all mentees in the system.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetMenteeDetails(System.String)">
+            <summary>
+            Retrieves the details of a specific mentee based on their unique code. The method takes the mentee's code as a parameter, queries the database to find the corresponding user record for that mentee, and returns basic information such as the mentee's name and last name. If the mentee is not found, it returns a 404 Not Found response. This endpoint allows clients to fetch basic details about a mentee, which can be useful for displaying mentee information in the frontend application or for administrative purposes.
+            </summary>
+            <param name="code">The unique code of the mentee.</param>
+            <returns>The details of the mentee.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.MentorController.GetNotRatedTasksCount(System.String)">
+            <summary>
+            Retrieves the count of tasks that have not been rated for a specific mentor.
+            </summary>
+            <param name="mentorCode">The code of the mentor.</param>
+            <returns>The count of not-rated tasks.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest">
+            <summary>
+            Request model for updating a mentor's expertise areas. This model contains the mentor's unique code and a list of expertise items, where each item includes information about the study program, specialization, and priority. The MentorExpertiseUpdateRequest is used in the UpdateExpertise endpoint of the MentorController to allow mentors to update their areas of expertise in the application. Each expertise item represents a specific area of knowledge or skill that the mentor can offer to mentees, and the priority field can be used to indicate the importance or relevance of each expertise area for matching mentors with mentees based on their academic interests.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.MentorCode">
+            <summary>
+            The unique code of the mentor for whom to update expertise areas. This code is used to identify the mentor in the database and associate the provided expertise items with the correct mentor record. The MentorCode is a crucial part of the request model as it ensures that the expertise updates are applied to the intended mentor in the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.ExpertiseList">
+            <summary>
+            A list of expertise items representing the areas of expertise for the mentor. Each item in the list contains information about a specific study program, specialization, and priority level. The ExpertiseList is used to update the mentor's expertise areas in the database, allowing mentees to find mentors with relevant academic interests when searching for mentorship opportunities in the application.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.ExpertiseItem">
+            <summary>
+            Represents an individual expertise item for a mentor, containing information about the study program, specialization, and priority level. This class is used as part of the MentorExpertiseUpdateRequest to specify the areas of expertise that a mentor has. The StudyProgram property indicates the specific academic program associated with the expertise, while the Specialization property can provide additional details about the mentor's focus within that study program. The Priority property can be used to indicate the importance or relevance of this expertise area when matching mentors with mentees based on their academic interests in the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.ExpertiseItem.StudyProgram">
+            <summary>
+            The unique identifier for the study program associated with the expertise item. This property indicates the specific academic program linked to the expertise area.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.ExpertiseItem.Specialization">
+            <summary>
+            The unique identifier for the specialization associated with the expertise item. This property provides additional details about the mentor's focus within the study program, allowing for more specific matching between mentors and mentees based on their academic interests in the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.ExpertiseItem.Priority">
+            <summary>
+            The priority level of the expertise item, which can be used to indicate the importance or relevance of this expertise area when matching mentors with mentees. A lower priority number may indicate a higher level of expertise or a stronger focus in that area, while a higher priority number may indicate a less critical area of expertise for the mentor. This property helps to facilitate more effective matching between mentors and mentees based on their academic interests in the application.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest">
+            <summary>
+            Request model for updating a mentor's availability status. This model contains the mentor's unique code and a boolean value indicating whether the mentor is currently accepting mentees or not. The MentorAvailabilityUpdateRequest is used in the UpdateAvailability endpoint of the MentorController to allow mentors to easily update their availability status in the application. By providing their mentor code and availability status, mentors can ensure that they are accurately represented in the system, allowing mentees to find mentors who are currently accepting new mentees when searching for mentorship opportunities in the frontend application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.MentorCode">
+            <summary>
+            The unique code of the mentor for whom to update the availability status. This code is used to identify the mentor in the database and apply the availability update to the correct mentor record. The MentorCode is essential for ensuring that the availability status is updated for the intended mentor in the application, allowing mentees to find mentors who are currently accepting new mentees when searching for mentorship opportunities in the frontend application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.AcceptingMentees">
+            <summary>
+            A boolean value indicating whether the mentor is currently accepting mentees or not. If AcceptingMentees is set to true, it means that the mentor is open to taking on new mentees, and if it is set to false, it indicates that the mentor is not currently accepting new mentees. This property allows mentors to easily update their availability status in the application, ensuring that mentees can find mentors who are currently accepting new mentees when searching for mentorship opportunities in the frontend application.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.RejectRequestModel">
+            <summary>
+            Request model for rejecting a mentor request. This model contains a single property, Reason, which is a string that allows mentors to provide a reason for rejecting a mentorship request from a mentee. The RejectRequestModel is used in the RejectRequest endpoint of the MentorController to capture the rejection reason when a mentor decides to reject a mentorship request. By providing a reason for rejection, mentors can offer feedback to mentees, which can be helpful for mentees to understand why their request was rejected and potentially improve their chances of being accepted by other mentors in the future. Additionally, this information can be included in email notifications sent to mentees to inform them about the rejection of their mentorship request.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.RejectRequestModel.Reason">
+            <summary>
+            A string property that allows mentors to provide a reason for rejecting a mentorship request from a mentee. This reason can be used to offer feedback to mentees, helping them understand why their request was rejected and potentially improve their chances of being accepted by other mentors in the future. The Reason property can also be included in email notifications sent to mentees to inform them about the rejection of their mentorship request, providing clarity and transparency in the communication process between mentors and mentees in the application.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.SpecializationController">
+            <summary>
+            Controller responsible for handling API requests related to specializations. This controller provides an endpoint to retrieve a list of specializations from the database, which can be used by the frontend application to display specialization options to users. The GetSpecializations action method queries the database for all specializations, selects relevant properties (value, label, and fk_id_StudyPrograms), and returns the list of specializations in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their specialization when interacting with the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.SpecializationController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the SpecializationController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to retrieve specialization data. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to perform database operations such as querying for specializations when handling API requests. This setup is essential for the functionality of the GetSpecializations endpoint, which relies on the database context to fetch and return specialization information to the frontend application.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.SpecializationController.GetSpecializations">
+            <summary>
+            Handles GET requests to retrieve a list of specializations from the database. This method queries the Specializations table, selects relevant properties (value, label, and fk_id_StudyPrograms), and returns the list of specializations in a format suitable for use in dropdowns or selection components in the frontend application. The value property is set to the specialization's ID as a string, the label property is set to the specialization's name, and the fk_id_StudyPrograms property is included to provide information about the associated study program for each specialization. This endpoint allows users to easily select their specialization when interacting with the application.
+            </summary>
+            <returns>A list of specializations.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.StudyProgramController">
+            <summary>
+            Controller responsible for handling API requests related to study programs. This controller provides an endpoint to retrieve a list of study programs from the database, which can be used by the frontend application to display study program options to users. The GetStudyPrograms action method queries the database for all study programs, selects relevant properties (value and label), and returns the list of study programs in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their study program when interacting with the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.StudyProgramController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the StudyProgramController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to retrieve study program data. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to perform database operations such as querying for study programs when handling API requests. This setup is essential for the functionality of the GetStudyPrograms endpoint, which relies on the database context to fetch and return study program information to the frontend application.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.StudyProgramController.GetStudyPrograms">
+            <summary>
+            Handles GET requests to retrieve a list of study programs from the database. This method queries the StudyPrograms table, selects relevant properties (value and label), and returns the list of study programs in a format suitable for use in dropdowns or selection components in the frontend application. The value property is set to the study program's ID as a string, and the label property is set to the study program's name. This endpoint allows users to easily select their study program when interacting with the application.
+            </summary>
+            <returns>A list of study programs.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TaskController">
+            <summary>
+            Controller responsible for handling API requests related to tasks. This controller provides endpoints for creating, retrieving, updating, and deleting tasks, as well as assigning tasks to mentees and marking tasks as completed. The TaskController interacts with the database through the ApplicationDbContext to perform CRUD operations on tasks and manage task assignments. It also includes functionality to retrieve task types and get assigned tasks for specific mentees, allowing for efficient task management within the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the TaskController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to perform CRUD operations on tasks and manage task assignments. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to access the database context for handling API requests related to tasks. This setup is essential for the functionality of the TaskController, as it relies on the database context to fetch, create, update, and delete task data, as well as manage task assignments and retrieve task types for use in the frontend application.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.GetTasksByUser(System.String)">
+            <summary>
+            Handles GET requests to retrieve a list of tasks created by a specific user. This method queries the Tasks table in the database, filtering tasks based on the CreatedBy property that matches the provided user code. The resulting list of tasks is returned in the response, allowing users to view and manage their created tasks within the application. This endpoint is essential for providing users with access to their task data and enabling them to perform actions such as updating or deleting their tasks as needed.
+            </summary>
+            <param name="userCode">The code of the user for whom to retrieve tasks.</param>
+            <returns>A list of tasks created by the specified user.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.CreateTask(NKDUPVS_React.Server.Models.Task)">
+            <summary>
+            Handles POST requests to create a new task. This method accepts a Task object in the request body, adds it to the Tasks table in the database, and saves the changes. Upon successful creation, the newly created task is returned in the response. This endpoint allows users to create new tasks within the application, providing them with the ability to manage their tasks effectively. The Task object should include necessary properties such as Name, Description, MaterialLink, Deadline, CreatedBy, IsAssigned, and TaskTypeId for proper task creation and management.
+            </summary>
+            <param name="task">The task to create.</param>
+            <returns>The created task.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.CreateTaskForMentees(NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest)">
+            <summary>
+            Handles POST requests to create a new task and assign it to multiple mentees. This method accepts a TaskCreationRequest object in the request body, which includes task details and a list of mentee codes to whom the task should be assigned. The method creates a new task based on the provided details, saves it to the database, and then iterates through the list of mentee codes to create corresponding SemesterPlanTask entries for each mentee. If any mentee code does not have an associated semester plan, it will be skipped. Finally, the created task is returned in the response. This endpoint allows users to efficiently create tasks and assign them to multiple mentees in one operation, streamlining task management within the application.
+            </summary>
+            <param name="request">The request containing task details and mentee codes.</param>
+            <returns>The created task.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.UpdateTask(System.Int32,NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest)">
+            <summary>
+            Handles PUT requests to update an existing task. This method accepts the task ID as a route parameter and a TaskCreationRequest object in the request body containing the updated task details and a list of mentee codes for assignment. The method first retrieves the existing task from the database using the provided ID. If the task is found, it updates the task's properties with the new values from the request. It then manages task assignments by comparing the new list of mentee codes with the current assignments in the database, removing any assignments that are no longer valid and adding new assignments for any new mentee codes. Finally, it saves the changes to the database and returns the updated task in the response. This endpoint allows users to efficiently update tasks and manage their assignments to mentees within the application.
+            </summary>
+            <param name="id">The ID of the task to update.</param>
+            <param name="updatedRequest">The request containing updated task details and mentee codes.</param>
+            <returns>The updated task.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.DeleteTask(System.Int32)">
+            <summary>
+            Handles DELETE requests to remove a task by its ID. This method first retrieves the task from the database using the provided ID. If the task is found, it checks for any related assignments in the SemesterPlanTasks table. If there are related assignments, it further checks if any of those assignments have associated feedback in the Feedback table. If feedback exists for any of the assignments, the method returns a BadRequest response indicating that the task cannot be deleted because it has been completed by at least one mentee. If there are no feedback entries, it proceeds to remove all related assignments and then deletes the task itself from the database. Finally, it saves the changes and returns an Ok response indicating successful deletion. This endpoint ensures that tasks with completed assignments cannot be deleted, preserving important data integrity within the application.
+            </summary>
+            <param name="id">The ID of the task to delete.</param>
+            <returns>The result of the delete operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.AssignTask(NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest)">
+            <summary>
+            Handles POST requests to assign a task to multiple mentees. This method accepts an AssignTaskRequest object in the request body, which includes the task ID and a list of mentee codes to whom the task should be assigned. The method first filters out any null or empty mentee codes from the provided list. If there are no valid mentee codes, it removes all existing assignments for the task and marks the task as unassigned. If there are valid mentee codes, it retrieves the current assignments for the task and compares them with the new list of mentee codes. It removes any assignments that are no longer valid and adds new assignments for any new mentee codes. Finally, it marks the task as assigned and saves the changes to the database before returning a success response. This endpoint allows for efficient management of task assignments to mentees within the application.
+            </summary>
+            <param name="request">The request object containing the task ID and list of mentee codes.</param>
+            <returns>The result of the assignment operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.GetTaskAssignments(System.Int32)">
+            <summary>
+            Handles GET requests to retrieve a list of mentee codes that are assigned to a specific task. This method queries the SemesterPlanTasks table joined with the SemesterPlans table to find all assignments for the given task ID and returns a list of mentee codes associated with those assignments. This endpoint allows users to see which mentees are currently assigned to a particular task, providing insight into task distribution and enabling better management of task assignments within the application.
+            </summary>
+            <param name="taskId">The ID of the task for which to retrieve assignments.</param>
+            <returns>A list of mentee codes assigned to the specified task.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.GetAssignedTasks(System.String)">
+            <summary>
+            Handles GET requests to retrieve a list of tasks assigned to a specific mentee. This method queries the SemesterPlanTasks table joined with the SemesterPlans and Tasks tables to find all tasks assigned to the mentee identified by the provided mentee code. It also performs a left join with the Feedback table to include any feedback associated with each task assignment. The resulting list includes task details, assignment information, and feedback (if available) for each task assigned to the mentee. This endpoint allows mentees to view their assigned tasks along with any feedback they may have received, enabling them to manage their tasks effectively within the application.
+            </summary>
+            <param name="menteeCode">The code of the mentee for whom to retrieve assigned tasks.</param>
+            <returns>A list of tasks assigned to the specified mentee.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.MarkTaskCompleted(NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest)">
+            <summary>
+            Handles POST requests to mark a task as completed for a specific mentee. This method accepts a CompleteTaskRequest object in the request body, which includes the task ID, mentee code, and an optional completion file link. The method first retrieves the semester plan associated with the provided mentee code, then finds the corresponding task assignment for that semester plan and task ID. If a completion file link is provided, it updates the CompletionFile property of the assignment with that link; otherwise, it sets it to a default value indicating completion. Finally, it saves the changes to the database and returns the updated assignment information in the response. This endpoint allows mentees to mark their tasks as completed and optionally provide evidence of completion through a file link, facilitating better tracking of task progress within the application.
+            </summary>
+            <param name="request">The request object containing the task ID, mentee code, and completion file link.</param>
+            <returns>The updated assignment information.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskController.GetTaskTypes">
+            <summary>
+            Handles GET requests to retrieve a list of all available task types. This method queries the TaskTypes table in the database and returns the list of task types in the response. This endpoint allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.
+            </summary>
+            <returns>A list of task types.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest">
+            <summary>
+            Defines the request model for marking a task as completed. This class includes properties for the task ID, mentee code, and an optional completion file link. The TaskId property identifies the specific task being marked as completed, while the MenteeCode property identifies the mentee who is completing the task. The CompletionFile property allows for an optional link to a file that serves as evidence of task completion. This request model is used in the MarkTaskCompleted endpoint to process requests for marking tasks as completed by mentees within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId">
+            <summary>
+            The ID of the task being marked as completed. This property is used to identify the specific task that the mentee is completing. It is a nullable integer, allowing for the possibility that the task ID may not be provided in the request. However, in typical usage, this property should contain a valid task ID to ensure that the correct task assignment is updated in the database when marking it as completed.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode">
+            <summary>
+            The code of the mentee who is marking the task as completed. This property is used to identify the specific mentee associated with the task completion request. It is a nullable string, allowing for the possibility that the mentee code may not be provided in the request. However, in typical usage, this property should contain a valid mentee code to ensure that the correct semester plan and task assignment are updated in the database when marking the task as completed.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile">
+            <summary>
+            An optional link to a file that serves as evidence of task completion. This property allows mentees to provide additional information or proof when marking a task as completed. It is a nullable string, meaning that it can be left empty if the mentee does not wish to provide a completion file. If no link is provided, the system will use a default value (e.g., "completed") to indicate that the task has been marked as completed without specific evidence.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest">
+            <summary>
+            Defines the request model for assigning a task to multiple mentees. This class includes properties for the task ID, mentor code, and a list of mentee codes. The TaskId property identifies the specific task being assigned, while the MentorCode property identifies the mentor responsible for the assignment. The MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned. This request model is used in the AssignTask endpoint to process requests for assigning tasks to multiple mentees within the application, allowing for efficient management of task assignments.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId">
+            <summary>
+            The ID of the task being assigned. This property is used to identify the specific task that is being assigned to mentees. It is a nullable integer, allowing for the possibility that the task ID may not be provided in the request. However, in typical usage, this property should contain a valid task ID to ensure that the correct task is updated in the database when processing the assignment request.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode">
+            <summary>
+            The code of the mentor responsible for the assignment. This property is used to identify the mentor who is assigning the task to mentees. It is a nullable string, allowing for the possibility that the mentor code may not be provided in the request. However, in typical usage, this property should contain a valid mentor code to ensure that the assignment is properly attributed to the correct mentor within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes">
+            <summary>
+            A list of strings that contains the codes of the mentees to whom the task should be assigned. This property allows for multiple mentee codes to be included in the assignment request, enabling the assignment of a single task to multiple mentees in one operation. It is a nullable list, meaning that it can be left empty if no mentee codes are provided. However, in typical usage, this property should contain at least one valid mentee code to ensure that the task is assigned to the intended recipients within the application.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest">
+            <summary>
+            Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator's code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name">
+            <summary>
+            The name of the task being created. This property is used to specify the title or name of the task that is being created. It is a nullable string, allowing for the possibility that the task name may not be provided in the request. However, in typical usage, this property should contain a valid task name to ensure that the task is properly identified and displayed within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description">
+            <summary>
+            A description of the task being created. This property provides additional details or information about the task, allowing users to understand the requirements or objectives of the task. It is a nullable string, meaning that it can be left empty if no description is provided. However, in typical usage, this property should contain relevant information to help users understand the context and expectations for the task within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink">
+            <summary>
+            A URL link to relevant materials for the task being created. This property allows users to provide a link to resources, documents, or other materials that are associated with the task. It is a nullable string, meaning that it can be left empty if no material link is provided. However, in typical usage, this property should contain a valid URL to ensure that users can access the necessary materials related to the task within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline">
+            <summary>
+            The deadline for the task being created. This property indicates when the task is due and helps users manage their time effectively. It is a nullable DateTime, allowing for the possibility that a deadline may not be provided in the request. However, in typical usage, this property should contain a valid date and time to ensure that users are aware of the task's due date and can plan accordingly within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy">
+            <summary>
+            The code of the user who created the task. This property is used to identify the creator of the task, allowing for proper attribution and tracking within the application. It is a nullable string, meaning that it can be left empty if the creator's code is not provided in the request. However, in typical usage, this property should contain a valid user code to ensure that the task is properly associated with its creator within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned">
+            <summary>
+            Indicates whether the task is currently assigned to any mentees. This property is used to track the assignment status of the task, allowing users to quickly see if a task has been assigned or not. It is a nullable boolean, meaning that it can be left empty if the assignment status is not provided in the request. However, in typical usage, this property should contain a value (true or false) to ensure that the task's assignment status is accurately reflected within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId">
+            <summary>
+            The ID of the task type, categorizing the task based on predefined types. This property allows users to classify tasks according to their nature or purpose, making it easier to organize and filter tasks within the application. It is a nullable integer, allowing for the possibility that a task type may not be provided in the request. However, in typical usage, this property should contain a valid task type ID to ensure that the task is properly categorized and can be easily identified based on its type within the application.
+            </summary>
+        </member>
+        <member name="P:NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes">
+            <summary>
+            A list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This property allows for multiple mentee codes to be included in the task creation request, enabling the assignment of a single task to multiple mentees in one operation. It is a nullable list, meaning that it can be left empty if no mentee codes are provided. However, in typical usage, this property should contain at least one valid mentee code to ensure that the task is assigned to the intended recipients within the application upon creation.
+            </summary>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.TaskTypesController">
+            <summary>
+            Controller responsible for handling API requests related to task types. This controller provides an endpoint to retrieve a list of all available task types from the database, which can be used by the frontend application to display task type options to users when creating or managing tasks. The GetTaskTypes action method queries the TaskTypes table in the database and returns the list of task types in the response. This allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskTypesController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the TaskTypesController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to retrieve task type data. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to perform database operations such as querying for task types when handling API requests. This setup is essential for the functionality of the GetTaskTypes endpoint, which relies on the database context to fetch and return task type information to the frontend application.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.TaskTypesController.GetTaskTypes">
+            <summary>
+            Handles GET requests to retrieve a list of all available task types. This method queries the TaskTypes table in the database and returns the list of task types in the response. This endpoint allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.
+            </summary>
+            <returns>A list of task types.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Controllers.UserClassController">
+            <summary>
+            Controller responsible for handling API requests related to user class assignments
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.UserClassController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext)">
+            <summary>
+            Constructor for the UserClassController, which takes an instance of ApplicationDbContext as a parameter. This allows the controller to interact with the database to manage user class assignments. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to perform database operations such as adding, retrieving, editing, and deleting user class assignments when handling API requests. This setup is essential for the functionality of the various endpoints in this controller, which rely on the database context to manage user class data effectively.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.UserClassController.AssignClass(NKDUPVS_React.Server.Models.UserClass)">
+            <summary>
+            Handles POST requests to assign a user to a class. This method accepts a UserClass object in the request body, which contains information about the user, class, and schedule. The method first checks if the user is already assigned to the same class at the same time, and if so, it returns a message indicating that the user is already assigned. It then checks for overlapping class times for the same user, and if any overlap is found, it returns a bad request response indicating that the selected time overlaps with another class. If there are no conflicts, it adds the new user class assignment to the database and saves the changes, returning the created assignment in the response. This endpoint allows for efficient management of user class assignments
+            </summary>
+            <param name="userClass">The user class assignment to create.</param>
+            <returns>The created user class assignment.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.UserClassController.GetUserClasses(System.String)">
+            <summary>
+            Handles GET requests to retrieve a list of class assignments
+            </summary>
+            <param name="userCode">The code of the user for whom to retrieve class assignments.</param>
+            <returns>A list of class assignments for the specified user.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.UserClassController.EditUserClass(System.Int32,NKDUPVS_React.Server.Models.UserClass)">
+            <summary>
+            Handles PUT requests to edit an existing user class assignment. This method accepts the ID of the user class assignment to edit and a UserClass object in the request body containing the updated information. The method first retrieves the existing user class assignment from the database using the provided ID. If the assignment does not exist, it returns a not found response. It then checks for overlapping class times for the same user, excluding the current assignment being edited, and if any overlap is found, it returns a bad request response indicating that the selected time overlaps with another class. If there are no conflicts, it updates the existing user class assignment with the new information and saves the changes to the database, returning the updated assignment in the response. This endpoint allows for efficient management of user class assignments
+            </summary>
+            <param name="id">The ID of the user class assignment to edit.</param>
+            <param name="userClass">The updated user class assignment information.</param>
+            <returns>The updated user class assignment.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Controllers.UserClassController.DeleteUserClass(System.Int32)">
+            <summary>
+            Handles DELETE requests to remove a user class assignment. This method accepts the ID of the user class assignment to delete as a parameter. It first retrieves the user class assignment from the database using the provided ID. If the assignment does not exist, it returns a not found response. If the assignment exists, it removes it from the database and saves the changes, returning an OK response to indicate that the deletion was successful. This endpoint allows for efficient management of user class assignments by enabling the removal of assignments that are no longer needed or were created in error.
+            </summary>
+            <param name="id">The ID of the user class assignment to delete.</param>
+            <returns>The deleted user class assignment.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Services.IEmailService">
+            <summary>
+            Interface for email services, defining a method for sending emails asynchronously. This interface allows for different implementations of email sending functionality, such as using SendGrid or other email providers, while providing a consistent method signature for sending emails throughout the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends an email asynchronously to the specified recipient with the given subject, plain text content, and HTML content. This method is used to send various types of emails, such as account verification, password reset, or notifications, by providing the necessary email details and allowing for asynchronous execution to improve performance and responsiveness of the application.
+            </summary>
+            <param name="toEmail">The email address of the recipient.</param>
+            <param name="subject">The subject of the email.</param>
+            <param name="plainText">The plain text content of the email.</param>
+            <param name="htmlContent">The HTML content of the email.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:NKDUPVS_React.Server.Services.EmailService">
+            <summary>
+            Implementation of the IEmailService interface using SendGrid to send emails. This class retrieves the SendGrid API key and sender information from the application configuration, and uses the SendGrid client to create and send emails based on the provided recipient, subject, and content. The SendEmailAsync method constructs the email message and sends it asynchronously, allowing for efficient email delivery without blocking the main thread of the application.
+            </summary>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Services.EmailService.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the EmailService class with the specified configuration. The constructor retrieves the SendGrid API key, sender email, and sender name from the application configuration, which are necessary for sending emails using the SendGrid service. This setup allows for flexible configuration of email sending parameters without hardcoding sensitive information in the codebase.
+            </summary>
+            <param name="configuration">The application configuration.</param>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Services.EmailService.SendEmailAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends an email asynchronously to the specified recipient with the given subject, plain text content, and HTML content using the SendGrid service. This method constructs an email message using the sender information and recipient details, and then uses the SendGrid client to send the email. The asynchronous nature of this method allows for non-blocking email sending, improving the performance and responsiveness of the application when sending emails.
+            </summary>
+            <param name="toEmail">The email address of the recipient.</param>
+            <param name="subject">The subject of the email.</param>
+            <param name="plainText">The plain text content of the email.</param>
+            <param name="htmlContent">The HTML content of the email.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:NKDUPVS_React.Server.Migrations.SeedAdminUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UserController">
+            <summary>
+            Controller responsible for handling API requests related to user management, including updating user information, retrieving lists of mentors and mentees, accepting or rejecting user submissions, and managing user class assignments. This controller interacts with the database to perform CRUD operations on user data and related entities such as mentors, mentees, and user classes. It also includes functionality for sending email notifications when a user's submission is rejected and for maintaining a history of rejections. The endpoints in this controller allow for efficient management of users within the application, enabling administrators to review and verify user submissions, assign users to classes, and maintain accurate records of user activity and status.
+            </summary>
+        </member>
+        <member name="M:UserController.#ctor(NKDUPVS_React.Server.Data.ApplicationDbContext,NKDUPVS_React.Server.Services.IEmailService)">
+            <summary>
+            Constructor for the UserController, which takes instances of ApplicationDbContext and IEmailService as parameters. This allows the controller to interact with the database to manage user data and to send email notifications when necessary. The ApplicationDbContext is injected into the controller using dependency injection, enabling it to perform database operations such as querying for users, updating user information, and managing related entities like mentors and mentees. The IEmailService is also injected to facilitate sending emails, particularly when a user's submission is rejected, allowing for effective communication with users regarding their account status and any actions they may need to take.
+            </summary>
+            <param name="context">The application database context.</param>
+            <param name="emailService">The email service for sending notifications.</param>
+        </member>
+        <member name="M:UserController.UpdateMentee(MenteeUpdateRequest)">
+            <summary>
+            Handles POST requests to update a mentee's information. This method accepts a MenteeUpdateRequest object in the request body, which contains the user's code, phone number, study program, and specialization. The method first checks if the request model is valid, and if not, it returns a bad request response with the model state errors. It then retrieves the user from the database using the provided code. If the user does not exist, it returns a not found response. If the user exists, it updates the user's phone number and sets the IsSubmitted flag to true. The method then checks if a mentee record already exists for the user; if it does, it updates the study program and specialization. If it does not exist, it creates a new mentee record with the provided information. Finally, it saves the changes to the database and returns an OK response to indicate that the update was successful.
+            </summary>
+            <param name="request">The request containing the updated mentee information.</param>
+            <returns>The result of the update operation.</returns>
+        </member>
+        <member name="M:UserController.UpdateMentor(MentorUpdateRequest)">
+            <summary>
+            Handles POST requests to update a mentor's information. This method accepts a MentorUpdateRequest object in the request body, which contains the user's code, phone number, and department. The method first checks if the request model is valid, and if not, it returns a bad request response with the model state errors. It then retrieves the user from the database using the provided code. If the user does not exist, it returns a not found response. If the user exists, it updates the user's phone number and sets the IsSubmitted flag to true. The method then checks if a mentor record already exists for the user; if it does, it updates the department. If it does not exist, it creates a new mentor record with the provided information. Finally, it saves the changes to the database and returns an OK response to indicate that the update was successful.
+            </summary>
+            <param name="request">The request containing the updated mentor information.</param>
+            <returns>The result of the update operation.</returns>
+        </member>
+        <member name="M:UserController.GetMentors">
+            <summary>
+            Handles GET requests to retrieve a list of mentors. This method queries the Users table in the database to find users who are verified, have submitted their information, are not administrators, and have a corresponding record in the Mentors table. It then selects relevant properties (id, name, email, phone, last name, and department) for each mentor and returns the list of mentors in the response. This endpoint allows clients to retrieve information about mentors for display or further processing in the frontend application.
+            </summary>
+            <returns>The list of mentors.</returns>
+        </member>
+        <member name="M:UserController.GetMentees">
+            <summary>
+            Handles GET requests to retrieve a list of mentees. This method queries the Users table in the database to find users who are verified, have submitted their information, are not administrators, and have a corresponding record in the Mentees table. It then selects relevant properties (id, name, email, phone, last name, study program, and specialization) for each mentee and returns the list of mentees in the response. This endpoint allows clients to retrieve information about mentees for display or further processing in the frontend application.
+            </summary>
+            <returns>The list of mentees.</returns>
+        </member>
+        <member name="M:UserController.GetMenteesForMentor(System.String)">
+            <summary>
+            Handles GET requests to retrieve a list of mentees for a specific mentor. This method accepts a mentor code as a parameter and queries the Mentees table in the database to find mentees who are assigned to the specified mentor. It then joins the Mentees table with the Users table to select relevant properties (id, name, email, phone, last name, study program, and specialization) for each mentee and returns the list of mentees in the response. This endpoint allows clients to retrieve information about mentees assigned to a specific mentor for display or further processing in the frontend application.
+            </summary>
+            <param name="mentorCode">The code of the mentor for whom to retrieve mentees.</param>
+            <returns>The list of mentees assigned to the specified mentor.</returns>
+        </member>
+        <member name="M:UserController.GetSubmittedUsers">
+            <summary>
+            Handles GET requests to retrieve a list of users who have submitted their information but are not yet verified. This method queries the Users table in the database to find users who have the IsSubmitted flag set to true, the IsVerified flag set to false, and are not administrators. It then selects relevant properties (id, name, email, phone, last name, study program, specialization, and department) for each user and returns the list of submitted users in the response. This endpoint allows clients to retrieve information about users who are pending verification for display or further processing in the frontend application.
+            </summary>
+            <returns>The list of submitted users.</returns>
+        </member>
+        <member name="M:UserController.GetOtherUsers">
+            <summary>
+            Handles GET requests to retrieve a list of users who have not submitted their information and are not verified. This method queries the Users table in the database to find users who have the IsSubmitted flag set to false, the IsVerified flag set to false, and are not administrators. It then selects relevant properties (id, name, email, phone, last name, study program, and department) for each user and returns the list of other users in the response. This endpoint allows clients to retrieve information about users who have not yet submitted their information for display or further processing in the frontend application.
+            </summary>
+            <returns>The list of other users.</returns>
+        </member>
+        <member name="M:UserController.AcceptUser(System.String)">
+            <summary>
+            Handles POST requests to accept a user's submission. This method accepts a user ID as a parameter and retrieves the corresponding user from the database. If the user is not found, it returns a not found response. If the user is found, it sets the IsVerified flag to true. The method then checks if the user has a mentor record with a valid department; if so, it sets the IsMentor flag to true and removes any existing mentee record for the user. If the user does not have a valid mentor record but has a mentee record, it sets the IsMentor flag to false and removes any existing mentor record for the user. Finally, it saves the changes to the database and returns an OK response to indicate that the user has been accepted.
+            </summary>
+            <param name="userId">The ID of the user to accept.</param>
+            <returns>The response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:UserController.RejectUser(System.String,RejectUserRequest)">
+            <summary>
+            Handles POST requests to reject a user's submission. This method accepts a user ID as a parameter and a RejectUserRequest object in the request body, which contains the reason for rejection. The method first checks if the request model is valid, and if not, it returns a bad request response with the model state errors. It then retrieves the user from the database using the provided user ID. If the user is not found, it returns a not found response. If the user is found, it sets the IsSubmitted and IsVerified flags to false. The method then removes any dependent mentor expertise records, mentor records, and mentee records associated with the user to ensure data integrity. After saving these changes to the database, it sends an email notification to the user informing them of the rejection and the reason for it. Finally, it logs the rejection reason in a RejectionHistory table for future reference and returns an OK response to indicate that the user has been rejected.
+            </summary>
+            <param name="userId">The ID of the user to reject.</param>
+            <param name="request">The request containing the rejection reason.</param>
+            <returns>The response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:UserController.GetRejectionHistory(System.String)">
+            <summary>
+            Handles GET requests to retrieve the rejection history for a specific user. This method accepts a user ID as a parameter and queries the RejectionHistories table in the database to find all rejection records associated with the specified user. It orders the results by the rejection date in descending order and returns the list of rejection history entries in the response. This endpoint allows clients to retrieve information about past rejections for a user, which can be useful for understanding the reasons for previous rejections and for tracking user status over time.
+            </summary>
+            <param name="userId">The ID of the user for whom to retrieve rejection history.</param>
+            <returns>The list of rejection history entries.</returns>
+        </member>
+        <member name="M:UserController.DeleteUser(System.String)">
+            <summary>
+            Handles DELETE requests to delete a user. This method accepts a user ID as a parameter and retrieves the corresponding user from the database. If the user is not found, it returns a not found response. If the user is found, it first removes any mentor request records that reference the user as a mentee to maintain referential integrity. It then checks if the user has a mentor record; if so, it verifies that there are no mentees assigned to this mentor before allowing deletion. If there are assigned mentees, it returns a bad request response indicating that the mentor cannot be deleted. If the user has a mentee record, it checks for any recent class assignments
+            </summary>
+            <param name="userId">The ID of the user to delete.</param>
+            <returns>The response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:UserController.UpdatePersonalInfo(PersonalInfoUpdateRequest)">
+            <summary>
+            Handles POST requests to update a user's personal information. This method accepts a PersonalInfoUpdateRequest object in the request body, which contains the user's code, name, last name, and phone number. The method first checks if the request model is valid, and if not, it returns a bad request response with the model state errors. It then retrieves the user from the database using the provided code. If the user is not found, it returns a not found response. If the user is found, it updates the user's name, last name, and phone number with the values from the request. Finally, it saves the changes to the database and returns an OK response to indicate that the update was successful.
+            </summary>
+            <param name="request">The request containing the updated personal information.</param>
+            <returns>The response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:UserController.GetMenteeActivityStats(System.String)">
+            <summary>
+            Handles GET requests to retrieve activity statistics for a specific mentee. This method accepts a mentee code as a parameter and retrieves the most recent semester plan for the mentee, regardless of whether it is active. It then counts the total number of trainings and affairs whose event periods overlap with the semester plan's start and end dates. Additionally, it counts how many of those trainings and affairs the mentee has registered for by checking for corresponding records in the SemesterPlanEvents table. Finally, it returns an object containing the total number of trainings, registered trainings, total number of affairs, and registered affairs in the response. This endpoint allows clients to retrieve information about a mentee's activity and engagement with training and affair events during their semester plan.
+            </summary>
+            <param name="menteeCode">The code of the mentee for whom to retrieve activity statistics.</param>
+            <returns>The activity statistics for the specified mentee.</returns>
+        </member>
+        <member name="T:PersonalInfoUpdateRequest">
+            <summary>
+            Request model for updating a user's personal information, including their name, last name, and phone number. This model is used in the UpdatePersonalInfo endpoint of the UserController to receive and validate the data sent by the client when a user wants to update their personal details. The Code property is required to identify which user is being updated, while the Name, LastName, and PhoneNumber properties are also required and have validation attributes to ensure that they meet certain criteria (e.g., length constraints). This structured request model helps ensure that the data received from the client is valid and can be processed correctly by the controller.
+            </summary>
+        </member>
+        <member name="P:PersonalInfoUpdateRequest.Code">
+            <summary>
+            The unique code of the user whose personal information is being updated. This property is required to identify the specific user in the database that the update operation should be applied to. The controller will use this code to retrieve the user record and apply the changes to the correct user. Without this code, the controller would not be able to determine which user's information needs to be updated, making it a critical part of the request model for updating personal information.
+            </summary>
+        </member>
+        <member name="P:PersonalInfoUpdateRequest.Name">
+            <summary>
+            The first name of the user. This property is required and must be between 2 and 50 characters in length. The validation attributes ensure that the name provided by the client meets these criteria, which helps maintain data integrity and consistency in the database. When a user submits a request to update their personal information, they must provide a valid name that adheres to these constraints for the update to be successful.
+            </summary>
+        </member>
+        <member name="P:PersonalInfoUpdateRequest.LastName">
+            <summary>
+            The last name of the user. This property is required and must be between 2 and 50 characters in length. The validation attributes ensure that the last name provided by the client meets these criteria, which helps maintain data integrity and consistency in the database. When a user submits a request to update their personal information, they must provide a valid last name that adheres to these constraints for the update to be successful.
+            </summary>
+        </member>
+        <member name="P:PersonalInfoUpdateRequest.PhoneNumber">
+            <summary>
+            The phone number of the user. This property is required and must be between 7 and 15 characters in length. The validation attributes ensure that the phone number provided by the client meets these criteria, which helps maintain data integrity and consistency in the database. When a user submits a request to update their personal information, they must provide a valid phone number that adheres to these constraints for the update to be successful.
+            </summary>
+        </member>
+        <member name="T:MenteeUpdateRequest">
+            <summary>
+            Request model for updating a mentee's information, including their study program, specialization, and phone number. This model is used in the UpdateMentee endpoint of the UserController to receive and validate the data sent by the client when a mentee wants to update their information. The Code property is used to identify which mentee is being updated, while the StudyProgram, Specialization, and PhoneNumber properties are optional and can be updated as needed. This structured request model helps ensure that the data received from the client is valid and can be processed correctly by the controller when updating a mentee's information.
+            </summary>
+        </member>
+        <member name="P:MenteeUpdateRequest.Code">
+            <summary>
+            The unique code identifying the mentee whose information is being updated.
+            </summary>
+        </member>
+        <member name="P:MenteeUpdateRequest.StudyProgram">
+            <summary>
+            The study program to which the mentee belongs.
+            </summary>
+        </member>
+        <member name="P:MenteeUpdateRequest.PhoneNumber">
+            <summary>
+            The phone number of the mentee.
+            </summary>
+        </member>
+        <member name="P:MenteeUpdateRequest.Specialization">
+            <summary>
+            The specialization of the mentee.
+            </summary>
+        </member>
+        <member name="T:MentorUpdateRequest">
+            <summary>
+            Request model for updating a mentor's information, including their department and phone number. This model is used in the UpdateMentor endpoint of the UserController to receive and validate the data sent by the client when a mentor wants to update their information. The Code property is used to identify which mentor is being updated, while the Department and PhoneNumber properties are optional and can be updated as needed. This structured request model helps ensure that the data received from the client is valid and can be processed correctly by the controller when updating a mentor's information.
+            </summary>
+        </member>
+        <member name="P:MentorUpdateRequest.Code">
+            <summary>
+            The unique code identifying the mentor whose information is being updated.
+            </summary>
+        </member>
+        <member name="P:MentorUpdateRequest.Department">
+            <summary>
+            The department to which the mentor belongs.
+            </summary>
+        </member>
+        <member name="P:MentorUpdateRequest.PhoneNumber">
+            <summary>
+            The phone number of the mentor.
+            </summary>
+        </member>
+        <member name="T:RejectUserRequest">
+            <summary>
+            Request model for rejecting a user's submission, containing the reason for rejection. This model is used in the RejectUser endpoint of the UserController to receive and validate the data sent by the client when an administrator wants to reject a user's submission. The Reason property is required and allows the administrator to provide a specific explanation for why the user's submission was rejected. This information can be used for communication with the user and for logging purposes in the system's rejection history.
+            </summary>
+        </member>
+        <member name="P:RejectUserRequest.Reason">
+            <summary>
+            The reason for rejecting the user's submission. This property is required and should provide a clear explanation for why the user's submission was rejected. The reason can be communicated to the user in the rejection email and is also stored in the RejectionHistory table for future reference. Providing a reason helps maintain transparency and allows users to understand what they can improve if they wish to resubmit their information in the future.
+            </summary>
+        </member>
+    </members>
+</doc>

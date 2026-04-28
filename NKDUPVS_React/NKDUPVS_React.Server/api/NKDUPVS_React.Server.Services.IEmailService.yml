@@ -1,0 +1,180 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Services.IEmailService
+  commentId: T:NKDUPVS_React.Server.Services.IEmailService
+  id: IEmailService
+  parent: NKDUPVS_React.Server.Services
+  children:
+  - NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: NKDUPVS_React.Server.Services.IEmailService
+  type: Interface
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/EmailService.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: IEmailService
+    path: Controllers/EmailService.cs
+    startLine: 10
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Services
+  summary: Interface for email services, defining a method for sending emails asynchronously. This interface allows for different implementations of email sending functionality, such as using SendGrid or other email providers, while providing a consistent method signature for sending emails throughout the application.
+  example: []
+  syntax:
+    content: public interface IEmailService
+    content.vb: Public Interface IEmailService
+  derivedClasses:
+  - NKDUPVS_React.Server.Services.EmailService
+- uid: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  commentId: M:NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(System.String,System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String,System.String)
+  parent: NKDUPVS_React.Server.Services.IEmailService
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(string, string, string, string)
+  nameWithType: IEmailService.SendEmailAsync(string, string, string, string)
+  fullName: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(string, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/EmailService.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: SendEmailAsync
+    path: Controllers/EmailService.cs
+    startLine: 20
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Services
+  summary: Sends an email asynchronously to the specified recipient with the given subject, plain text content, and HTML content. This method is used to send various types of emails, such as account verification, password reset, or notifications, by providing the necessary email details and allowing for asynchronous execution to improve performance and responsiveness of the application.
+  example: []
+  syntax:
+    content: Task SendEmailAsync(string toEmail, string subject, string plainText, string htmlContent)
+    parameters:
+    - id: toEmail
+      type: System.String
+      description: The email address of the recipient.
+    - id: subject
+      type: System.String
+      description: The subject of the email.
+    - id: plainText
+      type: System.String
+      description: The plain text content of the email.
+    - id: htmlContent
+      type: System.String
+      description: The HTML content of the email.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task representing the asynchronous operation.
+    content.vb: Function SendEmailAsync(toEmail As String, subject As String, plainText As String, htmlContent As String) As Task
+  overload: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync*
+  nameWithType.vb: IEmailService.SendEmailAsync(String, String, String, String)
+  fullName.vb: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync(String, String, String, String)
+  name.vb: SendEmailAsync(String, String, String, String)
+references:
+- uid: NKDUPVS_React.Server.Services
+  commentId: N:NKDUPVS_React.Server.Services
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Services
+  nameWithType: NKDUPVS_React.Server.Services
+  fullName: NKDUPVS_React.Server.Services
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html
+- uid: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync*
+  commentId: Overload:NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync
+  href: NKDUPVS_React.Server.Services.IEmailService.html#NKDUPVS_React_Server_Services_IEmailService_SendEmailAsync_System_String_System_String_System_String_System_String_
+  name: SendEmailAsync
+  nameWithType: IEmailService.SendEmailAsync
+  fullName: NKDUPVS_React.Server.Services.IEmailService.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

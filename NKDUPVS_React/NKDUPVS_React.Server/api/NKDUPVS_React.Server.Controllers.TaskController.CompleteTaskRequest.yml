@@ -1,0 +1,484 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  id: TaskController.CompleteTaskRequest
+  parent: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile
+  - NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+  - NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+  langs:
+  - csharp
+  - vb
+  name: TaskController.CompleteTaskRequest
+  nameWithType: TaskController.CompleteTaskRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: CompleteTaskRequest
+    path: Controllers/TaskController.cs
+    startLine: 454
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Defines the request model for marking a task as completed. This class includes properties for the task ID, mentee code, and an optional completion file link. The TaskId property identifies the specific task being marked as completed, while the MenteeCode property identifies the mentee who is completing the task. The CompletionFile property allows for an optional link to a file that serves as evidence of task completion. This request model is used in the MarkTaskCompleted endpoint to process requests for marking tasks as completed by mentees within the application.
+  example: []
+  syntax:
+    content: public class TaskController.CompleteTaskRequest
+    content.vb: Public Class TaskController.CompleteTaskRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+  id: TaskId
+  parent: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: TaskId
+  nameWithType: TaskController.CompleteTaskRequest.TaskId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: TaskId
+    path: Controllers/TaskController.cs
+    startLine: 459
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The ID of the task being marked as completed. This property is used to identify the specific task that the mentee is completing. It is a nullable integer, allowing for the possibility that the task ID may not be provided in the request. However, in typical usage, this property should contain a valid task ID to ensure that the correct task assignment is updated in the database when marking it as completed.
+  example: []
+  syntax:
+    content: public int? TaskId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TaskId As Integer?
+  overload: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+  id: MenteeCode
+  parent: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: MenteeCode
+  nameWithType: TaskController.CompleteTaskRequest.MenteeCode
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MenteeCode
+    path: Controllers/TaskController.cs
+    startLine: 464
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The code of the mentee who is marking the task as completed. This property is used to identify the specific mentee associated with the task completion request. It is a nullable string, allowing for the possibility that the mentee code may not be provided in the request. However, in typical usage, this property should contain a valid mentee code to ensure that the correct semester plan and task assignment are updated in the database when marking the task as completed.
+  example: []
+  syntax:
+    content: public string? MenteeCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MenteeCode As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile
+  id: CompletionFile
+  parent: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: CompletionFile
+  nameWithType: TaskController.CompleteTaskRequest.CompletionFile
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: CompletionFile
+    path: Controllers/TaskController.cs
+    startLine: 469
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: An optional link to a file that serves as evidence of task completion. This property allows mentees to provide additional information or proof when marking a task as completed. It is a nullable string, meaning that it can be left empty if the mentee does not wish to provide a completion file. If no link is provided, the system will use a default value (e.g., "completed") to indicate that the task has been marked as completed without specific evidence.
+  example: []
+  syntax:
+    content: public string? CompletionFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompletionFile As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile*
+references:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+  href: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_CompleteTaskRequest_TaskId
+  name: TaskId
+  nameWithType: TaskController.CompleteTaskRequest.TaskId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.TaskId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+  href: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_CompleteTaskRequest_MenteeCode
+  name: MenteeCode
+  nameWithType: TaskController.CompleteTaskRequest.MenteeCode
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.MenteeCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile
+  href: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_CompleteTaskRequest_CompletionFile
+  name: CompletionFile
+  nameWithType: TaskController.CompleteTaskRequest.CompletionFile
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.CompletionFile

@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  id: TaskController.AssignTaskRequest
+  parent: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+  - NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+  - NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+  langs:
+  - csharp
+  - vb
+  name: TaskController.AssignTaskRequest
+  nameWithType: TaskController.AssignTaskRequest
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: AssignTaskRequest
+    path: Controllers/TaskController.cs
+    startLine: 475
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Defines the request model for assigning a task to multiple mentees. This class includes properties for the task ID, mentor code, and a list of mentee codes. The TaskId property identifies the specific task being assigned, while the MentorCode property identifies the mentor responsible for the assignment. The MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned. This request model is used in the AssignTask endpoint to process requests for assigning tasks to multiple mentees within the application, allowing for efficient management of task assignments.
+  example: []
+  syntax:
+    content: public class TaskController.AssignTaskRequest
+    content.vb: Public Class TaskController.AssignTaskRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+  id: TaskId
+  parent: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: TaskId
+  nameWithType: TaskController.AssignTaskRequest.TaskId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: TaskId
+    path: Controllers/TaskController.cs
+    startLine: 480
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The ID of the task being assigned. This property is used to identify the specific task that is being assigned to mentees. It is a nullable integer, allowing for the possibility that the task ID may not be provided in the request. However, in typical usage, this property should contain a valid task ID to ensure that the correct task is updated in the database when processing the assignment request.
+  example: []
+  syntax:
+    content: public int? TaskId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TaskId As Integer?
+  overload: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+  id: MentorCode
+  parent: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: MentorCode
+  nameWithType: TaskController.AssignTaskRequest.MentorCode
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MentorCode
+    path: Controllers/TaskController.cs
+    startLine: 485
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The code of the mentor responsible for the assignment. This property is used to identify the mentor who is assigning the task to mentees. It is a nullable string, allowing for the possibility that the mentor code may not be provided in the request. However, in typical usage, this property should contain a valid mentor code to ensure that the assignment is properly attributed to the correct mentor within the application.
+  example: []
+  syntax:
+    content: public string? MentorCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MentorCode As String
+  overload: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode*
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+  commentId: P:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+  id: MenteeCodes
+  parent: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: MenteeCodes
+  nameWithType: TaskController.AssignTaskRequest.MenteeCodes
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MenteeCodes
+    path: Controllers/TaskController.cs
+    startLine: 490
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: A list of strings that contains the codes of the mentees to whom the task should be assigned. This property allows for multiple mentee codes to be included in the assignment request, enabling the assignment of a single task to multiple mentees in one operation. It is a nullable list, meaning that it can be left empty if no mentee codes are provided. However, in typical usage, this property should contain at least one valid mentee code to ensure that the task is assigned to the intended recipients within the application.
+  example: []
+  syntax:
+    content: public List<string>? MenteeCodes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property MenteeCodes As List(Of String)
+  overload: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes*
+references:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+  href: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_AssignTaskRequest_TaskId
+  name: TaskId
+  nameWithType: TaskController.AssignTaskRequest.TaskId
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.TaskId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+  href: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_AssignTaskRequest_MentorCode
+  name: MentorCode
+  nameWithType: TaskController.AssignTaskRequest.MentorCode
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MentorCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+  href: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html#NKDUPVS_React_Server_Controllers_TaskController_AssignTaskRequest_MenteeCodes
+  name: MenteeCodes
+  nameWithType: TaskController.AssignTaskRequest.MenteeCodes
+  fullName: NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.MenteeCodes
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,522 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  commentId: T:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  id: AffairFeedbackRequest
+  parent: NKDUPVS_React.Server.Controllers
+  children:
+  - NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+  - NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+  - NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode
+  - NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+  langs:
+  - csharp
+  - vb
+  name: AffairFeedbackRequest
+  nameWithType: AffairFeedbackRequest
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/FeedbackController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: AffairFeedbackRequest
+    path: Controllers/FeedbackController.cs
+    startLine: 380
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: Request model for creating feedback for an affair. Contains the affair ID, rating, comment, and mentee code. The affair ID is used to associate the feedback with the correct affair's event, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the affair. This model also includes validation to prevent duplicate feedback for the same affair and mentee combination.
+  example: []
+  syntax:
+    content: public class AffairFeedbackRequest
+    content.vb: Public Class AffairFeedbackRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+  commentId: P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+  id: AffairId
+  parent: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  langs:
+  - csharp
+  - vb
+  name: AffairId
+  nameWithType: AffairFeedbackRequest.AffairId
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/FeedbackController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: AffairId
+    path: Controllers/FeedbackController.cs
+    startLine: 385
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The ID of the affair for which to create feedback. This field is required when creating feedback for an affair and is used to look up the associated affair and its event in the database. The feedback will be linked to the affair's event ID (fk_Affairid_Affair) to maintain the relationship between the feedback and the affair. The affair ID should correspond to an existing affair that has ended, as feedback can only be created for affairs that have already taken place.
+  example: []
+  syntax:
+    content: public int? AffairId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property AffairId As Integer?
+  overload: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId*
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+  commentId: P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+  id: Rating
+  parent: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  langs:
+  - csharp
+  - vb
+  name: Rating
+  nameWithType: AffairFeedbackRequest.Rating
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/FeedbackController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Rating
+    path: Controllers/FeedbackController.cs
+    startLine: 390
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The rating for the feedback, which should be an integer value between 1 and 5. This field is required for creating feedback and will be validated to ensure it falls within the acceptable range. The rating represents the mentee's evaluation of the affair, with 1 being the lowest rating and 5 being the highest.
+  example: []
+  syntax:
+    content: public int? Rating { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Rating As Integer?
+  overload: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating*
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+  commentId: P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+  id: Comment
+  parent: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: AffairFeedbackRequest.Comment
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/FeedbackController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Comment
+    path: Controllers/FeedbackController.cs
+    startLine: 395
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: An optional comment for the affair feedback. This field allows the mentee to provide additional context or details about their rating of the affair. While it is not required, it can be useful for providing more specific feedback on what aspects of the affair were particularly good or could be improved. The comment will be stored along with the rating and can be displayed when retrieving feedback for the affair.
+  example: []
+  syntax:
+    content: public string? Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment*
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode
+  commentId: P:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode
+  id: MenteeCode
+  parent: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest
+  langs:
+  - csharp
+  - vb
+  name: MenteeCode
+  nameWithType: AffairFeedbackRequest.MenteeCode
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/Controllers/FeedbackController.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MenteeCode
+    path: Controllers/FeedbackController.cs
+    startLine: 400
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Controllers
+  summary: The code of the mentee providing the feedback. This field is required for creating feedback for an affair, as it allows for tracking which mentee provided the feedback and enables features such as preventing duplicate feedback from the same mentee for the same affair. The mentee code should correspond to an existing user in the system who is associated with the affair through their semester plan.
+  example: []
+  syntax:
+    content: public string? MenteeCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MenteeCode As String
+  overload: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode*
+references:
+- uid: NKDUPVS_React.Server.Controllers
+  commentId: N:NKDUPVS_React.Server.Controllers
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Controllers
+  nameWithType: NKDUPVS_React.Server.Controllers
+  fullName: NKDUPVS_React.Server.Controllers
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Controllers
+    name: Controllers
+    href: NKDUPVS_React.Server.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+  href: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html#NKDUPVS_React_Server_Controllers_AffairFeedbackRequest_AffairId
+  name: AffairId
+  nameWithType: AffairFeedbackRequest.AffairId
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.AffairId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+  href: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html#NKDUPVS_React_Server_Controllers_AffairFeedbackRequest_Rating
+  name: Rating
+  nameWithType: AffairFeedbackRequest.Rating
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Rating
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+  href: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html#NKDUPVS_React_Server_Controllers_AffairFeedbackRequest_Comment
+  name: Comment
+  nameWithType: AffairFeedbackRequest.Comment
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.Comment
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode*
+  commentId: Overload:NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode
+  href: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html#NKDUPVS_React_Server_Controllers_AffairFeedbackRequest_MenteeCode
+  name: MenteeCode
+  nameWithType: AffairFeedbackRequest.MenteeCode
+  fullName: NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.MenteeCode

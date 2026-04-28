@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace NKDUPVS_React.Server.Controllers
 {
+    /// <summary>
+    /// Controller for managing class-related operations such as retrieving class information and creating new classes.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class ClassController : ControllerBase
@@ -16,12 +19,21 @@ namespace NKDUPVS_React.Server.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ILogger<ClassController> _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the ClassController class with the specified database context and logger.
+        /// </summary>
+        /// <param name="context">The database context.</param>
+        /// <param name="logger">The logger.</param>
         public ClassController(ApplicationDbContext context, ILogger<ClassController> logger)
         {
             _context = context;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Retrieves a list of all classes from the database and returns them to the client. This method is typically used to display available classes to users.
+        /// </summary>
+        /// <returns>A list of all classes.</returns>
         [HttpGet]
         public async Task<IActionResult> GetClasses()
         {
@@ -29,6 +41,11 @@ namespace NKDUPVS_React.Server.Controllers
             return Ok(classes);
         }
 
+        /// <summary>
+        /// Creates a new class in the database based on the provided class information. If no code is provided, a unique code will be generated. If a class with the same code already exists, it will return the existing class instead of creating a new one. This method is used to allow users to create new classes for their courses or groups.
+        /// </summary>
+        /// <param name="newClass">The class to create.</param>
+        /// <returns>The created class.</returns>
         [HttpPost]
         public async Task<IActionResult> CreateClass([FromBody] Class newClass)
         {

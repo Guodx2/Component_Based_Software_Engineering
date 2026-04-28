@@ -1,0 +1,4227 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext
+  commentId: T:NKDUPVS_React.Server.Data.ApplicationDbContext
+  id: ApplicationDbContext
+  parent: NKDUPVS_React.Server.Data
+  children:
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext})
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+  - NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+  langs:
+  - csharp
+  - vb
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext
+  type: Class
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: ApplicationDbContext
+    path: data/ApplicationDbContext.cs
+    startLine: 6
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: 'public class ApplicationDbContext : DbContext, IInfrastructure<IServiceProvider>, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService, IDisposable, IAsyncDisposable'
+    content.vb: Public Class ApplicationDbContext Inherits DbContext Implements IInfrastructure(Of IServiceProvider), IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService, IDisposable, IAsyncDisposable
+  inheritance:
+  - System.Object
+  - Microsoft.EntityFrameworkCore.DbContext
+  implements:
+  - Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  - Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  - Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  - Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  - Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  - System.IDisposable
+  - System.IAsyncDisposable
+  inheritedMembers:
+  - Microsoft.EntityFrameworkCore.DbContext.Set``1
+  - Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  - Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  - Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Dispose
+  - Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  - Microsoft.EntityFrameworkCore.DbContext.Entry``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Add``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.AddAsync``1({TEntity},System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Attach``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Update``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Remove``1({TEntity})
+  - Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  - Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  - Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  - Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  - Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{{TResult}}}})
+  - Microsoft.EntityFrameworkCore.DbContext.Database
+  - Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  - Microsoft.EntityFrameworkCore.DbContext.Model
+  - Microsoft.EntityFrameworkCore.DbContext.ContextId
+  - Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  - Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext})
+  commentId: M:NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext})
+  id: '#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext})'
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: ApplicationDbContext(DbContextOptions<ApplicationDbContext>)
+  nameWithType: ApplicationDbContext.ApplicationDbContext(DbContextOptions<ApplicationDbContext>)
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.ApplicationDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<NKDUPVS_React.Server.Data.ApplicationDbContext>)
+  type: Constructor
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: .ctor
+    path: data/ApplicationDbContext.cs
+    startLine: 8
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    parameters:
+    - id: options
+      type: Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext}
+    content.vb: Public Sub New(options As DbContextOptions(Of ApplicationDbContext))
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor*
+  nameWithType.vb: ApplicationDbContext.New(DbContextOptions(Of ApplicationDbContext))
+  fullName.vb: NKDUPVS_React.Server.Data.ApplicationDbContext.New(Microsoft.EntityFrameworkCore.DbContextOptions(Of NKDUPVS_React.Server.Data.ApplicationDbContext))
+  name.vb: New(DbContextOptions(Of ApplicationDbContext))
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+  id: Users
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: ApplicationDbContext.Users
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Users
+    path: data/ApplicationDbContext.cs
+    startLine: 13
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<User> Users { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.User}
+    content.vb: Public Property Users As DbSet(Of User)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Users*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+  id: Mentors
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Mentors
+  nameWithType: ApplicationDbContext.Mentors
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Mentors
+    path: data/ApplicationDbContext.cs
+    startLine: 14
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Mentor> Mentors { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentor}
+    content.vb: Public Property Mentors As DbSet(Of Mentor)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+  id: Mentees
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Mentees
+  nameWithType: ApplicationDbContext.Mentees
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Mentees
+    path: data/ApplicationDbContext.cs
+    startLine: 15
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Mentee> Mentees { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentee}
+    content.vb: Public Property Mentees As DbSet(Of Mentee)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+  id: Classes
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Classes
+  nameWithType: ApplicationDbContext.Classes
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Classes
+    path: data/ApplicationDbContext.cs
+    startLine: 16
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Class> Classes { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Class}
+    content.vb: Public Property Classes As DbSet(Of [Class])
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Classes*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+  id: UserClasses
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: UserClasses
+  nameWithType: ApplicationDbContext.UserClasses
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: UserClasses
+    path: data/ApplicationDbContext.cs
+    startLine: 17
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<UserClass> UserClasses { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.UserClass}
+    content.vb: Public Property UserClasses As DbSet(Of UserClass)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+  id: RejectionHistories
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: RejectionHistories
+  nameWithType: ApplicationDbContext.RejectionHistories
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: RejectionHistories
+    path: data/ApplicationDbContext.cs
+    startLine: 18
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<RejectionHistory> RejectionHistories { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RejectionHistory}
+    content.vb: Public Property RejectionHistories As DbSet(Of RejectionHistory)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+  id: Tasks
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Tasks
+  nameWithType: ApplicationDbContext.Tasks
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Tasks
+    path: data/ApplicationDbContext.cs
+    startLine: 19
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Task> Tasks { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Task}
+    content.vb: Public Property Tasks As DbSet(Of Task)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+  id: MentorExpertises
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: MentorExpertises
+  nameWithType: ApplicationDbContext.MentorExpertises
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MentorExpertises
+    path: data/ApplicationDbContext.cs
+    startLine: 20
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<MentorExpertise> MentorExpertises { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorExpertise}
+    content.vb: Public Property MentorExpertises As DbSet(Of MentorExpertise)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+  id: MentorRequests
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: MentorRequests
+  nameWithType: ApplicationDbContext.MentorRequests
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: MentorRequests
+    path: data/ApplicationDbContext.cs
+    startLine: 21
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<MentorRequest> MentorRequests { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorRequest}
+    content.vb: Public Property MentorRequests As DbSet(Of MentorRequest)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+  id: StudyPrograms
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: StudyPrograms
+  nameWithType: ApplicationDbContext.StudyPrograms
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: StudyPrograms
+    path: data/ApplicationDbContext.cs
+    startLine: 22
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<StudyProgram> StudyPrograms { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.StudyProgram}
+    content.vb: Public Property StudyPrograms As DbSet(Of StudyProgram)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+  id: Specializations
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Specializations
+  nameWithType: ApplicationDbContext.Specializations
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Specializations
+    path: data/ApplicationDbContext.cs
+    startLine: 23
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Specialization> Specializations { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Specialization}
+    content.vb: Public Property Specializations As DbSet(Of Specialization)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+  id: Departments
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Departments
+  nameWithType: ApplicationDbContext.Departments
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Departments
+    path: data/ApplicationDbContext.cs
+    startLine: 24
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Department> Departments { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Department}
+    content.vb: Public Property Departments As DbSet(Of Department)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Departments*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+  id: RequestStatuses
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: RequestStatuses
+  nameWithType: ApplicationDbContext.RequestStatuses
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: RequestStatuses
+    path: data/ApplicationDbContext.cs
+    startLine: 25
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<RequestStatus> RequestStatuses { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RequestStatus}
+    content.vb: Public Property RequestStatuses As DbSet(Of RequestStatus)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+  id: TaskTypes
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: TaskTypes
+  nameWithType: ApplicationDbContext.TaskTypes
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: TaskTypes
+    path: data/ApplicationDbContext.cs
+    startLine: 26
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<TaskType> TaskTypes { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.TaskType}
+    content.vb: Public Property TaskTypes As DbSet(Of TaskType)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+  id: SemesterPlans
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: SemesterPlans
+  nameWithType: ApplicationDbContext.SemesterPlans
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: SemesterPlans
+    path: data/ApplicationDbContext.cs
+    startLine: 27
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<SemesterPlan> SemesterPlans { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlan}
+    content.vb: Public Property SemesterPlans As DbSet(Of SemesterPlan)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+  id: SemesterPlanTasks
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: SemesterPlanTasks
+  nameWithType: ApplicationDbContext.SemesterPlanTasks
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: SemesterPlanTasks
+    path: data/ApplicationDbContext.cs
+    startLine: 28
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<SemesterPlanTask> SemesterPlanTasks { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanTask}
+    content.vb: Public Property SemesterPlanTasks As DbSet(Of SemesterPlanTask)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+  id: Feedback
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Feedback
+  nameWithType: ApplicationDbContext.Feedback
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Feedback
+    path: data/ApplicationDbContext.cs
+    startLine: 29
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Feedback> Feedback { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Feedback}
+    content.vb: Public Property Feedback As DbSet(Of Feedback)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+  id: Affairs
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Affairs
+  nameWithType: ApplicationDbContext.Affairs
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Affairs
+    path: data/ApplicationDbContext.cs
+    startLine: 30
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Affair> Affairs { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Affair}
+    content.vb: Public Property Affairs As DbSet(Of Affair)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+  id: Trainings
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Trainings
+  nameWithType: ApplicationDbContext.Trainings
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Trainings
+    path: data/ApplicationDbContext.cs
+    startLine: 31
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Training> Trainings { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Training}
+    content.vb: Public Property Trainings As DbSet(Of Training)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+  id: SemesterPlanEvents
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: SemesterPlanEvents
+  nameWithType: ApplicationDbContext.SemesterPlanEvents
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: SemesterPlanEvents
+    path: data/ApplicationDbContext.cs
+    startLine: 32
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<SemesterPlanEvent> SemesterPlanEvents { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanEvent}
+    content.vb: Public Property SemesterPlanEvents As DbSet(Of SemesterPlanEvent)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+  commentId: P:NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+  id: Events
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Events
+  nameWithType: ApplicationDbContext.Events
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+  type: Property
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: Events
+    path: data/ApplicationDbContext.cs
+    startLine: 33
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  syntax:
+    content: public DbSet<Event> Events { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Event}
+    content.vb: Public Property Events As DbSet(Of [Event])
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.Events*
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: NKDUPVS_React.Server.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: OnModelCreating(ModelBuilder)
+  nameWithType: ApplicationDbContext.OnModelCreating(ModelBuilder)
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    remote:
+      path: NKDUPVS_React/NKDUPVS_React.Server/data/ApplicationDbContext.cs
+      branch: main
+      repo: https://github.com/Guodx2/Component_Based_Software_Engineering.git
+    id: OnModelCreating
+    path: data/ApplicationDbContext.cs
+    startLine: 35
+  assemblies:
+  - NKDUPVS_React.Server
+  namespace: NKDUPVS_React.Server.Data
+  summary: >-
+    Override this method to further configure the model that was discovered by convention from the entity types
+
+    exposed in <xref href="Microsoft.EntityFrameworkCore.DbSet%601" data-throw-if-not-resolved="false"></xref> properties on your derived context. The resulting model may be cached
+
+    and re-used for subsequent instances of your derived context.
+  remarks: >-
+    <p>
+        If a model is explicitly set on the options for this context (via <xref href="Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)" data-throw-if-not-resolved="false"></xref>)
+        then this method will not be run. However, it will still run when creating a compiled model.
+    </p>
+
+    <p>
+        See <a href="https://aka.ms/efcore-docs-modeling">Modeling entity types and relationships</a> for more information and
+        examples.
+    </p>
+  example: []
+  syntax:
+    content: protected override void OnModelCreating(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+      description: >-
+        The builder being used to construct the model for this context. Databases (and other extensions) typically
+
+        define extension methods on this object that allow you to configure aspects of the model that are specific
+
+        to a given database.
+    content.vb: Protected Overrides Sub OnModelCreating(modelBuilder As ModelBuilder)
+  overridden: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  overload: NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating*
+references:
+- uid: NKDUPVS_React.Server.Data
+  commentId: N:NKDUPVS_React.Server.Data
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Data
+  nameWithType: NKDUPVS_React.Server.Data
+  fullName: NKDUPVS_React.Server.Data
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Data
+    name: Data
+    href: NKDUPVS_React.Server.Data.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Data
+    name: Data
+    href: NKDUPVS_React.Server.Data.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.EntityFrameworkCore.DbContext
+  commentId: T:Microsoft.EntityFrameworkCore.DbContext
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext
+  name: DbContext
+  nameWithType: DbContext
+  fullName: Microsoft.EntityFrameworkCore.DbContext
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure{System.IServiceProvider}
+  parent: Microsoft.EntityFrameworkCore.Infrastructure
+  definition: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  name: IInfrastructure<IServiceProvider>
+  nameWithType: IInfrastructure<IServiceProvider>
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>
+  nameWithType.vb: IInfrastructure(Of IServiceProvider)
+  fullName.vb: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure(Of System.IServiceProvider)
+  name.vb: IInfrastructure(Of IServiceProvider)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  - name: <
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbcontextdependencies
+  name: IDbContextDependencies
+  nameWithType: IDbContextDependencies
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbsetcache
+  name: IDbSetCache
+  nameWithType: IDbSetCache
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbSetCache
+- uid: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  commentId: T:Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+  parent: Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbcontextpoolable
+  name: IDbContextPoolable
+  nameWithType: IDbContextPoolable
+  fullName: Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+  parent: Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice
+  name: IResettableService
+  nameWithType: IResettableService
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IResettableService
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Set``1
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1
+  name: Set<TEntity>()
+  nameWithType: DbContext.Set<TEntity>()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>()
+  nameWithType.vb: DbContext.Set(Of TEntity)()
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)()
+  name.vb: Set(Of TEntity)()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+    name: Set
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1
+    name: Set
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1(system-string)
+  name: Set<TEntity>(string)
+  nameWithType: DbContext.Set<TEntity>(string)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Set<TEntity>(string)
+  nameWithType.vb: DbContext.Set(Of TEntity)(String)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Set(Of TEntity)(String)
+  name.vb: Set(Of TEntity)(String)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+    name: Set
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1(system-string)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Set``1(System.String)
+    name: Set
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1(system-string)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring
+  name: OnConfiguring(DbContextOptionsBuilder)
+  nameWithType: DbContext.OnConfiguring(DbContextOptionsBuilder)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+    name: OnConfiguring
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+    name: OnConfiguring
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.configureconventions
+  name: ConfigureConventions(ModelConfigurationBuilder)
+  nameWithType: DbContext.ConfigureConventions(ModelConfigurationBuilder)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+    name: ConfigureConventions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.configureconventions
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelConfigurationBuilder
+    name: ModelConfigurationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelconfigurationbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)
+    name: ConfigureConventions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.configureconventions
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelConfigurationBuilder
+    name: ModelConfigurationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelconfigurationbuilder
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges
+  name: SaveChanges()
+  nameWithType: DbContext.SaveChanges()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    name: SaveChanges
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges
+    name: SaveChanges
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges
+  - name: (
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges(system-boolean)
+  name: SaveChanges(bool)
+  nameWithType: DbContext.SaveChanges(bool)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(bool)
+  nameWithType.vb: DbContext.SaveChanges(Boolean)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean)
+  name.vb: SaveChanges(Boolean)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+    name: SaveChanges
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)
+    name: SaveChanges
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges(system-boolean)
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-threading-cancellationtoken)
+  name: SaveChangesAsync(CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-boolean-system-threading-cancellationtoken)
+  name: SaveChangesAsync(bool, CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(bool, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(bool, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.SaveChangesAsync(Boolean, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean, System.Threading.CancellationToken)
+  name.vb: SaveChangesAsync(Boolean, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-boolean-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean,System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-boolean-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Dispose
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.dispose
+  name: Dispose()
+  nameWithType: DbContext.Dispose()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Dispose()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.dispose
+  - name: (
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.disposeasync
+  name: DisposeAsync()
+  nameWithType: DbContext.DisposeAsync()
+  fullName: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.disposeasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.disposeasync
+  - name: (
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry(system-object)
+  name: Entry(object)
+  nameWithType: DbContext.Entry(object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry(object)
+  nameWithType.vb: DbContext.Entry(Object)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Entry(Object)
+  name.vb: Entry(Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  name: Add<TEntity>(TEntity)
+  nameWithType: DbContext.Add<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Add(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)(TEntity)
+  name.vb: Add(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1({TEntity},System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  name: AddAsync<TEntity>(TEntity, CancellationToken)
+  nameWithType: DbContext.AddAsync<TEntity>(TEntity, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>(TEntity, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddAsync(Of TEntity)(TEntity, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)(TEntity, System.Threading.CancellationToken)
+  name.vb: AddAsync(Of TEntity)(TEntity, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  name: Attach<TEntity>(TEntity)
+  nameWithType: DbContext.Attach<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Attach(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)(TEntity)
+  name.vb: Attach(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  name: Update<TEntity>(TEntity)
+  nameWithType: DbContext.Update<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Update(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)(TEntity)
+  name.vb: Update(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1({TEntity})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  name: Remove<TEntity>(TEntity)
+  nameWithType: DbContext.Remove<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Remove(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)(TEntity)
+  name.vb: Remove(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add(system-object)
+  name: Add(object)
+  nameWithType: DbContext.Add(object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add(object)
+  nameWithType.vb: DbContext.Add(Object)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Add(Object)
+  name.vb: Add(Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync(system-object-system-threading-cancellationtoken)
+  name: AddAsync(object, CancellationToken)
+  nameWithType: DbContext.AddAsync(object, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync(object, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddAsync(Object, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Object, System.Threading.CancellationToken)
+  name.vb: AddAsync(Object, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync(system-object-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync(system-object-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach(system-object)
+  name: Attach(object)
+  nameWithType: DbContext.Attach(object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach(object)
+  nameWithType.vb: DbContext.Attach(Object)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Attach(Object)
+  name.vb: Attach(Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update(system-object)
+  name: Update(object)
+  nameWithType: DbContext.Update(object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update(object)
+  nameWithType.vb: DbContext.Update(Object)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Update(Object)
+  name.vb: Update(Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove(system-object)
+  name: Remove(object)
+  nameWithType: DbContext.Remove(object)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove(object)
+  nameWithType.vb: DbContext.Remove(Object)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Remove(Object)
+  name.vb: Remove(Object)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-object())
+  name: AddRange(params object[])
+  nameWithType: DbContext.AddRange(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange(params object[])
+  nameWithType.vb: DbContext.AddRange(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRange(ParamArray Object())
+  name.vb: AddRange(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+    name: AddRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-object())
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])
+    name: AddRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-object())
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-object())
+  name: AddRangeAsync(params object[])
+  nameWithType: DbContext.AddRangeAsync(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(params object[])
+  nameWithType.vb: DbContext.AddRangeAsync(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(ParamArray Object())
+  name.vb: AddRangeAsync(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+    name: AddRangeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-object())
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])
+    name: AddRangeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-object())
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-object())
+  name: AttachRange(params object[])
+  nameWithType: DbContext.AttachRange(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange(params object[])
+  nameWithType.vb: DbContext.AttachRange(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AttachRange(ParamArray Object())
+  name.vb: AttachRange(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+    name: AttachRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-object())
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])
+    name: AttachRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-object())
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-object())
+  name: UpdateRange(params object[])
+  nameWithType: DbContext.UpdateRange(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(params object[])
+  nameWithType.vb: DbContext.UpdateRange(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(ParamArray Object())
+  name.vb: UpdateRange(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+    name: UpdateRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-object())
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])
+    name: UpdateRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-object())
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-object())
+  name: RemoveRange(params object[])
+  nameWithType: DbContext.RemoveRange(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(params object[])
+  nameWithType.vb: DbContext.RemoveRange(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(ParamArray Object())
+  name.vb: RemoveRange(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+    name: RemoveRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-object())
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])
+    name: RemoveRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-object())
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-collections-generic-ienumerable((system-object)))
+  name: AddRange(IEnumerable<object>)
+  nameWithType: DbContext.AddRange(IEnumerable<object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable<object>)
+  nameWithType.vb: DbContext.AddRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable(Of Object))
+  name.vb: AddRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AddRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AddRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-collections-generic-ienumerable((system-object))-system-threading-cancellationtoken)
+  name: AddRangeAsync(IEnumerable<object>, CancellationToken)
+  nameWithType: DbContext.AddRangeAsync(IEnumerable<object>, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable<object>, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddRangeAsync(IEnumerable(Of Object), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable(Of Object), System.Threading.CancellationToken)
+  name.vb: AddRangeAsync(IEnumerable(Of Object), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+    name: AddRangeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-collections-generic-ienumerable((system-object))-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)
+    name: AddRangeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-collections-generic-ienumerable((system-object))-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-collections-generic-ienumerable((system-object)))
+  name: AttachRange(IEnumerable<object>)
+  nameWithType: DbContext.AttachRange(IEnumerable<object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable<object>)
+  nameWithType.vb: DbContext.AttachRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable(Of Object))
+  name.vb: AttachRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AttachRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: AttachRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-collections-generic-ienumerable((system-object)))
+  name: UpdateRange(IEnumerable<object>)
+  nameWithType: DbContext.UpdateRange(IEnumerable<object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable<object>)
+  nameWithType.vb: DbContext.UpdateRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable(Of Object))
+  name.vb: UpdateRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: UpdateRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: UpdateRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-collections-generic-ienumerable((system-object)))
+  name: RemoveRange(IEnumerable<object>)
+  nameWithType: DbContext.RemoveRange(IEnumerable<object>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable<object>)
+  nameWithType.vb: DbContext.RemoveRange(IEnumerable(Of Object))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable(Of Object))
+  name.vb: RemoveRange(IEnumerable(Of Object))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: RemoveRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable{System.Object})
+    name: RemoveRange
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-collections-generic-ienumerable((system-object)))
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find(system-type-system-object())
+  name: Find(Type, params object[])
+  nameWithType: DbContext.Find(Type, params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type, params object[])
+  nameWithType.vb: DbContext.Find(Type, ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type, ParamArray Object())
+  name.vb: Find(Type, ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+    name: Find
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find(system-type-system-object())
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find(System.Type,System.Object[])
+    name: Find
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find(system-type-system-object())
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object())
+  name: FindAsync(Type, params object[])
+  nameWithType: DbContext.FindAsync(Type, params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, params object[])
+  nameWithType.vb: DbContext.FindAsync(Type, ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, ParamArray Object())
+  name.vb: FindAsync(Type, ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object())
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[])
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object())
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object()-system-threading-cancellationtoken)
+  name: FindAsync(Type, object[], CancellationToken)
+  nameWithType: DbContext.FindAsync(Type, object[], CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, object[], System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.FindAsync(Type, Object(), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, Object(), System.Threading.CancellationToken)
+  name.vb: FindAsync(Type, Object(), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object()-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type,System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object()-system-threading-cancellationtoken)
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find-1(system-object())
+  name: Find<TEntity>(params object[])
+  nameWithType: DbContext.Find<TEntity>(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Find<TEntity>(params object[])
+  nameWithType.vb: DbContext.Find(Of TEntity)(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Find(Of TEntity)(ParamArray Object())
+  name.vb: Find(Of TEntity)(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+    name: Find
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find-1(system-object())
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Find``1(System.Object[])
+    name: Find
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find-1(system-object())
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object())
+  name: FindAsync<TEntity>(params object[])
+  nameWithType: DbContext.FindAsync<TEntity>(params object[])
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>(params object[])
+  nameWithType.vb: DbContext.FindAsync(Of TEntity)(ParamArray Object())
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)(ParamArray Object())
+  name.vb: FindAsync(Of TEntity)(ParamArray Object())
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object())
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[])
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object())
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object()-system-threading-cancellationtoken)
+  name: FindAsync<TEntity>(object[], CancellationToken)
+  nameWithType: DbContext.FindAsync<TEntity>(object[], CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FindAsync<TEntity>(object[], System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.FindAsync(Of TEntity)(Object(), CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FindAsync(Of TEntity)(Object(), System.Threading.CancellationToken)
+  name.vb: FindAsync(Of TEntity)(Object(), CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object()-system-threading-cancellationtoken)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FindAsync``1(System.Object[],System.Threading.CancellationToken)
+    name: FindAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object()-system-threading-cancellationtoken)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{{TResult}}}})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  definition: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  name: FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  nameWithType: DbContext.FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>(System.Linq.Expressions.Expression<System.Func<System.Linq.IQueryable<TResult>>>)
+  nameWithType.vb: DbContext.FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of System.Linq.IQueryable(Of TResult))))
+  name.vb: FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+  - name: )
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Database
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Database
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.database
+  name: Database
+  nameWithType: DbContext.Database
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Database
+- uid: Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.changetracker
+  name: ChangeTracker
+  nameWithType: DbContext.ChangeTracker
+  fullName: Microsoft.EntityFrameworkCore.DbContext.ChangeTracker
+- uid: Microsoft.EntityFrameworkCore.DbContext.Model
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.Model
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.model
+  name: Model
+  nameWithType: DbContext.Model
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Model
+- uid: Microsoft.EntityFrameworkCore.DbContext.ContextId
+  commentId: P:Microsoft.EntityFrameworkCore.DbContext.ContextId
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.contextid
+  name: ContextId
+  nameWithType: DbContext.ContextId
+  fullName: Microsoft.EntityFrameworkCore.DbContext.ContextId
+- uid: Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savingchanges
+  name: SavingChanges
+  nameWithType: DbContext.SavingChanges
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SavingChanges
+- uid: Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savedchanges
+  name: SavedChanges
+  nameWithType: DbContext.SavedChanges
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SavedChanges
+- uid: Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  commentId: E:Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesfailed
+  name: SaveChangesFailed
+  nameWithType: DbContext.SaveChangesFailed
+  fullName: Microsoft.EntityFrameworkCore.DbContext.SaveChangesFailed
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+- uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  commentId: T:Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  name: IInfrastructure<T>
+  nameWithType: IInfrastructure<T>
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<T>
+  nameWithType.vb: IInfrastructure(Of T)
+  fullName.vb: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure(Of T)
+  name.vb: IInfrastructure(Of T)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure`1
+    name: IInfrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.Infrastructure
+  commentId: N:Microsoft.EntityFrameworkCore.Infrastructure
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore.Infrastructure
+  nameWithType: Microsoft.EntityFrameworkCore.Infrastructure
+  fullName: Microsoft.EntityFrameworkCore.Infrastructure
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Infrastructure
+    name: Infrastructure
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure
+- uid: Microsoft.EntityFrameworkCore.Internal
+  commentId: N:Microsoft.EntityFrameworkCore.Internal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore.Internal
+  nameWithType: Microsoft.EntityFrameworkCore.Internal
+  fullName: Microsoft.EntityFrameworkCore.Internal
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Internal
+    name: Internal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Internal
+    name: Internal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal
+- uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Entry``1(``0)
+    name: Entry
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  name: Add<TEntity>(TEntity)
+  nameWithType: DbContext.Add<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Add<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Add(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Add(Of TEntity)(TEntity)
+  name.vb: Add(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Add``1(``0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  name: AddAsync<TEntity>(TEntity, CancellationToken)
+  nameWithType: DbContext.AddAsync<TEntity>(TEntity, CancellationToken)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.AddAsync<TEntity>(TEntity, System.Threading.CancellationToken)
+  nameWithType.vb: DbContext.AddAsync(Of TEntity)(TEntity, CancellationToken)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.AddAsync(Of TEntity)(TEntity, System.Threading.CancellationToken)
+  name.vb: AddAsync(Of TEntity)(TEntity, CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken)
+    name: AddAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  name: Attach<TEntity>(TEntity)
+  nameWithType: DbContext.Attach<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Attach<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Attach(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Attach(Of TEntity)(TEntity)
+  name.vb: Attach(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Attach``1(``0)
+    name: Attach
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  name: Update<TEntity>(TEntity)
+  nameWithType: DbContext.Update<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Update<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Update(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Update(Of TEntity)(TEntity)
+  name.vb: Update(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Update``1(``0)
+    name: Update
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  name: Remove<TEntity>(TEntity)
+  nameWithType: DbContext.Remove<TEntity>(TEntity)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Remove(Of TEntity)(TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.Remove(Of TEntity)(TEntity)
+  name.vb: Remove(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  - name: <
+  - name: TEntity
+  - name: '>'
+  - name: (
+  - name: TEntity
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.Remove``1(``0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+  - name: (
+  - name: TEntity
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  name: FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  nameWithType: DbContext.FromExpression<TResult>(Expression<Func<IQueryable<TResult>>>)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.FromExpression<TResult>(System.Linq.Expressions.Expression<System.Func<System.Linq.IQueryable<TResult>>>)
+  nameWithType.vb: DbContext.FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContext.FromExpression(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of System.Linq.IQueryable(Of TResult))))
+  name.vb: FromExpression(Of TResult)(Expression(Of Func(Of IQueryable(Of TResult))))
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.FromExpression``1(System.Linq.Expressions.Expression{System.Func{System.Linq.IQueryable{``0}}})
+    name: FromExpression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+  - name: )
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.#ctor
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_NKDUPVS_React_Server_Data_ApplicationDbContext__
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext.ApplicationDbContext
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.ApplicationDbContext
+  nameWithType.vb: ApplicationDbContext.New
+  fullName.vb: NKDUPVS_React.Server.Data.ApplicationDbContext.New
+  name.vb: New
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext}
+  commentId: T:Microsoft.EntityFrameworkCore.DbContextOptions{NKDUPVS_React.Server.Data.ApplicationDbContext}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  name: DbContextOptions<ApplicationDbContext>
+  nameWithType: DbContextOptions<ApplicationDbContext>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<NKDUPVS_React.Server.Data.ApplicationDbContext>
+  nameWithType.vb: DbContextOptions(Of ApplicationDbContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of NKDUPVS_React.Server.Data.ApplicationDbContext)
+  name.vb: DbContextOptions(Of ApplicationDbContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Data.ApplicationDbContext
+    name: ApplicationDbContext
+    href: NKDUPVS_React.Server.Data.ApplicationDbContext.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Data.ApplicationDbContext
+    name: ApplicationDbContext
+    href: NKDUPVS_React.Server.Data.ApplicationDbContext.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+  commentId: T:Microsoft.EntityFrameworkCore.DbContextOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  name: DbContextOptions<TContext>
+  nameWithType: DbContextOptions<TContext>
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptions<TContext>
+  nameWithType.vb: DbContextOptions(Of TContext)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbContextOptions(Of TContext)
+  name.vb: DbContextOptions(Of TContext)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  - name: <
+  - name: TContext
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptions`1
+    name: DbContextOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContext
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Users*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Users
+  name: Users
+  nameWithType: ApplicationDbContext.Users
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Users
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.User}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.User}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<User>
+  nameWithType: DbSet<User>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.User>
+  nameWithType.vb: DbSet(Of User)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.User)
+  name.vb: DbSet(Of User)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.User
+    name: User
+    href: NKDUPVS_React.Server.Models.User.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.User
+    name: User
+    href: NKDUPVS_React.Server.Models.User.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbSet`1
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<TEntity>
+  nameWithType: DbSet<TEntity>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<TEntity>
+  nameWithType.vb: DbSet(Of TEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of TEntity)
+  name.vb: DbSet(Of TEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Mentors
+  name: Mentors
+  nameWithType: ApplicationDbContext.Mentors
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentors
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentor}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentor}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Mentor>
+  nameWithType: DbSet<Mentor>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Mentor>
+  nameWithType.vb: DbSet(Of Mentor)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Mentor)
+  name.vb: DbSet(Of Mentor)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Mentor
+    name: Mentor
+    href: NKDUPVS_React.Server.Models.Mentor.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Mentor
+    name: Mentor
+    href: NKDUPVS_React.Server.Models.Mentor.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Mentees
+  name: Mentees
+  nameWithType: ApplicationDbContext.Mentees
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Mentees
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentee}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Mentee}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Mentee>
+  nameWithType: DbSet<Mentee>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Mentee>
+  nameWithType.vb: DbSet(Of Mentee)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Mentee)
+  name.vb: DbSet(Of Mentee)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Mentee
+    name: Mentee
+    href: NKDUPVS_React.Server.Models.Mentee.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Mentee
+    name: Mentee
+    href: NKDUPVS_React.Server.Models.Mentee.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Classes*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Classes
+  name: Classes
+  nameWithType: ApplicationDbContext.Classes
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Classes
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Class}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Class}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Class>
+  nameWithType: DbSet<Class>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Class>
+  nameWithType.vb: DbSet(Of Class)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Class)
+  name.vb: DbSet(Of Class)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Class
+    name: Class
+    href: NKDUPVS_React.Server.Models.Class.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Class
+    name: Class
+    href: NKDUPVS_React.Server.Models.Class.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_UserClasses
+  name: UserClasses
+  nameWithType: ApplicationDbContext.UserClasses
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.UserClasses
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.UserClass}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.UserClass}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<UserClass>
+  nameWithType: DbSet<UserClass>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.UserClass>
+  nameWithType.vb: DbSet(Of UserClass)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.UserClass)
+  name.vb: DbSet(Of UserClass)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.UserClass
+    name: UserClass
+    href: NKDUPVS_React.Server.Models.UserClass.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.UserClass
+    name: UserClass
+    href: NKDUPVS_React.Server.Models.UserClass.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_RejectionHistories
+  name: RejectionHistories
+  nameWithType: ApplicationDbContext.RejectionHistories
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.RejectionHistories
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RejectionHistory}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RejectionHistory}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<RejectionHistory>
+  nameWithType: DbSet<RejectionHistory>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.RejectionHistory>
+  nameWithType.vb: DbSet(Of RejectionHistory)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.RejectionHistory)
+  name.vb: DbSet(Of RejectionHistory)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.RejectionHistory
+    name: RejectionHistory
+    href: NKDUPVS_React.Server.Models.RejectionHistory.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.RejectionHistory
+    name: RejectionHistory
+    href: NKDUPVS_React.Server.Models.RejectionHistory.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Tasks
+  name: Tasks
+  nameWithType: ApplicationDbContext.Tasks
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Tasks
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Task}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Task}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Task>
+  nameWithType: DbSet<Task>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Task>
+  nameWithType.vb: DbSet(Of Task)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Task)
+  name.vb: DbSet(Of Task)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Task
+    name: Task
+    href: NKDUPVS_React.Server.Models.Task.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Task
+    name: Task
+    href: NKDUPVS_React.Server.Models.Task.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_MentorExpertises
+  name: MentorExpertises
+  nameWithType: ApplicationDbContext.MentorExpertises
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorExpertises
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorExpertise}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorExpertise}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<MentorExpertise>
+  nameWithType: DbSet<MentorExpertise>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.MentorExpertise>
+  nameWithType.vb: DbSet(Of MentorExpertise)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.MentorExpertise)
+  name.vb: DbSet(Of MentorExpertise)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.MentorExpertise
+    name: MentorExpertise
+    href: NKDUPVS_React.Server.Models.MentorExpertise.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.MentorExpertise
+    name: MentorExpertise
+    href: NKDUPVS_React.Server.Models.MentorExpertise.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_MentorRequests
+  name: MentorRequests
+  nameWithType: ApplicationDbContext.MentorRequests
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.MentorRequests
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorRequest}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.MentorRequest}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<MentorRequest>
+  nameWithType: DbSet<MentorRequest>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.MentorRequest>
+  nameWithType.vb: DbSet(Of MentorRequest)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.MentorRequest)
+  name.vb: DbSet(Of MentorRequest)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.MentorRequest
+    name: MentorRequest
+    href: NKDUPVS_React.Server.Models.MentorRequest.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.MentorRequest
+    name: MentorRequest
+    href: NKDUPVS_React.Server.Models.MentorRequest.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_StudyPrograms
+  name: StudyPrograms
+  nameWithType: ApplicationDbContext.StudyPrograms
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.StudyPrograms
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.StudyProgram}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.StudyProgram}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<StudyProgram>
+  nameWithType: DbSet<StudyProgram>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.StudyProgram>
+  nameWithType.vb: DbSet(Of StudyProgram)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.StudyProgram)
+  name.vb: DbSet(Of StudyProgram)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.StudyProgram
+    name: StudyProgram
+    href: NKDUPVS_React.Server.Models.StudyProgram.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.StudyProgram
+    name: StudyProgram
+    href: NKDUPVS_React.Server.Models.StudyProgram.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Specializations
+  name: Specializations
+  nameWithType: ApplicationDbContext.Specializations
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Specializations
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Specialization}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Specialization}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Specialization>
+  nameWithType: DbSet<Specialization>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Specialization>
+  nameWithType.vb: DbSet(Of Specialization)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Specialization)
+  name.vb: DbSet(Of Specialization)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Specialization
+    name: Specialization
+    href: NKDUPVS_React.Server.Models.Specialization.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Specialization
+    name: Specialization
+    href: NKDUPVS_React.Server.Models.Specialization.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Departments*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Departments
+  name: Departments
+  nameWithType: ApplicationDbContext.Departments
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Departments
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Department}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Department}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Department>
+  nameWithType: DbSet<Department>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Department>
+  nameWithType.vb: DbSet(Of Department)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Department)
+  name.vb: DbSet(Of Department)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Department
+    name: Department
+    href: NKDUPVS_React.Server.Models.Department.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Department
+    name: Department
+    href: NKDUPVS_React.Server.Models.Department.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_RequestStatuses
+  name: RequestStatuses
+  nameWithType: ApplicationDbContext.RequestStatuses
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.RequestStatuses
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RequestStatus}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.RequestStatus}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<RequestStatus>
+  nameWithType: DbSet<RequestStatus>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.RequestStatus>
+  nameWithType.vb: DbSet(Of RequestStatus)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.RequestStatus)
+  name.vb: DbSet(Of RequestStatus)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.RequestStatus
+    name: RequestStatus
+    href: NKDUPVS_React.Server.Models.RequestStatus.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.RequestStatus
+    name: RequestStatus
+    href: NKDUPVS_React.Server.Models.RequestStatus.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_TaskTypes
+  name: TaskTypes
+  nameWithType: ApplicationDbContext.TaskTypes
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.TaskTypes
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.TaskType}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.TaskType}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<TaskType>
+  nameWithType: DbSet<TaskType>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.TaskType>
+  nameWithType.vb: DbSet(Of TaskType)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.TaskType)
+  name.vb: DbSet(Of TaskType)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.TaskType
+    name: TaskType
+    href: NKDUPVS_React.Server.Models.TaskType.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.TaskType
+    name: TaskType
+    href: NKDUPVS_React.Server.Models.TaskType.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_SemesterPlans
+  name: SemesterPlans
+  nameWithType: ApplicationDbContext.SemesterPlans
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlans
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlan}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlan}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<SemesterPlan>
+  nameWithType: DbSet<SemesterPlan>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.SemesterPlan>
+  nameWithType.vb: DbSet(Of SemesterPlan)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.SemesterPlan)
+  name.vb: DbSet(Of SemesterPlan)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.SemesterPlan
+    name: SemesterPlan
+    href: NKDUPVS_React.Server.Models.SemesterPlan.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.SemesterPlan
+    name: SemesterPlan
+    href: NKDUPVS_React.Server.Models.SemesterPlan.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_SemesterPlanTasks
+  name: SemesterPlanTasks
+  nameWithType: ApplicationDbContext.SemesterPlanTasks
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanTasks
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanTask}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanTask}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<SemesterPlanTask>
+  nameWithType: DbSet<SemesterPlanTask>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.SemesterPlanTask>
+  nameWithType.vb: DbSet(Of SemesterPlanTask)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.SemesterPlanTask)
+  name.vb: DbSet(Of SemesterPlanTask)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanTask
+    name: SemesterPlanTask
+    href: NKDUPVS_React.Server.Models.SemesterPlanTask.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanTask
+    name: SemesterPlanTask
+    href: NKDUPVS_React.Server.Models.SemesterPlanTask.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Feedback
+  name: Feedback
+  nameWithType: ApplicationDbContext.Feedback
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Feedback
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Feedback}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Feedback}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Feedback>
+  nameWithType: DbSet<Feedback>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Feedback>
+  nameWithType.vb: DbSet(Of Feedback)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Feedback)
+  name.vb: DbSet(Of Feedback)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Feedback
+    name: Feedback
+    href: NKDUPVS_React.Server.Models.Feedback.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Feedback
+    name: Feedback
+    href: NKDUPVS_React.Server.Models.Feedback.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Affairs
+  name: Affairs
+  nameWithType: ApplicationDbContext.Affairs
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Affairs
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Affair}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Affair}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Affair>
+  nameWithType: DbSet<Affair>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Affair>
+  nameWithType.vb: DbSet(Of Affair)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Affair)
+  name.vb: DbSet(Of Affair)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Affair
+    name: Affair
+    href: NKDUPVS_React.Server.Models.Affair.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Affair
+    name: Affair
+    href: NKDUPVS_React.Server.Models.Affair.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Trainings
+  name: Trainings
+  nameWithType: ApplicationDbContext.Trainings
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Trainings
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Training}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Training}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Training>
+  nameWithType: DbSet<Training>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Training>
+  nameWithType.vb: DbSet(Of Training)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Training)
+  name.vb: DbSet(Of Training)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Training
+    name: Training
+    href: NKDUPVS_React.Server.Models.Training.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Training
+    name: Training
+    href: NKDUPVS_React.Server.Models.Training.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_SemesterPlanEvents
+  name: SemesterPlanEvents
+  nameWithType: ApplicationDbContext.SemesterPlanEvents
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.SemesterPlanEvents
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanEvent}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.SemesterPlanEvent}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<SemesterPlanEvent>
+  nameWithType: DbSet<SemesterPlanEvent>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.SemesterPlanEvent>
+  nameWithType.vb: DbSet(Of SemesterPlanEvent)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.SemesterPlanEvent)
+  name.vb: DbSet(Of SemesterPlanEvent)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanEvent
+    name: SemesterPlanEvent
+    href: NKDUPVS_React.Server.Models.SemesterPlanEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.SemesterPlanEvent
+    name: SemesterPlanEvent
+    href: NKDUPVS_React.Server.Models.SemesterPlanEvent.html
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.Events*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_Events
+  name: Events
+  nameWithType: ApplicationDbContext.Events
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.Events
+- uid: Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Event}
+  commentId: T:Microsoft.EntityFrameworkCore.DbSet{NKDUPVS_React.Server.Models.Event}
+  parent: Microsoft.EntityFrameworkCore
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  name: DbSet<Event>
+  nameWithType: DbSet<Event>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<NKDUPVS_React.Server.Models.Event>
+  nameWithType.vb: DbSet(Of Event)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of NKDUPVS_React.Server.Models.Event)
+  name.vb: DbSet(Of Event)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: <
+  - uid: NKDUPVS_React.Server.Models.Event
+    name: Event
+    href: NKDUPVS_React.Server.Models.Event.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: NKDUPVS_React.Server.Models.Event
+    name: Event
+    href: NKDUPVS_React.Server.Models.Event.html
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder.usemodel
+  name: UseModel(IModel)
+  nameWithType: DbContextOptionsBuilder.UseModel(IModel)
+  fullName: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
+    name: UseModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder.usemodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Metadata.IModel
+    name: IModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.metadata.imodel
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)
+    name: UseModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder.usemodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Metadata.IModel
+    name: IModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.metadata.imodel
+  - name: )
+- uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: Microsoft.EntityFrameworkCore.DbContext
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onmodelcreating
+  name: OnModelCreating(ModelBuilder)
+  nameWithType: DbContext.OnModelCreating(ModelBuilder)
+  fullName: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: OnModelCreating
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onmodelcreating
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: OnModelCreating
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onmodelcreating
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+- uid: NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating*
+  commentId: Overload:NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating
+  href: NKDUPVS_React.Server.Data.ApplicationDbContext.html#NKDUPVS_React_Server_Data_ApplicationDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_
+  name: OnModelCreating
+  nameWithType: ApplicationDbContext.OnModelCreating
+  fullName: NKDUPVS_React.Server.Data.ApplicationDbContext.OnModelCreating
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.ModelBuilder
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder

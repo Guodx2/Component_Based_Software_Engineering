@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace NKDUPVS_React.Server.Controllers | NKDUPVS Docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace NKDUPVS_React.Server.Controllers | NKDUPVS Docs ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NKDUPVS Docs">
+            NKDUPVS Docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NKDUPVS_React.Server.Controllers">
+
+  <h1 id="NKDUPVS_React_Server_Controllers" data-uid="NKDUPVS_React.Server.Controllers" class="text-break">Namespace NKDUPVS_React.Server.Controllers</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html">AffairFeedbackRequest</a></dt>
+      <dd><p>Request model for creating feedback for an affair. Contains the affair ID, rating, comment, and mentee code. The affair ID is used to associate the feedback with the correct affair's event, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the affair. This model also includes validation to prevent duplicate feedback for the same affair and mentee combination.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.ClassController.html">ClassController</a></dt>
+      <dd><p>Controller for managing class-related operations such as retrieving class information and creating new classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.CreateAffairDto.html">CreateAffairDto</a></dt>
+      <dd><p>Data transfer object for creating a new affair event. This class contains properties that represent the necessary information to create an affair, including the name of the affair, start and end times, address, any comments, and the code of the user who created the affair. This DTO is used to receive data from the client when a new affair event is being created through the API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.CreateTrainingDto.html">CreateTrainingDto</a></dt>
+      <dd><p>Data transfer object for creating a new training event. This class contains properties that represent the necessary information to create a training, including the name of the training, start and end times, address, any comments, and the code of the vice-dean for studies responsible for the training. This DTO is used to receive data from the client when a new training event is being created through the API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.DepartmentController.html">DepartmentController</a></dt>
+      <dd><p>Controller for managing department-related operations such as retrieving department information. This controller provides endpoints for clients to access department data stored in the database, allowing them to display department options or details as needed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.EventsController.html">EventsController</a></dt>
+      <dd><p>Controller for managing events such as trainings and affairs. This controller provides endpoints for retrieving upcoming and past events, creating new events, updating existing events, deleting events, and registering users for events. It interacts with the database context to perform CRUD operations on events and their related entities, allowing clients to manage and access event information effectively.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.ExpertiseItem.html">ExpertiseItem</a></dt>
+      <dd><p>Represents an individual expertise item for a mentor, containing information about the study program, specialization, and priority level. This class is used as part of the MentorExpertiseUpdateRequest to specify the areas of expertise that a mentor has. The StudyProgram property indicates the specific academic program associated with the expertise, while the Specialization property can provide additional details about the mentor's focus within that study program. The Priority property can be used to indicate the importance or relevance of this expertise area when matching mentors with mentees based on their academic interests in the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.FeedbackController.html">FeedbackController</a></dt>
+      <dd><p>Controller for handling feedback related operations for semester plan tasks, trainings, and affairs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.FeedbackRequest.html">FeedbackRequest</a></dt>
+      <dd><p>Request model for creating feedback for a semester plan task. Contains the semester plan task ID, rating, and an optional comment.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.html">FeedbackUpdateRequest</a></dt>
+      <dd><p>Request model for updating existing feedback for a semester plan task. Contains the new rating and an optional comment. The SemesterPlanTaskId is not included in this request model since the feedback entry to be updated is identified by the route parameter in the UpdateFeedback endpoint. This model focuses on the fields that can be updated, which are the rating and comment.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.HomeController.html">HomeController</a></dt>
+      <dd><p>Controller responsible for serving the main HTML file of the React application. The Index action method returns the index.html file located in the wwwroot directory, which is the entry point for the React frontend. This allows the React application to be loaded and rendered in the client's browser when they access the root URL of the server. The PhysicalFile method is used to serve the static HTML file with the appropriate content type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.MenteeController.html">MenteeController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to mentees. This includes retrieving mentee information, counting accepted and rejected mentor requests, marking notifications as read, and fetching educational results and mentor information for a specific mentee. The controller interacts with the ApplicationDbContext to perform database operations and returns appropriate responses based on the requested data. Each action method is designed to handle specific endpoints related to mentee functionalities in the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.html">MentorAvailabilityUpdateRequest</a></dt>
+      <dd><p>Request model for updating a mentor's availability status. This model contains the mentor's unique code and a boolean value indicating whether the mentor is currently accepting mentees or not. The MentorAvailabilityUpdateRequest is used in the UpdateAvailability endpoint of the MentorController to allow mentors to easily update their availability status in the application. By providing their mentor code and availability status, mentors can ensure that they are accurately represented in the system, allowing mentees to find mentors who are currently accepting new mentees when searching for mentorship opportunities in the frontend application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.MentorController.html">MentorController</a></dt>
+      <dd><p>Controller responsible for handling mentor-related operations in the application. This includes updating mentor availability, retrieving mentor details and expertise, managing mentor requests from mentees, and fetching information about assigned mentees. The controller interacts with the database context to perform CRUD operations on mentor data and uses an email service to send notifications when necessary. It provides various endpoints for both mentors and mentees to facilitate the mentorship process within the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.html">MentorExpertiseUpdateRequest</a></dt>
+      <dd><p>Request model for updating a mentor's expertise areas. This model contains the mentor's unique code and a list of expertise items, where each item includes information about the study program, specialization, and priority. The MentorExpertiseUpdateRequest is used in the UpdateExpertise endpoint of the MentorController to allow mentors to update their areas of expertise in the application. Each expertise item represents a specific area of knowledge or skill that the mentor can offer to mentees, and the priority field can be used to indicate the importance or relevance of each expertise area for matching mentors with mentees based on their academic interests.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.RegisterAffairDto.html">RegisterAffairDto</a></dt>
+      <dd><p>Data transfer object for registering a user for an affair event. This class contains properties that represent the necessary information to register for an affair, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for an affair event through the API, allowing users to sign up for events they are interested in attending.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.RegisterTrainingDto.html">RegisterTrainingDto</a></dt>
+      <dd><p>Data transfer object for registering a user for a training or affair event. This class contains properties that represent the necessary information to register for an event, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for a training or affair event through the API, allowing users to sign up for events they are interested in attending.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.RejectRequestModel.html">RejectRequestModel</a></dt>
+      <dd><p>Request model for rejecting a mentor request. This model contains a single property, Reason, which is a string that allows mentors to provide a reason for rejecting a mentorship request from a mentee. The RejectRequestModel is used in the RejectRequest endpoint of the MentorController to capture the rejection reason when a mentor decides to reject a mentorship request. By providing a reason for rejection, mentors can offer feedback to mentees, which can be helpful for mentees to understand why their request was rejected and potentially improve their chances of being accepted by other mentors in the future. Additionally, this information can be included in email notifications sent to mentees to inform them about the rejection of their mentorship request.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.SpecializationController.html">SpecializationController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to specializations. This controller provides an endpoint to retrieve a list of specializations from the database, which can be used by the frontend application to display specialization options to users. The GetSpecializations action method queries the database for all specializations, selects relevant properties (value, label, and fk_id_StudyPrograms), and returns the list of specializations in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their specialization when interacting with the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.StudyProgramController.html">StudyProgramController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to study programs. This controller provides an endpoint to retrieve a list of study programs from the database, which can be used by the frontend application to display study program options to users. The GetStudyPrograms action method queries the database for all study programs, selects relevant properties (value and label), and returns the list of study programs in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their study program when interacting with the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.html">TaskController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to tasks. This controller provides endpoints for creating, retrieving, updating, and deleting tasks, as well as assigning tasks to mentees and marking tasks as completed. The TaskController interacts with the database through the ApplicationDbContext to perform CRUD operations on tasks and manage task assignments. It also includes functionality to retrieve task types and get assigned tasks for specific mentees, allowing for efficient task management within the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html">TaskController.AssignTaskRequest</a></dt>
+      <dd><p>Defines the request model for assigning a task to multiple mentees. This class includes properties for the task ID, mentor code, and a list of mentee codes. The TaskId property identifies the specific task being assigned, while the MentorCode property identifies the mentor responsible for the assignment. The MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned. This request model is used in the AssignTask endpoint to process requests for assigning tasks to multiple mentees within the application, allowing for efficient management of task assignments.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html">TaskController.CompleteTaskRequest</a></dt>
+      <dd><p>Defines the request model for marking a task as completed. This class includes properties for the task ID, mentee code, and an optional completion file link. The TaskId property identifies the specific task being marked as completed, while the MenteeCode property identifies the mentee who is completing the task. The CompletionFile property allows for an optional link to a file that serves as evidence of task completion. This request model is used in the MarkTaskCompleted endpoint to process requests for marking tasks as completed by mentees within the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html">TaskController.TaskCreationRequest</a></dt>
+      <dd><p>Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator's code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TaskTypesController.html">TaskTypesController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to task types. This controller provides an endpoint to retrieve a list of all available task types from the database, which can be used by the frontend application to display task type options to users when creating or managing tasks. The GetTaskTypes action method queries the TaskTypes table in the database and returns the list of task types in the response. This allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.html">TrainingFeedbackRequest</a></dt>
+      <dd><p>Request model for creating feedback for a training. Contains the training ID, rating, comment, and mentee code. The training ID is used to associate the feedback with the correct training, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the training.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.UpdateAffairDto.html">UpdateAffairDto</a></dt>
+      <dd><p>Data transfer object for updating an existing affair event. This class contains properties that represent the information that can be updated for an affair, including the name of the affair, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing affair event is being updated through the API, allowing users to modify the details of an affair as needed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.UpdateTrainingDto.html">UpdateTrainingDto</a></dt>
+      <dd><p>Data transfer object for updating an existing training event. This class contains properties that represent the information that can be updated for a training, including the name of the training, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing training event is being updated through the API, allowing users to modify the details of a training as needed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="NKDUPVS_React.Server.Controllers.UserClassController.html">UserClassController</a></dt>
+      <dd><p>Controller responsible for handling API requests related to user class assignments</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Services
+  commentId: N:NKDUPVS_React.Server.Services
+  id: NKDUPVS_React.Server.Services
+  children:
+  - NKDUPVS_React.Server.Services.EmailService
+  - NKDUPVS_React.Server.Services.IEmailService
+  langs:
+  - csharp
+  - vb
+  name: NKDUPVS_React.Server.Services
+  nameWithType: NKDUPVS_React.Server.Services
+  fullName: NKDUPVS_React.Server.Services
+  type: Namespace
+  assemblies:
+  - NKDUPVS_React.Server
+references:
+- uid: NKDUPVS_React.Server.Services.IEmailService
+  commentId: T:NKDUPVS_React.Server.Services.IEmailService
+  parent: NKDUPVS_React.Server.Services
+  href: NKDUPVS_React.Server.Services.IEmailService.html
+  name: IEmailService
+  nameWithType: IEmailService
+  fullName: NKDUPVS_React.Server.Services.IEmailService
+- uid: NKDUPVS_React.Server.Services.EmailService
+  commentId: T:NKDUPVS_React.Server.Services.EmailService
+  href: NKDUPVS_React.Server.Services.EmailService.html
+  name: EmailService
+  nameWithType: EmailService
+  fullName: NKDUPVS_React.Server.Services.EmailService
+- uid: NKDUPVS_React.Server.Services
+  commentId: N:NKDUPVS_React.Server.Services
+  href: NKDUPVS_React.html
+  name: NKDUPVS_React.Server.Services
+  nameWithType: NKDUPVS_React.Server.Services
+  fullName: NKDUPVS_React.Server.Services
+  spec.csharp:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html
+  spec.vb:
+  - uid: NKDUPVS_React
+    name: NKDUPVS_React
+    href: NKDUPVS_React.html
+  - name: .
+  - uid: NKDUPVS_React.Server
+    name: Server
+    href: NKDUPVS_React.Server.html
+  - name: .
+  - uid: NKDUPVS_React.Server.Services
+    name: Services
+    href: NKDUPVS_React.Server.Services.html

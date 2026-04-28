@@ -5,9 +5,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NKDUPVS_React.Server.Controllers;
 
+/// <summary>
+/// Handles account-related operations such as sign-in and sign-out.
+/// </summary>
 [AllowAnonymous]
 public class AccountController : Controller
 {
+    /// <summary>
+    /// Initiates the Google authentication process.
+    /// </summary>
+    /// <returns>Sign-in result</returns>
     [HttpGet]
     public IActionResult SignIn()
     {
@@ -15,6 +22,10 @@ public class AccountController : Controller
         return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
     }
 
+    /// <summary>
+    /// Signs the user out and redirects to the home page.
+    /// </summary>
+    /// <returns>Sign-out result</returns>
     [HttpGet]
     public new IActionResult SignOut()
     {

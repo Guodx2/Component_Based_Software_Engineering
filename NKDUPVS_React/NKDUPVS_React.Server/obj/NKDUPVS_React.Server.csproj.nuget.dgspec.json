@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj": {}
+    "C:\\Users\\Guoda\\Desktop\\Component_Based_Software_Engineering\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj": {
+    "C:\\Users\\Guoda\\Desktop\\Component_Based_Software_Engineering\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Guoda\\Desktop\\Component_Based_Software_Engineering\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj",
         "projectName": "NKDUPVS_React.Server",
-        "projectPath": "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj",
+        "projectPath": "C:\\Users\\Guoda\\Desktop\\Component_Based_Software_Engineering\\NKDUPVS_React\\NKDUPVS_React.Server\\NKDUPVS_React.Server.csproj",
         "packagesPath": "C:\\Users\\Guoda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guoda\\Desktop\\NKDUPVS\\NKDUPVS_React\\NKDUPVS_React.Server\\obj\\",
+        "outputPath": "C:\\Users\\Guoda\\Desktop\\Component_Based_Software_Engineering\\NKDUPVS_React\\NKDUPVS_React.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Guoda\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: NKDUPVS_React.Server.Migrations
+  commentId: N:NKDUPVS_React.Server.Migrations
+  id: NKDUPVS_React.Server.Migrations
+  children:
+  - NKDUPVS_React.Server.Migrations.SeedAdminUser
+  langs:
+  - csharp
+  - vb
+  name: NKDUPVS_React.Server.Migrations
+  nameWithType: NKDUPVS_React.Server.Migrations
+  fullName: NKDUPVS_React.Server.Migrations
+  type: Namespace
+  assemblies:
+  - NKDUPVS_React.Server
+references:
+- uid: NKDUPVS_React.Server.Migrations.SeedAdminUser
+  commentId: T:NKDUPVS_React.Server.Migrations.SeedAdminUser
+  href: NKDUPVS_React.Server.Migrations.SeedAdminUser.html
+  name: SeedAdminUser
+  nameWithType: SeedAdminUser
+  fullName: NKDUPVS_React.Server.Migrations.SeedAdminUser

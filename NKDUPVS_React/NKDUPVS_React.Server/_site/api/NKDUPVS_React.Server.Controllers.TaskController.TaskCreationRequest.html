@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TaskController.TaskCreationRequest | NKDUPVS Docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TaskController.TaskCreationRequest | NKDUPVS Docs ">
+      
+      <meta name="description" content="Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator&#39;s code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Guodx2/Component_Based_Software_Engineering/new/main/apiSpec/new?filename=NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest.md&amp;value=---%0Auid%3A%20NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="NKDUPVS Docs">
+            NKDUPVS Docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest">
+
+
+
+  <h1 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest" class="text-break">
+Class TaskController.TaskCreationRequest  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NKDUPVS_React.html">NKDUPVS_React</a>.<a class="xref" href="NKDUPVS_React.Server.html">Server</a>.<a class="xref" href="NKDUPVS_React.Server.Controllers.html">Controllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>NKDUPVS_React.Server.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator's code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TaskController.TaskCreationRequest</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TaskController.TaskCreationRequest</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_CreatedBy_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_CreatedBy" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.CreatedBy">
+  CreatedBy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The code of the user who created the task. This property is used to identify the creator of the task, allowing for proper attribution and tracking within the application. It is a nullable string, meaning that it can be left empty if the creator's code is not provided in the request. However, in typical usage, this property should contain a valid user code to ensure that the task is properly associated with its creator within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? CreatedBy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Deadline_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Deadline" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Deadline">
+  Deadline
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The deadline for the task being created. This property indicates when the task is due and helps users manage their time effectively. It is a nullable DateTime, allowing for the possibility that a deadline may not be provided in the request. However, in typical usage, this property should contain a valid date and time to ensure that users are aware of the task's due date and can plan accordingly within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? Deadline { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Description_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Description" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A description of the task being created. This property provides additional details or information about the task, allowing users to understand the requirements or objectives of the task. It is a nullable string, meaning that it can be left empty if no description is provided. However, in typical usage, this property should contain relevant information to help users understand the context and expectations for the task within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_IsAssigned_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_IsAssigned" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.IsAssigned">
+  IsAssigned
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the task is currently assigned to any mentees. This property is used to track the assignment status of the task, allowing users to quickly see if a task has been assigned or not. It is a nullable boolean, meaning that it can be left empty if the assignment status is not provided in the request. However, in typical usage, this property should contain a value (true or false) to ensure that the task's assignment status is accurately reflected within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsAssigned { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MaterialLink_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MaterialLink" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MaterialLink">
+  MaterialLink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A URL link to relevant materials for the task being created. This property allows users to provide a link to resources, documents, or other materials that are associated with the task. It is a nullable string, meaning that it can be left empty if no material link is provided. However, in typical usage, this property should contain a valid URL to ensure that users can access the necessary materials related to the task within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? MaterialLink { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MenteeCodes_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_MenteeCodes" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.MenteeCodes">
+  MenteeCodes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This property allows for multiple mentee codes to be included in the task creation request, enabling the assignment of a single task to multiple mentees in one operation. It is a nullable list, meaning that it can be left empty if no mentee codes are provided. However, in typical usage, this property should contain at least one valid mentee code to ensure that the task is assigned to the intended recipients within the application upon creation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt;? MenteeCodes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Name_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_Name" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the task being created. This property is used to specify the title or name of the task that is being created. It is a nullable string, allowing for the possibility that the task name may not be provided in the request. However, in typical usage, this property should contain a valid task name to ensure that the task is properly identified and displayed within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_TaskTypeId_" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId*"></a>
+
+  <h3 id="NKDUPVS_React_Server_Controllers_TaskController_TaskCreationRequest_TaskTypeId" data-uid="NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.TaskTypeId">
+  TaskTypeId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The ID of the task type, categorizing the task based on predefined types. This property allows users to classify tasks according to their nature or purpose, making it easier to organize and filter tasks within the application. It is a nullable integer, allowing for the possibility that a task type may not be provided in the request. However, in typical usage, this property should contain a valid task type ID to ensure that the task is properly categorized and can be easily identified based on its type within the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? TaskTypeId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Guodx2/Component_Based_Software_Engineering/blob/main/NKDUPVS_React/NKDUPVS_React.Server/Controllers/TaskController.cs/#L497" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

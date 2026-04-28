@@ -1,0 +1,1065 @@
+{
+  "source_base_path": "C:/Users/Guoda/Desktop/Component_Based_Software_Engineering/NKDUPVS_React/NKDUPVS_React.Server",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.AffairFeedbackRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.AffairFeedbackRequest.yml\" sourcestartlinenumber=\"1\">Request model for creating feedback for an affair. Contains the affair ID, rating, comment, and mentee code. The affair ID is used to associate the feedback with the correct affair's event, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the affair. This model also includes validation to prevent duplicate feedback for the same affair and mentee combination.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.ClassController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.ClassController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.ClassController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.ClassController.yml\" sourcestartlinenumber=\"1\">Controller for managing class-related operations such as retrieving class information and creating new classes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.CreateAffairDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.CreateAffairDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.CreateAffairDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.CreateAffairDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for creating a new affair event. This class contains properties that represent the necessary information to create an affair, including the name of the affair, start and end times, address, any comments, and the code of the user who created the affair. This DTO is used to receive data from the client when a new affair event is being created through the API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.CreateTrainingDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.CreateTrainingDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.CreateTrainingDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.CreateTrainingDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for creating a new training event. This class contains properties that represent the necessary information to create a training, including the name of the training, start and end times, address, any comments, and the code of the vice-dean for studies responsible for the training. This DTO is used to receive data from the client when a new training event is being created through the API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.DepartmentController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.DepartmentController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.DepartmentController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.DepartmentController.yml\" sourcestartlinenumber=\"1\">Controller for managing department-related operations such as retrieving department information. This controller provides endpoints for clients to access department data stored in the database, allowing them to display department options or details as needed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.EventsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.EventsController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.EventsController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.EventsController.yml\" sourcestartlinenumber=\"1\">Controller for managing events such as trainings and affairs. This controller provides endpoints for retrieving upcoming and past events, creating new events, updating existing events, deleting events, and registering users for events. It interacts with the database context to perform CRUD operations on events and their related entities, allowing clients to manage and access event information effectively.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.ExpertiseItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.ExpertiseItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.ExpertiseItem",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.ExpertiseItem.yml\" sourcestartlinenumber=\"1\">Represents an individual expertise item for a mentor, containing information about the study program, specialization, and priority level. This class is used as part of the MentorExpertiseUpdateRequest to specify the areas of expertise that a mentor has. The StudyProgram property indicates the specific academic program associated with the expertise, while the Specialization property can provide additional details about the mentor's focus within that study program. The Priority property can be used to indicate the importance or relevance of this expertise area when matching mentors with mentees based on their academic interests in the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.FeedbackController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.FeedbackController.yml\" sourcestartlinenumber=\"1\">Controller for handling feedback related operations for semester plan tasks, trainings, and affairs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.FeedbackRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.FeedbackRequest.yml\" sourcestartlinenumber=\"1\">Request model for creating feedback for a semester plan task. Contains the semester plan task ID, rating, and an optional comment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.FeedbackUpdateRequest.yml\" sourcestartlinenumber=\"1\">Request model for updating existing feedback for a semester plan task. Contains the new rating and an optional comment. The SemesterPlanTaskId is not included in this request model since the feedback entry to be updated is identified by the route parameter in the UpdateFeedback endpoint. This model focuses on the fields that can be updated, which are the rating and comment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.HomeController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.HomeController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.HomeController.yml\" sourcestartlinenumber=\"1\">Controller responsible for serving the main HTML file of the React application. The Index action method returns the index.html file located in the wwwroot directory, which is the entry point for the React frontend. This allows the React application to be loaded and rendered in the client's browser when they access the root URL of the server. The PhysicalFile method is used to serve the static HTML file with the appropriate content type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.MenteeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.MenteeController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.MenteeController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.MenteeController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to mentees. This includes retrieving mentee information, counting accepted and rejected mentor requests, marking notifications as read, and fetching educational results and mentor information for a specific mentee. The controller interacts with the ApplicationDbContext to perform database operations and returns appropriate responses based on the requested data. Each action method is designed to handle specific endpoints related to mentee functionalities in the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.MentorAvailabilityUpdateRequest.yml\" sourcestartlinenumber=\"1\">Request model for updating a mentor's availability status. This model contains the mentor's unique code and a boolean value indicating whether the mentor is currently accepting mentees or not. The MentorAvailabilityUpdateRequest is used in the UpdateAvailability endpoint of the MentorController to allow mentors to easily update their availability status in the application. By providing their mentor code and availability status, mentors can ensure that they are accurately represented in the system, allowing mentees to find mentors who are currently accepting new mentees when searching for mentorship opportunities in the frontend application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.MentorController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.MentorController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.MentorController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.MentorController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling mentor-related operations in the application. This includes updating mentor availability, retrieving mentor details and expertise, managing mentor requests from mentees, and fetching information about assigned mentees. The controller interacts with the database context to perform CRUD operations on mentor data and uses an email service to send notifications when necessary. It provides various endpoints for both mentors and mentees to facilitate the mentorship process within the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.MentorExpertiseUpdateRequest.yml\" sourcestartlinenumber=\"1\">Request model for updating a mentor's expertise areas. This model contains the mentor's unique code and a list of expertise items, where each item includes information about the study program, specialization, and priority. The MentorExpertiseUpdateRequest is used in the UpdateExpertise endpoint of the MentorController to allow mentors to update their areas of expertise in the application. Each expertise item represents a specific area of knowledge or skill that the mentor can offer to mentees, and the priority field can be used to indicate the importance or relevance of each expertise area for matching mentors with mentees based on their academic interests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.RegisterAffairDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.RegisterAffairDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.RegisterAffairDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.RegisterAffairDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for registering a user for an affair event. This class contains properties that represent the necessary information to register for an affair, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for an affair event through the API, allowing users to sign up for events they are interested in attending.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.RegisterTrainingDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.RegisterTrainingDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.RegisterTrainingDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.RegisterTrainingDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for registering a user for a training or affair event. This class contains properties that represent the necessary information to register for an event, including the ID of the event and the code of the user. This DTO is used to receive data from the client when a user is registering for a training or affair event through the API, allowing users to sign up for events they are interested in attending.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.RejectRequestModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.RejectRequestModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.RejectRequestModel",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.RejectRequestModel.yml\" sourcestartlinenumber=\"1\">Request model for rejecting a mentor request. This model contains a single property, Reason, which is a string that allows mentors to provide a reason for rejecting a mentorship request from a mentee. The RejectRequestModel is used in the RejectRequest endpoint of the MentorController to capture the rejection reason when a mentor decides to reject a mentorship request. By providing a reason for rejection, mentors can offer feedback to mentees, which can be helpful for mentees to understand why their request was rejected and potentially improve their chances of being accepted by other mentors in the future. Additionally, this information can be included in email notifications sent to mentees to inform them about the rejection of their mentorship request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.SpecializationController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.SpecializationController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.SpecializationController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.SpecializationController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to specializations. This controller provides an endpoint to retrieve a list of specializations from the database, which can be used by the frontend application to display specialization options to users. The GetSpecializations action method queries the database for all specializations, selects relevant properties (value, label, and fk_id_StudyPrograms), and returns the list of specializations in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their specialization when interacting with the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.StudyProgramController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.StudyProgramController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.StudyProgramController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.StudyProgramController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to study programs. This controller provides an endpoint to retrieve a list of study programs from the database, which can be used by the frontend application to display study program options to users. The GetStudyPrograms action method queries the database for all study programs, selects relevant properties (value and label), and returns the list of study programs in a format suitable for use in dropdowns or selection components in the frontend. This allows users to easily select their study program when interacting with the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TaskController.AssignTaskRequest.yml\" sourcestartlinenumber=\"1\">Defines the request model for assigning a task to multiple mentees. This class includes properties for the task ID, mentor code, and a list of mentee codes. The TaskId property identifies the specific task being assigned, while the MentorCode property identifies the mentor responsible for the assignment. The MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned. This request model is used in the AssignTask endpoint to process requests for assigning tasks to multiple mentees within the application, allowing for efficient management of task assignments.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TaskController.CompleteTaskRequest.yml\" sourcestartlinenumber=\"1\">Defines the request model for marking a task as completed. This class includes properties for the task ID, mentee code, and an optional completion file link. The TaskId property identifies the specific task being marked as completed, while the MenteeCode property identifies the mentee who is completing the task. The CompletionFile property allows for an optional link to a file that serves as evidence of task completion. This request model is used in the MarkTaskCompleted endpoint to process requests for marking tasks as completed by mentees within the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TaskController.TaskCreationRequest.yml\" sourcestartlinenumber=\"1\">Defines the request model for creating a new task and assigning it to multiple mentees. This class includes properties for the task name, description, material link, deadline, creator's code, assignment status, task type ID, and a list of mentee codes. The Name property specifies the name of the task, while the Description provides additional details about the task. The MaterialLink property can contain a URL to relevant materials for the task. The Deadline property indicates when the task is due. The CreatedBy property identifies the user who created the task. The IsAssigned property indicates whether the task is currently assigned to any mentees. The TaskTypeId property categorizes the task based on predefined types. Finally, the MenteeCodes property is a list of strings that contains the codes of the mentees to whom the task should be assigned upon creation. This request model is used in the CreateTaskForMentees endpoint to process requests for creating new tasks and assigning them to multiple mentees within the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TaskController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TaskController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TaskController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to tasks. This controller provides endpoints for creating, retrieving, updating, and deleting tasks, as well as assigning tasks to mentees and marking tasks as completed. The TaskController interacts with the database through the ApplicationDbContext to perform CRUD operations on tasks and manage task assignments. It also includes functionality to retrieve task types and get assigned tasks for specific mentees, allowing for efficient task management within the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TaskTypesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TaskTypesController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TaskTypesController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TaskTypesController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to task types. This controller provides an endpoint to retrieve a list of all available task types from the database, which can be used by the frontend application to display task type options to users when creating or managing tasks. The GetTaskTypes action method queries the TaskTypes table in the database and returns the list of task types in the response. This allows users to view the different categories or types of tasks that can be created and assigned within the application, providing them with options for categorizing their tasks effectively.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.TrainingFeedbackRequest.yml\" sourcestartlinenumber=\"1\">Request model for creating feedback for a training. Contains the training ID, rating, comment, and mentee code. The training ID is used to associate the feedback with the correct training, while the mentee code allows for tracking which mentee provided the feedback. The rating and comment fields are used to capture the mentee's evaluation of the training.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.UpdateAffairDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.UpdateAffairDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.UpdateAffairDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.UpdateAffairDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for updating an existing affair event. This class contains properties that represent the information that can be updated for an affair, including the name of the affair, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing affair event is being updated through the API, allowing users to modify the details of an affair as needed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.UpdateTrainingDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.UpdateTrainingDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.UpdateTrainingDto",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.UpdateTrainingDto.yml\" sourcestartlinenumber=\"1\">Data transfer object for updating an existing training event. This class contains properties that represent the information that can be updated for a training, including the name of the training, start and end times, address, and any comments. This DTO is used to receive data from the client when an existing training event is being updated through the API, allowing users to modify the details of a training as needed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.UserClassController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.UserClassController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers.UserClassController",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Controllers.UserClassController.yml\" sourcestartlinenumber=\"1\">Controller responsible for handling API requests related to user class assignments</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Data.ApplicationDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Data.ApplicationDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Data.ApplicationDbContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Migrations.SeedAdminUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Migrations.SeedAdminUser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Migrations.SeedAdminUser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Affair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Affair.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Affair",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Class.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Class.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Class",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Department.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Department.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Department",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Event.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Event",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Feedback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Feedback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Feedback",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Mentee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Mentee.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Mentee",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Mentor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Mentor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Mentor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.MentorExpertise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.MentorExpertise.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.MentorExpertise",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.MentorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.MentorRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.MentorRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.RejectUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.RejectUserRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.RejectUserRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.RejectionHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.RejectionHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.RejectionHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.RequestStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.RequestStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.RequestStatus",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.SemesterPlan",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlanEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlanEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.SemesterPlanEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlanTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.SemesterPlanTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.SemesterPlanTask",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Specialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Specialization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Specialization",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.StudyProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.StudyProgram.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.StudyProgram",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Task.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Task.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Task",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.TaskType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.TaskType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.TaskType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.Training.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.Training.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.Training",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.UserClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.UserClass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models.UserClass",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Services.EmailService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Services.EmailService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Services.EmailService",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Services.EmailService.yml\" sourcestartlinenumber=\"1\">Implementation of the IEmailService interface using SendGrid to send emails. This class retrieves the SendGrid API key and sender information from the application configuration, and uses the SendGrid client to create and send emails based on the provided recipient, subject, and content. The SendEmailAsync method constructs the email message and sends it asynchronously, allowing for efficient email delivery without blocking the main thread of the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Services.IEmailService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Services.IEmailService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Services.IEmailService",
+      "Summary": "<p sourcefile=\"api/NKDUPVS_React.Server.Services.IEmailService.yml\" sourcestartlinenumber=\"1\">Interface for email services, defining a method for sending emails asynchronously. This interface allows for different implementations of email sending functionality, such as using SendGrid or other email providers, while providing a consistent method signature for sending emails throughout the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NKDUPVS_React.Server.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NKDUPVS_React.Server.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "NKDUPVS_React.Server.Services",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/@popperjs/core/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/@popperjs/core/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/@popperjs/core/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/@popperjs/core/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/@types/cookie/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/@types/cookie/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/bootstrap/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/bootstrap/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/cookie/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/cookie/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-dom/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-dom/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-router-dom/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-router-dom/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-router-dom/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-router-dom/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-router/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-router/CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-router/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-router/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react-router/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react-router/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/react/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/react/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/scheduler/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/scheduler/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/set-cookie-parser/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/set-cookie-parser/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "node_modules/turbo-stream/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "node_modules/turbo-stream/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

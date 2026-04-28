@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NKDUPVS_React.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9df93ebfb3f475824b8cd0e5d7051d083f8ae419")]
 [assembly: System.Reflection.AssemblyProductAttribute("NKDUPVS_React.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NKDUPVS_React.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
